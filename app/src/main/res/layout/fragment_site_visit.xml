@@ -1,0 +1,36 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.clicbrics.consumer.fragment.SiteVisitFragment"
+    android:id="@+id/parentLayout">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_site_visit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:visibility="gone"
+                  android:id="@+id/empty_view_site_visit"
+                  android:layout_gravity="center"
+                  android:orientation="vertical">
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:src="@drawable/no_site_visit_found"/>
+        <TextView
+            fontPath="fonts/FiraSans-Regular.ttf"
+            tools:ignore="MissingPrefix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:text="@string/no_sitevisit"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_size"
+            android:gravity="center"
+            android:textColor="#979797"/>
+    </LinearLayout>
+</FrameLayout>

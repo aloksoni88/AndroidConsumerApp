@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottom_gradient_color_bg"
+        tools:ignore="MissingPrefix">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingBottom="@dimen/margin_30"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/enter_property_address"
+                    fontPath="fonts/FiraSans-Medium.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/property_address"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/search_title_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/enter_property_address"
+                    android:layout_marginVertical="@dimen/margin_10"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:background="@drawable/white_bg_with_gray_border">
+
+
+                    <TextView
+                        android:id="@+id/select_city"
+                        fontPath="fonts/FiraSans-Light.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:drawableRight="@drawable/arrow_drop_down_black"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/black"
+                        android:ellipsize="end"
+                        android:gravity="left|center_vertical"
+                        android:hint=""
+                        android:maxLines="1"
+                        android:padding="@dimen/margin_10"
+                        android:paddingLeft="@dimen/margin_5"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <View
+                        android:id="@+id/view_sepration"
+                        android:layout_width="@dimen/margin_1"
+                        android:layout_height="@dimen/margin_25"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/select_city"
+                        android:background="@color/gray_300" />
+
+                    <TextView
+                        android:id="@+id/search_locality"
+                        fontPath="fonts/FiraSans-Light.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/view_sepration"
+                        android:drawableTint="@color/black"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="Enter your area or locality"
+                        android:maxLines="1"
+                        android:padding="@dimen/margin_10"
+                        android:paddingLeft="@dimen/margin_5"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_600"
+                        android:textSize="@dimen/text_size_small" />
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/property_type_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/search_title_layout"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_10">
+
+
+                    <ToggleButton
+                        android:id="@+id/id_apartment"
+                        fontPath="fonts/FiraSans-Book.ttf"
+                        android:layout_marginRight="@dimen/margin_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bhk_selector"
+                        android:drawableTop="@drawable/ic_filter_apartment"
+                        android:padding="@dimen/margin_5"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/filter_text_selector"
+                        android:textOff="Apartment"
+                        android:textOn="Apartment"
+                        android:textSize="@dimen/text_size_xsmall" />
+
+
+                    <ToggleButton
+                        android:id="@+id/id_villa"
+                        fontPath="fonts/FiraSans-Book.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_3"
+                        android:layout_weight="1"
+                        android:background="@drawable/bhk_selector"
+                        android:drawableTop="@drawable/ic_filter_villa_black"
+                        android:padding="@dimen/margin_5"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/filter_text_selector"
+                        android:textOff="Villa"
+                        android:textOn="Villa"
+                        android:textSize="@dimen/text_size_xsmall" />
+
+                    <ToggleButton
+                        android:id="@+id/id_plot"
+                        fontPath="fonts/FiraSans-Book.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/margin_3"
+                        android:layout_weight="1"
+                        android:background="@drawable/bhk_selector"
+                        android:drawableTop="@drawable/ic_filter_plot_black"
+                        android:padding="@dimen/margin_5"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/filter_text_selector"
+                        android:textOff="Plot"
+                        android:textOn="Plot"
+                        android:textSize="@dimen/text_size_xsmall" />
+
+                    <ToggleButton
+                        android:id="@+id/id_independent"
+                        fontPath="fonts/FiraSans-Book.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/bhk_selector"
+                        android:drawableTop="@drawable/ic_filter_floor_black"
+                        android:padding="@dimen/margin_5"
+                        android:textAllCaps="false"
+                        android:textColor="@drawable/filter_text_selector"
+                        android:textOff="Independent Floor"
+                        android:textOn="Independent Floor"
+                        android:textSize="@dimen/text_size_xsmall" />
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/rooms_title"
+                    fontPath="fonts/FiraSans-Medium.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/property_type_options"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/no_of_rooms"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:id="@+id/room_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rooms_title"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <ToggleButton
+                            android:id="@+id/bhk1"
+                            fontPath="fonts/FiraSans-Book.ttf"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bhk_selector"
+                            android:minHeight="32dp"
+                            android:textAllCaps="false"
+                            android:textColor="@drawable/filter_text_selector"
+                            android:textOff="1 bhk"
+                            android:textOn="1 bhk"
+                            android:textSize="14sp" />
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ToggleButton
+                            android:id="@+id/bhk2"
+                            fontPath="fonts/FiraSans-Book.ttf"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bhk_selector"
+                            android:minHeight="32dp"
+                            android:textAllCaps="false"
+                            android:textColor="@drawable/filter_text_selector"
+                            android:textOff="2 bhk"
+                            android:textOn="2 bhk"
+                            android:textSize="14sp" />
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ToggleButton
+                            android:id="@+id/bhk3"
+                            fontPath="fonts/FiraSans-Book.ttf"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bhk_selector"
+                            android:minHeight="32dp"
+                            android:textAllCaps="false"
+                            android:textColor="@drawable/filter_text_selector"
+                            android:textOff="3 bhk"
+                            android:textOn="3 bhk"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <ToggleButton
+                            android:id="@+id/bhk4"
+                            fontPath="fonts/FiraSans-Book.ttf"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bhk_selector"
+                            android:minHeight="32dp"
+                            android:textAllCaps="false"
+                            android:textColor="@drawable/filter_text_selector"
+                            android:textOff="4 bhk"
+                            android:textOn="4 bhk"
+                            android:textSize="14sp" />
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ToggleButton
+                            android:id="@+id/bhk5plus"
+                            fontPath="fonts/FiraSans-Book.ttf"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bhk_selector"
+                            android:minHeight="32dp"
+                            android:textAllCaps="false"
+                            android:textColor="@drawable/filter_text_selector"
+                            android:textOff="5+ bhk"
+                            android:textOn="5+ bhk"
+                            android:textSize="14sp" />
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <ToggleButton
+
+                            fontPath="fonts/FiraSans-Book.ttf"
+                            android:layout_width="90dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bhk_selector"
+                            android:minHeight="32dp"
+                            android:textAllCaps="false"
+                            android:textColor="@drawable/filter_text_selector"
+                            android:textOff="3 bhk"
+                            android:textOn="3 bhk"
+                            android:textSize="14sp"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/bhk_selected_txt"
+                    fontPath="fonts/FiraSans-Bold.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/room_options"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="BHK"
+                    android:textColor="#6f6f6f"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <SeekBar
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:id="@+id/bhk_seekbar"
+                    android:layout_below="@+id/bhk_selected_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:progressDrawable="@drawable/seekbar_progress"
+                    android:thumb="@drawable/ic_seekbar"
+                    android:max="4"
+                    android:progress="0"/>
+
+                <LinearLayout
+                    android:id="@+id/bhk_seekbar_interval_layout"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_below="@+id/bhk_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:paddingLeft="@dimen/margin_3"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"/>
+
+                    <TextView
+                        android:paddingLeft="@dimen/margin_3"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"/>
+
+                    <TextView
+                        android:paddingLeft="@dimen/margin_3"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3"/>
+
+                    <TextView
+                        android:paddingLeft="@dimen/margin_3"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4+"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/floor_selected_txt"
+                    fontPath="fonts/FiraSans-Bold.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bhk_seekbar_interval_layout"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/select_floor"
+                    android:textColor="#6f6f6f"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <!--<com.clicbrics.consumer.customview.TopSeekBarView
+                    android:id="@+id/floor_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/select_project_txt"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:paddingLeft="@dimen/margin_10"
+                    android:paddingRight="@dimen/margin_5"
+                    app:dsbv_max="5"
+                    app:dsbv_progress="0"
+                    app:dsbv_progressBackgroundColor="@color/gray_300"
+                    app:dsbv_progressColor="@color/red"
+                    app:dsbv_thumbDrawable="@drawable/thumb_emi" />-->
+
+                <TextView
+                    android:id="@+id/size_title"
+                    fontPath="fonts/FiraSans-Medium.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/floor_selected_txt"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:text="@string/size_of_property"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_large"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/size_title"
+                    android:layout_marginBottom="@dimen/margin_30"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:background="@drawable/white_bg_with_gray_border"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/decrease_size"
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@color/gray_400"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_2"
+                            android:text="-"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_xlarge"
+
+                            />
+
+                        <EditText
+                            android:id="@+id/et_size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:paddingLeft="@dimen/margin_20"
+                            android:paddingRight="@dimen/margin_20"
+                            android:text="1000"
+                            android:textColor="@color/black"></EditText>
+
+                        <TextView
+                            android:id="@+id/increase_size"
+                            android:layout_width="@dimen/margin_30"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@color/gray_400"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_2"
+                            android:text="+"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_xlarge" />
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:background="@drawable/white_bg_with_gray_border">
+
+                        <Spinner
+                            android:id="@+id/size_spinner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/black"
+                            android:entries="@array/size_list"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_5"
+                            android:textSize="@dimen/text_size_xlarge" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+        <Button
+            android:id="@+id/btn_get_estimate"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_35"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_margin="@dimen/margin_5"
+            android:background="@drawable/get_estimate_btn_bg"
+            android:gravity="center"
+            android:text="GET ESTIMATE"
+            android:textColor="@color/colorBlack"
+            android:visibility="visible" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>

@@ -1,0 +1,151 @@
+{
+  "project_info": {
+    "project_number": "675884397033",
+    "firebase_url": "https://redbrics-prod-backend.firebaseio.com",
+    "project_id": "redbrics-prod-backend",
+    "storage_bucket": "redbrics-prod-backend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675884397033:android:ce98315d14172344",
+        "android_client_info": {
+          "package_name": "com.redbrics.propmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675884397033-8og78ft8c6v0g7f4ghracu7t0vtqj2sa.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "675884397033-1q2gt4cjcvs4563hfr6gdh958pkrm40n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1SErNCsqSjjoJqZsdzKlSn-VziiIg01k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675884397033:android:b9143dd3cb67aba2",
+        "android_client_info": {
+          "package_name": "com.clicbrics.consumer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675884397033-8og78ft8c6v0g7f4ghracu7t0vtqj2sa.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "675884397033-1q2gt4cjcvs4563hfr6gdh958pkrm40n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1SErNCsqSjjoJqZsdzKlSn-VziiIg01k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675884397033:android:193b5b6dd84cce36",
+        "android_client_info": {
+          "package_name": "com.clicbrics.propmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675884397033-8og78ft8c6v0g7f4ghracu7t0vtqj2sa.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "675884397033-1q2gt4cjcvs4563hfr6gdh958pkrm40n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1SErNCsqSjjoJqZsdzKlSn-VziiIg01k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675884397033:android:7745089b944fac32",
+        "android_client_info": {
+          "package_name": "com.clicbrics.callmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675884397033-8og78ft8c6v0g7f4ghracu7t0vtqj2sa.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "675884397033-1q2gt4cjcvs4563hfr6gdh958pkrm40n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1SErNCsqSjjoJqZsdzKlSn-VziiIg01k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

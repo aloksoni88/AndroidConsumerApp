@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="@dimen/margin_2"
+        app:cardUseCompatPadding="true"
+        >
+        <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/margin_270"
+                android:id="@+id/result_cardView"
+                android:background="@drawable/cardview_gradient"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:orientation="vertical">
+                        <TextView
+                            fontPath="fonts/FiraSans-Bold.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/budget_font_size"
+                            android:text="@string/clicworth1"
+                            android:visibility="visible"
+                            android:textAllCaps="false"
+                            android:textColor="@color/clicworth_text_color"
+                            android:textStyle="bold"
+                            />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            app:srcCompat="@drawable/ic_clicworth_tagline" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:id="@+id/rupee1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="@string/rs"
+                                fontPath="fonts/FiraSans-Bold.ttf"
+                                android:gravity="top"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_xlarge"
+                                />
+
+                            <TextView
+                                android:id="@+id/amount1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="1.35"
+                                fontPath="fonts/FiraSans-Bold.ttf"
+                                android:layout_gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_xxxxlarge"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                        <TextView
+                            fontPath="fonts/FiraSans-Regular.ttf"
+                            android:id="@+id/max_min_price1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginRight="16dp"
+                            android:text="1.21Cr - 1.48Cr"
+                            android:textSize="@dimen/text_size_xsmall"
+                            />
+
+                        <View
+                            android:id="@+id/view31"
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginTop="@dimen/margin_5"
+                            android:layout_marginBottom="@dimen/margin_5"
+                            android:background="@color/view_color"
+                            />
+
+                        <TextView
+                            fontPath="fonts/FiraSans-Regular.ttf"
+                            android:id="@+id/bsp_price1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:text="BSP 5600 psf"
+                            android:textSize="@dimen/text_size_xsmall"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/propertytype1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Independent floor"
+                            fontPath="fonts/FiraSans-Regular.ttf"
+                            android:textSize="@dimen/text_size" />
+
+                        <TextView
+                            android:id="@+id/bhk_floor_size1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            fontPath="fonts/FiraSans-Regular.ttf"
+                            android:text="2 BHK, 2nd Floor, 1100 SqFt"
+                            android:textSize="@dimen/text_size"
+                            />
+
+                        <TextView
+                            android:id="@+id/address1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="211, Sector 34, Gurugram, Haryana."
+                            android:textSize="@dimen/text_size"
+                            android:layout_marginBottom="@dimen/margin_15"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/margin_270"
+        android:visibility="visible"
+
+        android:elevation="@dimen/margin_10"
+        android:background="@drawable/cardview_gradient"
+        >
+        <ImageView
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            app:srcCompat="@drawable/share_icon_gray" />
+        <LinearLayout
+            android:id="@+id/info_layout"
+            android:layout_below="@+id/share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/rupee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/rs"
+                        fontPath="fonts/FiraSans-Bold.ttf"
+                        android:gravity="top"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_xlarge"
+                        />
+
+                    <TextView
+                        android:id="@+id/amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1.35"
+                        fontPath="fonts/FiraSans-Bold.ttf"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_xxxxlarge"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginRight="16dp"
+                        android:padding="@dimen/margin_3"
+                        android:text="Cr"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_xlarge"
+                        />
+
+                </LinearLayout>
+                <TextView
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:id="@+id/max_min_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="1.21Cr - 1.48Cr"
+                    android:textSize="@dimen/text_size_xsmall"
+                    />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:background="@color/view_color"
+                    />
+
+                <TextView
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:id="@+id/bsp_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="BSP 5600 psf"
+                    android:textSize="@dimen/text_size_xsmall"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_15"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/propertytype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Independent floor"
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:textSize="@dimen/text_size" />
+
+                <TextView
+                    android:id="@+id/bhk_floor_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:text="2 BHK, 2nd Floor, 1100 SqFt"
+                    android:textSize="@dimen/text_size"
+                    />
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="211, Sector 34, Gurugram, Haryana."
+                    android:textSize="@dimen/text_size"
+                    />
+                <View
+                    android:id="@+id/view_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginRight="@dimen/margin_5"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/view_color"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/notify_feedback_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/info_layout"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginRight="@dimen/margin_15"
+            android:gravity="center"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <TextView
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:id="@+id/notify"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gray_outline_wite_rectangle"
+                android:text="@string/notify_price_change"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size_small"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/margin_5"
+                />
+            <TextView
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:id="@+id/btn_feedback"
+                android:layout_width="0dp"
+                android:layout_weight=".5"
+                android:layout_height="match_parent"
+                android:background="@drawable/gray_outline_wite_rectangle"
+                android:text="@string/feedback"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:textColor="@color/dark_red"
+                android:textSize="@dimen/text_size_small"
+                />
+        </LinearLayout>
+    </RelativeLayout> </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</layout>
+
+
+
+
+

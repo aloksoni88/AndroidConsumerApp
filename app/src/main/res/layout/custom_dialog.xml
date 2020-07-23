@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:minWidth="@dimen/margin_150">
+
+    <LinearLayout
+        android:id="@+id/normal_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:textColor="@android:color/black"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:textSize="@dimen/text_size"
+            />
+
+
+        <TextView
+            android:id="@+id/txt_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:text="Do you realy want to exit ?"
+            fontPath="fonts/FiraSans-Light.ttf"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_small"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_8" >
+
+
+
+            <Button
+                android:id="@+id/btn_negative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/margin_30"
+                android:clickable="true"
+                android:background="@drawable/custom_dialog_btn_bg"
+                android:visibility="gone"
+                android:text="@string/cancel"
+                android:gravity="center"
+                android:textColor="@color/gray_600"
+                android:textSize="@dimen/text_size"
+                android:paddingLeft="@dimen/margin_8"
+                android:paddingRight="@dimen/margin_8"
+                 />
+
+
+            <Button
+                android:id="@+id/btn_positive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/margin_30"
+                android:background="@drawable/custom_dialog_btn_bg"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:clickable="true"
+                android:visibility="gone"
+                android:gravity="center"
+                android:text="@string/ok"
+                android:paddingLeft="@dimen/margin_12"
+                android:paddingRight="@dimen/margin_12"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_article_fragment_layout">
+
+    <data>
+        <variable
+            name="articleModel"
+            type="com.clicbrics.consumer.viewmodel.ArticleViewModel"/>
+    </data>
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/light_white">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                android:contentInsetEnd="0dp"
+                android:contentInsetLeft="0dp"
+                android:contentInsetRight="0dp"
+                android:contentInsetStart="0dp"
+                android:gravity="center"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:gravity="center_vertical"
+                        android:text="Blogs"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color_login_reg"
+                        android:textSize="20sp"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_300"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/id_article_view_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_weight="1"
+                android:id="@+id/article_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:id="@+id/id_next_page_loader_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_200"
+                android:gravity="center"
+                android:padding="@dimen/margin_15"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/id_layout_list_image_pb"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/progressbar_theme_color"
+                    android:indeterminateDrawable="@drawable/progress_bg"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:textColor="@color/gray_800"
+                    android:layout_marginLeft="@dimen/margin_3"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/loading_blogs"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/id_shimmer_layout"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.clicbrics.consumer.customview.ThreeTwoImageView
+                    android:id="@+id/cover_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder" />
+
+                <include layout="@layout/shimmer_layout_news" />
+
+                <include layout="@layout/shimmer_layout_news" />
+
+                <include layout="@layout/shimmer_layout_news" />
+
+                <include layout="@layout/shimmer_layout_news" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+        <include
+            android:id="@+id/id_no_internet_layout"
+            layout="@layout/activity_no_internet"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/id_progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/carousal_map_overlay_color">
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:id="@+id/progressBar"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/cicular_progress"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

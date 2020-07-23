@@ -1,0 +1,44 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.clicbrics.consumer.fragment.PaymentPlanFragment"
+    tools:ignore="MissingPrefix"
+    tools:showIn="@layout/activity_plan_payment"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:descendantFocusability="blocksDescendants">
+
+            <TextView
+                android:id="@+id/payment_plan_description"
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_large" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/listView_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/detail_horizontal_margin"
+                android:layout_marginRight="@dimen/detail_horizontal_margin"
+                android:divider="@null"
+                android:scrollbars="none"
+                />
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

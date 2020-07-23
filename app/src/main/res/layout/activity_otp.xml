@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/id_otp_toolbar"
+            fontPath="fonts/FiraSans-Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:titleTextColor="@color/text_color_login_reg"
+            app:title="@string/verification_code"/>
+
+    </android.support.design.widget.AppBarLayout>
+    <TextView
+        android:id="@+id/otpMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_30"
+        android:layout_marginLeft="@dimen/margin_30"
+        android:layout_marginRight="@dimen/margin_30"
+        android:layout_marginStart="@dimen/margin_30"
+        android:layout_marginTop="@dimen/margin_15"
+        android:text="@string/otp_msg"
+        android:textColor="@color/text_color_login_reg"
+        android:textSize="@dimen/text_size_large" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_30"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.clicbrics.consumer.customview.PinEntryView
+                android:id="@+id/pin_entry_border"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:digitTextColor="@color/text_color_login_reg"
+                app:accentType="character"
+                app:digitBackground="@drawable/otp_edittext_bg"
+                app:digitTextSize="@dimen/text_size_xxlarge"
+                app:mask=""
+                app:pinInputType="number"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_5"
+            android:layout_gravity="left"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginTop="@dimen/margin_20"
+                android:id="@+id/id_resend_code"
+                android:minHeight="@dimen/margin_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resend_code"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:background="@drawable/red_btn_bg"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:layout_marginRight="@dimen/margin_5"
+                android:layout_marginTop="@dimen/margin_20"
+                android:id="@+id/id_otp_resend_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="30 Sec"
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="@dimen/text_size_large" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

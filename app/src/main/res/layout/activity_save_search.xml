@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/id_activity_saved_search"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    android:fitsSystemWindows="true"
+    tools:context="com.clicbrics.consumer.view.activity.SaveSearchActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/id_app_barlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_white">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:contentInsetEnd="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            android:gravity="center"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--<ImageView
+                    android:id="@+id/drawer_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:src="@drawable/ic_menu" />-->
+
+                <TextView
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="center_vertical"
+                    android:text="SAVED SEARCHES"
+                    android:textColor="@color/text_color_login_reg"
+                    android:textSize="20sp"
+                    tools:ignore="MissingPrefix" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <TextView
+        android:id="@+id/id_saved_search_count"
+        fontPath="fonts/FiraSans-Medium.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:text="Searches"
+        android:gravity="center"
+        android:textColor="@color/text_color_login_reg"
+        tools:ignore="MissingPrefix" />
+
+        <com.baoyz.swipemenulistview.SwipeMenuListView
+            android:id="@+id/listView"
+            android:layout_below="@+id/id_saved_search_count"
+            android:dividerHeight="1px"
+            android:divider="@color/gray_400"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:id="@+id/id_empty_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_no_save_search_icon"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_5"
+                android:textAllCaps="true"
+                android:textColor="#979797"
+                android:textSize="@dimen/text_size"
+                android:text="No saved search found"/>
+        </LinearLayout>
+</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

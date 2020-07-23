@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/activity_blog_content_webview"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.clicbrics.consumer.activities.BlogContentWebviewActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/id_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:paddingLeft="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@null"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/id_blog_content_toolbar"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:background="@color/overlay_color2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="">
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/id_blog_content_webview_title"
+                      fontPath="fonts/FiraSans-Light.ttf"
+                      android:maxLines="2"
+                      android:ellipsize="end"
+                      android:layout_marginRight="@dimen/margin_3"
+                      android:textColor="@color/colorWhite"
+                      android:textSize="20sp"
+                      android:gravity="center_vertical" tools:ignore="MissingPrefix"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <WebView android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_below="@id/id_appbar"
+            android:id="@+id/id_content">
+    </WebView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/blogcontent_webview_progress"
+        android:background="@drawable/progress_bg"
+        android:indeterminateDrawable="@drawable/progress_bg"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+    />
+
+</RelativeLayout>

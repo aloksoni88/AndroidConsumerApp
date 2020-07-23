@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_service_req_history_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash">
+
+    <TextView
+        android:id="@+id/id_all_req_title"
+        fontPath="fonts/FiraSans-Medium.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/margin_10"
+        android:text="All Service Requests"
+        android:textColor="@color/text_color_login_reg"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="bold"
+        android:visibility="visible"
+        tools:ignore="MissingPrefix" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/id_new_service_req_btn"
+        android:layout_below="@+id/id_all_req_title"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/id_servicereq_history_fragment_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@+id/id_req_history_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/progressbar_theme_color"
+            android:indeterminateDrawable="@drawable/progress_bg"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/empty_view_req_history"
+        fontPath="fonts/FiraSans-Light.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No Service Request raised!"
+        android:textColor="@color/text_color_login_reg"
+        android:textSize="@dimen/text_size_large"
+        android:visibility="gone"
+        tools:ignore="MissingPrefix" />
+
+    <Button
+        android:id="@+id/id_new_service_req_btn"
+        fontPath="fonts/FiraSans-SemiBold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/continue_button_selector"
+        android:padding="@dimen/margin_10"
+        android:text="New Service Request"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_small"
+        tools:ignore="MissingPrefix" />
+
+</RelativeLayout>

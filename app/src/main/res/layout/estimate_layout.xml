@@ -1,0 +1,141 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="item"
+            type="com.clicbrics.consumer.clicworth.EstimatedPropertyViewModel" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fragment_color"
+        tools:ignore="MissingPrefix">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentInsetStart="0dp"
+                android:contentInsetLeft="0dp"
+                android:contentInsetEnd="0dp"
+                android:contentInsetRight="0dp"
+                android:gravity="center"
+                app:contentInsetEnd="0dp"
+                app:contentInsetLeft="0dp"
+                app:contentInsetRight="0dp"
+                app:contentInsetStart="0dp">
+
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="?android:attr/actionBarSize"
+                        android:gravity="center_vertical"
+                        android:text="@string/clicworth"
+                        android:textAllCaps="true"
+                        android:textColor="@color/text_color_login_reg"
+                        android:textSize="20sp"
+                        tools:ignore="MissingPrefix" />
+
+                </LinearLayout>
+    -->
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/header"
+                layout="@layout/common_header" />
+
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/id_affordability_cordlayout"
+                android:elevation="@dimen/margin_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_3"
+                android:background="@color/fragment_color"
+                android:scrollbars="none"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingRight="@dimen/margin_10"
+                        android:paddingBottom="@dimen/margin_10">
+
+                        <include
+                            android:id="@+id/id_notify_layout"
+                            layout="@layout/notify_feedback_cardview" />
+
+
+                        <include
+                            android:id="@+id/explore_layout"
+                            layout="@layout/explore_layout_old"
+                            tools:ignore="IncludeLayoutParam" />
+
+                        <include
+                            android:id="@+id/id_affordability_layout"
+                            layout="@layout/affordability_layout"
+                            tools:ignore="IncludeLayoutParam" />
+
+                        <TextView
+                            android:id="@+id/simialr_property_text"
+                            fontPath="fonts/FiraSans-Bold.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/margin_1"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_marginRight="@dimen/margin_15"
+                            android:layout_marginBottom="@dimen/margin_3"
+                            android:text="@string/similar_properties"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_large"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/share_image"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/home_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/simialr_property_text"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

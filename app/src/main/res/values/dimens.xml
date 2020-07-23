@@ -1,0 +1,104 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="property_criteria_count_text_margin">10sp</dimen>
+    <dimen name="property_criteria_text_margin">10sp</dimen>
+    <item name="floatinghintedittext_hint_scale" format="float" type="dimen">0.6</item>
+    <item name="floatinghintedittext_animation_steps" format="integer" type="dimen">6</item>
+
+    <dimen name="text_size_xxxxsmall">4sp</dimen>
+    <dimen name="text_size_xxxsmall">6sp</dimen>
+    <dimen name="text_size_xxsmall">8sp</dimen>
+    <dimen name="text_size_xsmall">10sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_smaller">13sp</dimen>
+    <dimen name="text_size">14sp</dimen>
+    <dimen name="text_size15">15sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_xlarge">18sp</dimen>
+    <dimen name="text_size_xxlarge">21sp</dimen>
+    <dimen name="text_size_xxxlarge">25sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+    <dimen name="text_size_35">35sp</dimen>
+    <dimen name="text_size_xxxxlarge">40sp</dimen>
+    <dimen name="custom_profile_image">50dp</dimen>
+    <dimen name="custom_profile_padding">2dp</dimen>
+    <dimen name="margin_1">1dip</dimen>
+    <dimen name="margin_2">2dip</dimen>
+    <dimen name="margin_3">3dip</dimen>
+    <dimen name="margin_4">4dip</dimen>
+    <dimen name="margin_5">5dip</dimen>
+    <dimen name="margin_6">6dip</dimen>
+    <dimen name="margin_7">6dip</dimen>
+    <dimen name="margin_8">8dip</dimen>
+    <dimen name="margin_9">9dip</dimen>
+    <dimen name="margin_10">10dip</dimen>
+    <dimen name="margin_15">15dip</dimen>
+    <dimen name="margin_20">20dip</dimen>
+    <dimen name="margin_22">22dip</dimen>
+    <dimen name="margin_25">25dip</dimen>
+    <dimen name="margin_30">30dip</dimen>
+    <dimen name="margin_32">32dip</dimen>
+    <dimen name="smiley_top">30dip</dimen>
+    <dimen name="margin_35">35dip</dimen>
+    <dimen name="margin_40">40dip</dimen>
+    <dimen name="margin_43">43dip</dimen>
+    <dimen name="margin_45">45dip</dimen>
+    <dimen name="margin_47">47dip</dimen>
+    <dimen name="margin_50">50dip</dimen>
+    <dimen name="margin_55">55dip</dimen>
+    <dimen name="margin_60">60dip</dimen>
+    <dimen name="margin_70">70dip</dimen>
+    <dimen name="margin_80">80dip</dimen>
+    <dimen name="margin_85">85dip</dimen>
+    <dimen name="margin_90">90dip</dimen>
+    <dimen name="margin_95">95dip</dimen>
+    <dimen name="margin_114">114dip</dimen>
+    <dimen name="margin_120">120dip</dimen>
+    <dimen name="margin_130">130dip</dimen>
+    <dimen name="margin_140">140dip</dimen>
+    <dimen name="margin_145">145dip</dimen>
+    <dimen name="margin_148">150dip</dimen>
+    <dimen name="margin_150">150dip</dimen>
+    <dimen name="progressbar_top_margin">144dip</dimen>
+    <dimen name="margin_150_minus">-150dip</dimen>
+    <dimen name="margin_200">200dip</dimen>
+    <dimen name="margin_100">100dip</dimen>
+    <dimen name="margin_220">220dip</dimen>
+    <dimen name="margin_230">230dip</dimen>
+    <dimen name="margin_240">240dip</dimen>
+    <dimen name="margin_245">245dip</dimen>
+    <dimen name="margin_250">250dip</dimen>
+    <dimen name="margin_270">270dip</dimen>
+    <dimen name="margin_280">280dip</dimen>
+    <dimen name="margin_300">300dip</dimen>
+    <bool name="isTablet">false</bool>
+    <integer name="screen_width">0</integer>
+    <dimen name="recyclerviewHeight">150dip</dimen>
+    <dimen name="margin_36">36dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+    <dimen name="fab_margin_bottom">10dp</dimen>
+
+    <dimen name="budget_font_size">20sp</dimen>
+    <dimen name="cover_width">120dp</dimen>
+    <dimen name="cover_height">180dp</dimen>
+    <dimen name="button_height">48dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+
+    <dimen name="cpb_stroke_width">4dp</dimen>
+    <dimen name="nav_drawer_margin">3dip</dimen>
+    <!--<dimen name="nav_drawer_textsize">20sp</dimen>-->
+    <dimen name="nav_drawer_textsize">20sp</dimen>
+    <dimen name="support_activity_image_layout_height">190dp</dimen>
+    <dimen name="layout_cardview_width">260dp</dimen>
+    <dimen name="recent_search_textsize">18sp</dimen>
+    <dimen name="search_result_textsize">18sp</dimen>
+    <dimen name="item_layout_width">250dp</dimen>
+    <dimen name="item_layout_height">180dp</dimen>
+    <dimen name="default_thumb_size">15dp</dimen>
+</resources>
+

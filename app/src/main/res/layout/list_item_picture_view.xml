@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/splash"
+    android:id="@+id/id_list_item_picture_view">
+
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:layout_centerInParent="true"
+                 android:layout_below="@id/id_app_barlayout">
+
+        <com.clicbrics.consumer.customview.TouchImageView
+            android:id="@+id/id_picture_view"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:src="@drawable/placeholder"
+            android:layout_height="match_parent"
+        />
+
+        <ImageView
+            android:id="@+id/id_video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#4A000000"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:scaleType="center"
+            android:src="@drawable/ic_play_circle_outline_white_48dp"
+            android:visibility="gone"/>
+        <ProgressBar
+            android:id="@+id/id_imageloading_progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/progressbar_theme_color"
+            android:indeterminateDrawable="@drawable/progress_bg"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</RelativeLayout>

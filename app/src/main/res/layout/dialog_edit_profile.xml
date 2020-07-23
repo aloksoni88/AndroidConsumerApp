@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/margin_10"
+    android:layout_marginRight="@dimen/margin_10"
+    android:layout_marginBottom="@dimen/margin_10">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_account"
+        fontPath="fonts/FiraSans-Medium.ttf"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_xlarge"
+        android:layout_gravity="left"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_10"
+        tools:ignore="MissingPrefix"/>
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/password"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"/>-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/title_icon"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:background="@drawable/edit_profile_pass_bg"
+        android:gravity="left"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/confirmPassword"
+            fontPath="fonts/FiraSans-Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:textSize="14sp"
+            android:hint="@string/password"
+            android:imeActionId="@+id/login"
+            android:imeActionLabel="@string/login"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_600"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp" tools:ignore="MissingPrefix"/>
+
+    <!--<EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edit_text_yellow"
+        android:inputType="textPassword"
+        android:textColor="@color/black"
+        android:maxLines="1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:textCursorDrawable="@drawable/edittext_cursor_color"
+        android:layout_marginRight="10dp" />-->
+    <ProgressBar
+        style="?android:attr/progressBarStyleSmall"
+        android:background="@drawable/progressbar_gray_color"
+        android:indeterminateDrawable="@drawable/progress_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="25dp"
+        android:visibility="gone"
+        android:id="@+id/progressBar" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/invalidPasswordTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/invalid_password"
+        android:textSize="14sp"
+        android:textColor="@color/red_dark"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/forgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot password/ Don't have password?"
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:textColor="@color/black"
+        android:clickable="true"
+        android:textSize="12sp"
+        android:onClick="onClickForgotPassword"
+        android:layout_marginTop="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_10"/>
+
+    <RelativeLayout android:layout_width="265dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:gravity="right"
+        android:layout_marginTop="@dimen/margin_15">
+        <TextView
+            android:id="@+id/cancelaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:text="@string/cancel"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:layout_marginRight="@dimen/margin_30"
+            android:textColor="@drawable/button_red_selector"
+            android:background="@drawable/edit_profile_dialog_button_selector_bg"
+            android:clickable="true"
+            android:onClick="cancel"/>
+
+        <TextView
+            android:id="@+id/submitaction"
+            android:layout_toRightOf="@id/cancelaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:text="@string/ok"
+            android:textColor="@drawable/button_red_selector"
+            android:background="@drawable/edit_profile_dialog_button_selector_bg"
+            android:textStyle="bold"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:clickable="true"
+            android:onClick="submit"/>
+    </RelativeLayout>
+</LinearLayout>

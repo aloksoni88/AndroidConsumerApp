@@ -1,0 +1,154 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/city_list_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/city_list_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/splash_background_layer_list"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageButton
+                android:id="@+id/backbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:background="@null"
+                android:padding="@dimen/margin_3"
+                app:srcCompat="@drawable/ic_back_arrow" />
+        <TextView
+            fontPath="fonts/FiraSans-Light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/let_s_pick_a_city"
+            android:textColor="@color/text_color_login_reg"
+            android:textSize="28sp" />
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/search_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:background="@drawable/edittext_grayborder"
+            android:weightSum="1">
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="0dp"
+                android:layout_weight=".10"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_3"
+                android:layout_gravity="center"
+                android:src="@drawable/search_icon"
+                android:visibility="visible" />
+            <EditText
+                android:id="@+id/citysearch"
+                fontPath="fonts/FiraSans-Light.ttf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_weight=".75"
+                android:background="@android:color/transparent"
+                android:drawableTint="@color/black"
+                android:ellipsize="end"
+                android:paddingTop="@dimen/margin_3"
+                android:paddingBottom="@dimen/margin_3"
+                android:gravity="center_vertical"
+                android:hint="@string/select_city"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_600"
+                android:textSize="@dimen/text_size_small">
+
+                <requestFocus />
+            </EditText>
+
+
+                <ImageView
+                    android:id="@+id/id_cancel_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight=".15"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_3"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/ic_round_cancel" />
+
+        </LinearLayout>
+        <!--LinearLayout
+            android:id="@+id/current_location_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="8dp"
+            android:paddingTop="@dimen/activity_horizontal_margin"-->
+
+            <Button
+                android:id="@+id/use_current_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/current_location_drawable_selector"
+                android:drawableStart="@drawable/current_location_drawable_selector"
+                android:background="@color/transparent"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@drawable/text_selector_darkgray"
+                android:text="@string/use_my_current_location"
+                android:textSize="20sp"
+                android:drawablePadding="@dimen/activity_horizontal_margin"
+                android:elevation="0dp"
+                fontPath="fonts/FiraSans-Book.ttf"/>
+
+        <!--/LinearLayout-->
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="#AA999999" />
+
+        <ListView
+            android:id="@+id/list_pick_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_weight="1"
+            android:choiceMode="singleChoice"
+            android:divider="@null" />
+
+        <TextView
+            android:id="@+id/city_declaration"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:autoLink="email"
+            android:text="@string/city_availability_declaration"
+            android:textColorLink="@color/text_color_login_reg"
+            android:gravity="center"
+            android:textColor="@color/gray_700" />
+    </LinearLayout>
+
+</FrameLayout>

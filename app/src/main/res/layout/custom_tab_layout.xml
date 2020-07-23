@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_tab_icon"
+        android:layout_gravity="center"
+        android:src="@drawable/favorite_tab_icon"/>
+    <TextView
+        android:id="@+id/id_tab_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:textColor="@color/gray_200"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:layout_gravity="center"
+        android:textSize="@dimen/text_size_xsmall"
+        fontPath="fonts/FiraSans-Light.ttf"
+        android:text="@string/wishlist"/>
+</LinearLayout>

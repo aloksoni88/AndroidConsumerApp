@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/margin_8"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/margin_8">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/margin_2"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/id_property_count"
+            fontPath="fonts/FiraSans-SemiBold.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Properties"
+            android:textColor="@color/gray_800"
+            android:textSize="@dimen/margin_10" />
+        <TextView
+            android:id="@+id/id_polygon_msg"
+            fontPath="fonts/FiraSans-Regular.ttf"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(Inside Selected Area)"
+            android:textColor="@color/black"
+            android:textSize="@dimen/margin_10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/id_filter_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filter_rect_bg_gray"
+            android:paddingBottom="@dimen/margin_3"
+            android:paddingRight="@dimen/margin_5">
+
+            <ImageView
+                android:id="@+id/id_filter_img"
+                android:layout_width="@dimen/margin_15"
+                android:layout_height="@dimen/margin_15"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:padding="@dimen/margin_3"
+                android:src="@drawable/ic_filter_gray" />
+
+            <TextView
+                android:id="@+id/id_filter_view"
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/id_filter_img"
+                android:drawableTint="@color/gray_800"
+                android:text="Filter"
+                android:textColor="@color/gray_800"
+                android:textSize="@dimen/margin_8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/id_sort_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_3"
+            android:layout_marginRight="@dimen/margin_3"
+            android:background="@drawable/filter_rect_bg_gray"
+            android:paddingBottom="@dimen/margin_3"
+            android:paddingRight="@dimen/margin_5">
+
+            <ImageView
+                android:id="@+id/id_sort_img"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_15"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_2"
+                android:padding="@dimen/margin_3"
+                android:src="@drawable/ic_sort_gray"
+
+
+                />
+
+            <TextView
+                android:id="@+id/id_sort_text"
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/id_sort_img"
+                android:drawableTint="@color/gray_800"
+                android:text="Sort"
+                android:textColor="@color/gray_800"
+                android:textSize="@dimen/margin_8" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/id_saved_search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_3"
+            android:background="@drawable/filter_rect_bg_gray"
+            android:paddingBottom="@dimen/margin_3"
+            android:paddingRight="@dimen/margin_5">
+
+            <ImageView
+                android:id="@+id/id_saved_search_img"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_15"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/margin_3"
+                android:src="@drawable/ic_save_search_gray" />
+
+            <TextView
+                android:id="@+id/id_save_search_text"
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/id_saved_search_img"
+                android:drawableTint="@color/gray_800"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Save Search"
+                android:textColor="@color/gray_800"
+                android:textSize="@dimen/margin_8" />
+        </RelativeLayout>
+
+        <TextView
+            fontPath="fonts/FiraSans-Book.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_3"
+            android:layout_marginRight="@dimen/margin_3"
+            android:background="@drawable/filter_rect_bg_gray"
+            android:drawablePadding="@dimen/margin_3"
+            android:drawableStart="@drawable/ic_sort_gray"
+            android:drawableTint="@color/gray_800"
+            android:paddingBottom="@dimen/margin_3"
+            android:paddingLeft="@dimen/margin_5"
+            android:paddingRight="@dimen/margin_5"
+            android:paddingTop="@dimen/margin_3"
+            android:text="Sort"
+            android:textColor="@color/gray_800"
+            android:textSize="@dimen/margin_8"
+            android:visibility="gone" />
+
+        <TextView
+
+            fontPath="fonts/FiraSans-Book.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/filter_rect_bg_gray"
+            android:drawablePadding="@dimen/margin_3"
+            android:drawableStart="@drawable/ic_save_search_gray"
+            android:drawableTint="@color/gray_800"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/margin_3"
+            android:paddingLeft="@dimen/margin_5"
+            android:paddingRight="@dimen/margin_5"
+            android:paddingTop="@dimen/margin_3"
+            android:text="Save Search"
+            android:textColor="@color/gray_800"
+            android:textSize="@dimen/margin_8"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

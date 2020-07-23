@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="?android:colorControlHighlight"
+    tools:ignore="NewApi">
+    <item>
+<shape
+    android:shape="rectangle">
+    <solid android:color="@color/white"/>
+    <stroke android:color="@color/notification_header_gray"
+        android:width="1dip"/>
+    <padding android:bottom="@dimen/margin_5"
+        android:top="@dimen/margin_5"
+        android:left="@dimen/margin_3"
+        android:right="@dimen/margin_3"/>
+
+</shape>
+    </item>
+</ripple>

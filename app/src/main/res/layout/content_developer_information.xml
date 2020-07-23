@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/detail_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/detail_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/developer_txt"
+        fontPath="fonts/FiraSans-Book.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Developer"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/id_dev_image_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/developer_txt"
+            android:layout_marginRight="12dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:background="@drawable/white_border_bg"
+                android:padding="@dimen/margin_3">
+
+                <ImageView
+                    android:id="@+id/img_builder_logo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/id_devlogo_pb"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="@dimen/margin_5"
+                android:background="@drawable/progressbar_theme_color"
+                android:indeterminateDrawable="@drawable/progress_bg"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_builder_name"
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/id_dev_image_panel"
+                android:layout_toRightOf="@id/id_dev_image_panel"
+                android:gravity="right|start"
+                android:textColor="@color/gray_800"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/experience"
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_builder_name"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/id_dev_image_panel"
+                android:gravity="right|start"
+                android:textColor="@color/gray_600"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/year_s"
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/experience"
+                android:layout_toRightOf="@id/experience"
+                android:text="years "
+                android:textColor="@color/gray_600"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/year_s"
+                android:layout_toRightOf="@id/year_s"
+                android:text="@string/experience"
+                android:textColor="@color/gray_600"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/total_count"
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/experience"
+
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/id_dev_image_panel"
+                android:gravity="left"
+                android:textColor="@color/gray_600"
+                android:textSize="12sp" />
+
+            <TextView
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/experience"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/total_count"
+                android:gravity="left"
+                android:text="@string/total_projects"
+                android:textColor="@color/gray_600"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/ongoing_count"
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_count"
+
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/id_dev_image_panel"
+                android:gravity="left"
+                android:textColor="@color/gray_600"
+                android:textSize="12sp" />
+
+            <TextView
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_count"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/ongoing_count"
+                android:gravity="left"
+                android:text="@string/ongoing_projects"
+                android:textColor="@color/gray_600"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/summary"
+        fontPath="fonts/FiraSans-Book.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_dev_image_panel"
+        android:layout_marginTop="@dimen/margin_10"
+        android:textColor="@color/gray_600"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/read_more_developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/summary"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:src="@drawable/ic_arrow_down_36dp"
+        android:visibility="gone" />
+</LinearLayout>

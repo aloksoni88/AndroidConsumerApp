@@ -1,0 +1,269 @@
+{
+  "project_info": {
+    "project_number": "528746003799",
+    "firebase_url": "https://housingtestserver.firebaseio.com",
+    "project_id": "housingtestserver",
+    "storage_bucket": "housingtestserver.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528746003799:android:c35a02c0d6b91c44",
+        "android_client_info": {
+          "package_name": "com.buy.home.housing.agentonboard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528746003799-bkskhrrri4fe6smveetcrcl2i9k66p03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOZq0JnyG4Du0OKsP7JjC7sGwJe3v2O0s"
+        },
+        {
+          "current_key": "AIzaSyB5QH3ATr8P_8hVZ1W8pwOEmgQk_huZITY"
+        },
+        {
+          "current_key": "AIzaSyDYPm0sUZSZ7ZXeZ8yrWtGlD2w3HJ1pL7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528746003799-bkskhrrri4fe6smveetcrcl2i9k66p03.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "528746003799-08lvqt4soccs2i4c3g7q9vo88530u8bu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.redbrics.ClicMaster",
+                "app_store_id": "1466050558"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528746003799:android:7745089b944fac32",
+        "android_client_info": {
+          "package_name": "com.clicbrics.callmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528746003799-bkskhrrri4fe6smveetcrcl2i9k66p03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOZq0JnyG4Du0OKsP7JjC7sGwJe3v2O0s"
+        },
+        {
+          "current_key": "AIzaSyB5QH3ATr8P_8hVZ1W8pwOEmgQk_huZITY"
+        },
+        {
+          "current_key": "AIzaSyDYPm0sUZSZ7ZXeZ8yrWtGlD2w3HJ1pL7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528746003799-bkskhrrri4fe6smveetcrcl2i9k66p03.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "528746003799-08lvqt4soccs2i4c3g7q9vo88530u8bu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.redbrics.ClicMaster",
+                "app_store_id": "1466050558"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528746003799:android:b9143dd3cb67aba2",
+        "android_client_info": {
+          "package_name": "com.clicbrics.consumer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528746003799-bkskhrrri4fe6smveetcrcl2i9k66p03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOZq0JnyG4Du0OKsP7JjC7sGwJe3v2O0s"
+        },
+        {
+          "current_key": "AIzaSyB5QH3ATr8P_8hVZ1W8pwOEmgQk_huZITY"
+        },
+        {
+          "current_key": "AIzaSyDYPm0sUZSZ7ZXeZ8yrWtGlD2w3HJ1pL7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528746003799-bkskhrrri4fe6smveetcrcl2i9k66p03.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "528746003799-08lvqt4soccs2i4c3g7q9vo88530u8bu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.redbrics.ClicMaster",
+                "app_store_id": "1466050558"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528746003799:android:193b5b6dd84cce36",
+        "android_client_info": {
+          "package_name": "com.clicbrics.propmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528746003799-bkskhrrri4fe6smveetcrcl2i9k66p03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOZq0JnyG4Du0OKsP7JjC7sGwJe3v2O0s"
+        },
+        {
+          "current_key": "AIzaSyB5QH3ATr8P_8hVZ1W8pwOEmgQk_huZITY"
+        },
+        {
+          "current_key": "AIzaSyDYPm0sUZSZ7ZXeZ8yrWtGlD2w3HJ1pL7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528746003799-bkskhrrri4fe6smveetcrcl2i9k66p03.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "528746003799-08lvqt4soccs2i4c3g7q9vo88530u8bu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.redbrics.ClicMaster",
+                "app_store_id": "1466050558"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528746003799:android:ce98315d14172344",
+        "android_client_info": {
+          "package_name": "com.redbrics.propmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528746003799-bkskhrrri4fe6smveetcrcl2i9k66p03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOZq0JnyG4Du0OKsP7JjC7sGwJe3v2O0s"
+        },
+        {
+          "current_key": "AIzaSyB5QH3ATr8P_8hVZ1W8pwOEmgQk_huZITY"
+        },
+        {
+          "current_key": "AIzaSyDYPm0sUZSZ7ZXeZ8yrWtGlD2w3HJ1pL7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528746003799-bkskhrrri4fe6smveetcrcl2i9k66p03.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "528746003799-08lvqt4soccs2i4c3g7q9vo88530u8bu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.redbrics.ClicMaster",
+                "app_store_id": "1466050558"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:528746003799:android:937f454388cd1acc",
+        "android_client_info": {
+          "package_name": "connect.clicbrics.alpha"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "528746003799-bkskhrrri4fe6smveetcrcl2i9k66p03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOZq0JnyG4Du0OKsP7JjC7sGwJe3v2O0s"
+        },
+        {
+          "current_key": "AIzaSyB5QH3ATr8P_8hVZ1W8pwOEmgQk_huZITY"
+        },
+        {
+          "current_key": "AIzaSyDYPm0sUZSZ7ZXeZ8yrWtGlD2w3HJ1pL7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "528746003799-bkskhrrri4fe6smveetcrcl2i9k66p03.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "528746003799-08lvqt4soccs2i4c3g7q9vo88530u8bu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.redbrics.ClicMaster",
+                "app_store_id": "1466050558"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

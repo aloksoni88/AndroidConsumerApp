@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/splash">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        app:elevation="0dp">
+
+        <!--<android.support.v7.widget.Toolbar
+            android:id="@+id/registration_toolbar"
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            app:title="REGISTER"
+            android:titleTextColor="@color/white"
+            fontPath ="fonts/FiraSans-Medium.ttf"
+            android:layout_height="wrap_content"/>-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/registration_toolbar"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:contentInsetLeft="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetEnd="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetEnd="0dp"
+            android:layout_width="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_height="?android:attr/actionBarSize">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--<ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/drawer_logo" />-->
+                <ImageView
+                    android:id="@+id/id_back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:onClick="onDrawerIconClick"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_back_arrow" />
+                <TextView
+                    fontPath="fonts/FiraSans-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="REGISTER"
+                    android:textColor="@color/text_color_login_reg"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/login_horizontal_margin"
+            android:paddingRight="@dimen/login_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            tools:ignore="MissingPrefix">
+
+            <TextView
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="REGISTER"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/name"
+                android:inputType="textCapSentences"
+                android:maxLength="30"
+                android:textColorHint="@color/text_hint"
+                android:textColor="@color/text_color_login_reg"
+                android:windowSoftInputMode="adjustPan"
+                android:background="@drawable/login_screen_text_background"
+                android:minHeight="48dp"
+                android:layout_marginTop="@dimen/login_vertical_margin"
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:textSize="14sp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/editTextEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_screen_text_background"
+                android:ems="10"
+                android:hint="@string/email_id_hint"
+                android:textColor="@color/text_color_login_reg"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/text_hint"
+                android:textCursorDrawable="@drawable/edittext_cursor_color"
+                android:windowSoftInputMode="adjustPan"
+                android:minHeight="48dp"
+                android:layout_marginTop="@dimen/login_vertical_margin"
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:textSize="14sp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_screen_text_background"
+                android:orientation="horizontal"
+                android:minHeight="48dp"
+                android:layout_marginTop="@dimen/login_vertical_margin">
+
+                <TextView
+                    android:id="@+id/countryStdCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:clickable="true"
+                    android:onClick="showCountryList"
+                    android:paddingLeft="15dp"
+                    android:text="@string/country_code"
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:textSize="14sp"
+                    android:textColorHint="@color/text_hint"
+                    android:textColor="@color/text_color_login_reg"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/arrow_drop_down_black"
+                    android:clickable="true"
+                    android:onClick="showCountryList" />
+
+
+                <EditText
+                    android:id="@+id/phone_number_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:digits="0123456789"
+                    android:ems="10"
+                    android:hint="@string/phone_number"
+                    android:textColor="@color/text_color_login_reg"
+                    android:imeOptions="actionNext"
+                    android:inputType="phone"
+                    android:maxLength="12"
+                    android:layout_gravity="center_vertical"
+                    android:maxLines="1"
+                    android:textColorHint="@color/text_hint"
+                    android:windowSoftInputMode="adjustPan"
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:textSize="14sp"
+                    android:paddingRight="8dp"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/password_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_screen_text_background"
+                android:drawableRight="@drawable/ic_visibility_off_black_24dp"
+                android:ems="10"
+                android:hint="@string/password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:textCursorDrawable="@drawable/edittext_cursor_color"
+                android:windowSoftInputMode="adjustPan"
+                android:minHeight="48dp"
+                android:layout_marginTop="@dimen/login_vertical_margin"
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:textSize="14sp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColorHint="@color/text_hint"
+                android:textColor="@color/text_color_login_reg"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/activity_vertical_margin">
+
+                <ImageView
+                    android:id="@+id/error_tnc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_error_24dp"
+                    android:visibility="gone" />
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:button="@drawable/check_box_yellow_drawable"
+                    android:checked="false"
+                    android:focusable="true"
+                    android:textColor="@color/black"
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:textSize="14sp"
+                    android:text="@string/agree_terms_text" />
+
+                <TextView
+                    android:id="@+id/btnTnc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="doShowTnC"
+                    android:text="@string/terms_and_conditions"
+                    android:textColor="@drawable/price_on_request_text_selector"
+                    android:textStyle="bold"
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/margin_10"
+                android:background="@drawable/pick_time_btn_selector"
+                android:onClick="doRegistration"
+                android:text="SUBMIT"
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:textSize="14sp"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+            <include layout="@layout/fb_gp_btn_layout"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/login_vertical_margin"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

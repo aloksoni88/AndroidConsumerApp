@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_document_list_adapter"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_10"
+    android:background="@drawable/splash"
+    app:cardBackgroundColor="@color/gray_300"
+    app:cardCornerRadius="@dimen/margin_3"
+    app:cardElevation="@dimen/margin_2"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/aboutus_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_selector_bg_lightdark"
+        android:padding="@dimen/margin_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/id_doc_type_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/doc_type_doc_icon" />
+
+            <TextView
+                android:id="@+id/id_document_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@id/id_doc_type_icon"
+                android:text=""
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/id_document_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_document_name"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_toRightOf="@id/id_doc_type_icon"
+                android:text=""
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="@dimen/text_size" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_5"
+                android:layout_toRightOf="@id/id_document_text">
+
+                <ImageButton
+                    android:id="@+id/id_download_link_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/download_icon_selector_bg" />
+
+                <ProgressBar
+                    android:id="@+id/id_downloading_pbar"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/id_download_success_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_done_black"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

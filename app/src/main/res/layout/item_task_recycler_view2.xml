@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="40dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_5">
+
+        <View
+            android:id="@+id/vertical_connecting_upperline"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/id_circular_dot"
+            android:layout_centerHorizontal="true"
+            android:background="@color/gray_400" />
+
+        <ImageView
+            android:id="@+id/id_circular_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/circular_gray_dot_bg" />
+
+        <View
+            android:id="@+id/vertical_connecting_downline"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/id_circular_dot"
+            android:layout_centerHorizontal="true"
+            android:background="@color/gray_400" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/connector"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--<TextView
+            android:id="@+id/task_item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginBottom="@dimen/margin_4"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:text="8:50 PM 12 Dec, 2016"
+            android:textColor="@color/red_500"
+            android:textStyle="bold" />-->
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="@color/cardview_bg_color"
+            app:cardCornerRadius="@dimen/margin_3">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_10">
+
+                <TextView
+                    android:id="@+id/task_item_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_toLeftOf="@+id/task_item_status"
+                    android:text="12th Dec 2016"
+                    android:textColor="@color/text_color_login_reg"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/task_item_date_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/task_item_detail"
+                    android:layout_marginBottom="@dimen/margin_10"
+                    android:paddingTop="@dimen/margin_3"
+                    android:text="5:30 PM"
+                    android:textColor="@color/gray_600"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/task_item_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:paddingLeft="4dp"
+                    android:text="@string/reschedule"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorAccent"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <!--<TextView
+                android:id="@+id/task_item_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_4"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/margin_4"
+                android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />-->
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</LinearLayout>

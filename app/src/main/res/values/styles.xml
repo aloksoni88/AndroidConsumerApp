@@ -1,0 +1,238 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/background_color</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="coordinatorLayoutStyle">@style/Widget.Support.CoordinatorLayout</item>
+        <item name="android:colorControlHighlight">@color/gray_500</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="myEditText">
+        <item name="android:colorControlNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="LoginScreenActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--<item name="overlapAnchor">false</item>-->
+        <item name="android:itemBackground">@color/white</item>
+        <item name="android:textColor">@color/text_color_login_reg</item>
+    </style>
+
+
+    <style name="AppTheme.ProfileScreenAppBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="actionBarItemBackground">@color/transparent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!-- Transparent dialog -->
+    <style name="TransparentProgressDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="SelectableItemDarkBackground">
+        <item name="android:colorControlHighlight">@color/gray_600</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="SelectableItemMediumBackground">
+        <item name="android:colorControlHighlight">@color/gray_400</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="SelectableItemLightBackground">
+        <item name="android:colorControlHighlight">@color/gray_200</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+
+    <style name="BGTransparentPB" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="LinearProgress" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/theme</item>
+        <item name="android:progressBackgroundTint" tools:targetApi="lollipop">@color/transparent
+        </item>
+    </style>
+    <!--<style name="LinearProgress" parent="Theme.AppCompat.Light">-->
+    <!--<item name="colorAccent">@color/colorPrimary</item>-->
+    <!--<item name="android:progressBackgroundTint">@color/colorPrimaryDark</item>-->
+    <!--</style>-->
+
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/gray_500</item>
+        <item name="tabBackground">@color/white</item>
+        <item name="android:textColor">@color/gray_600</item>
+        <item name="tabIndicatorHeight">1dp</item>
+        <item name="android:textSize">10sp</item>
+        <item name="fontPath">fonts/FiraSans-Medium.ttf</item>
+        <item name="tabSelectedTextColor">@color/gray_800</item>
+    </style>
+
+    <!--style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/gray_600</item>
+        <item name="textAllCaps">true</item>
+    </style-->
+
+    <style name="MenuLabelsStyle">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/theme</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+    </style>
+
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/background_color</item>
+        <item name="colorPrimaryDark">#B5000000</item>
+    </style>
+
+    <style name="BigFontSizeTheme" parent="AppTheme.NoActionBar">
+        <item name="android:activatedBackgroundIndicator">@color/gray_200</item>
+        <item name="android:fontFamily" tools:targetApi="jelly_bean">FiraSans-Light.ttf</item>
+        <item name="android:layout_marginTop">@dimen/nav_drawer_margin</item>
+        <item name="android:layout_marginBottom">@dimen/nav_drawer_margin</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:checkableBehavior">single</item>
+        <item name="android:selectable">true</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:selectableItemBackground">@color/gray_200</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/nav_drawer_textsize</item>
+    </style>
+
+    <style name="SpinnerTextColorTheme" parent="android:Widget.TextView.SpinnerItem">
+        <item name="android:textAppearance">@style/TextAppearanceSpinnerItem</item>
+    </style>
+
+    <style name="TextAppearanceSpinnerItem" parent="android:TextAppearance.Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/gray_400</item>
+    </style>
+
+    <declare-styleable name="CircularProgressButton">
+        <attr name="cpb_selectorIdle" format="reference"/>
+        <attr name="cpb_selectorComplete" format="reference"/>
+        <attr name="cpb_selectorError" format="reference"/>
+        <attr name="cpb_textComplete" format="string"/>
+        <attr name="cpb_textIdle" format="string"/>
+        <attr name="cpb_textError" format="string"/>
+        <attr name="cpb_textProgress" format="string"/>
+        <attr name="cpb_colorProgress" format="color"/>
+        <attr name="cpb_colorIndicator" format="color"/>
+        <attr name="cpb_colorIndicatorBackground" format="color"/>
+        <attr name="cpb_iconError" format="reference"/>
+        <attr name="cpb_iconComplete" format="reference"/>
+        <attr name="cpb_cornerRadius" format="dimension"/>
+        <attr name="cpb_paddingProgress" format="dimension"/>
+    </declare-styleable>
+
+    <style name="fab_menu_labels_style">
+        <item name="android:background">@drawable/expandable_fab_label_drawable</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="fab_menu_labels_style_black">
+        <item name="android:background">@drawable/expandable_fab_label_drawable_black</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <declare-styleable name="StoriesProgressView">
+        <attr name="progressCount" format="integer|reference" />
+    </declare-styleable>
+
+
+    <style name="TabLayoutStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_size_xsmall</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+
+
+
+    <declare-styleable name="CustomSeekBar">
+        <attr name="dms_rotation">
+            <enum name="CW90" value="90" />
+            <enum name="CW270" value="270" />
+        </attr>
+        <attr name="dms_thumbSize" format="dimension"/>
+        <attr name="dms_thumbDrawable" format="reference"/>
+        <attr name="dms_outsideControl" format="boolean"/>
+        <attr name="dms_background" format="reference"/>
+        <attr name="dms_progressDrawable" format="reference"/>
+        <attr name="dms_isHideProgressInit" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="TopSeekBarView">
+        <attr name="dsbv_thumbSize" format="dimension"/>
+        <attr name="dsbv_thumbDrawable" format="reference"/>
+        <attr name="dsbv_progressColor" format="reference"/>
+        <attr name="dsbv_progressBackgroundColor" format="reference"/>
+        <attr name="dsbv_progressDrawable" format="reference"/>
+        <attr name="dsbv_infoSize" format="dimension"/>
+        <attr name="dsbv_infoTextSize" format="dimension"/>
+        <attr name="dsbv_infoTextColor" format="reference"/>
+        <attr name="dsbv_infoRadius" format="integer"/>
+        <attr name="dsbv_infoBackgroundColor" format="reference"/>
+        <attr name="dsbv_infoInitText" format="reference"/>
+        <attr name="dsbv_max" format="integer"/>
+        <attr name="dsbv_progress" format="integer"/>
+        <attr name="dsbv_isHideInfo" format="boolean"/>
+    </declare-styleable>
+
+
+    <style name="DialogTheme" parent="android:Theme.Dialog">
+
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <!-- No backgrounds, titles or window float -->
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+
+
+
+</resources>

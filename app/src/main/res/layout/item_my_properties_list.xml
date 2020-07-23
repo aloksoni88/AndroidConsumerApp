@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardPreventCornerOverlap="false"
+    tools:ignore="MissingPrefix">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/id_image_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        app:cardCornerRadius="@dimen/margin_4"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
+
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="@dimen/margin_140">
+        <ImageView
+            android:id="@+id/project_image_my_property"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_140"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder" />
+            <ProgressBar
+                android:id="@+id/id_myproperty_image_pb"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/progressbar_theme_color"
+                android:indeterminateDrawable="@drawable/progress_bg"
+                android:visibility="gone" />
+            <Button
+                android:id="@+id/booking_status_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_2"
+                android:minHeight="24dp"
+                android:maxHeight="24dp"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:visibility="gone"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="2dp"
+                android:layout_gravity="right"
+                android:text=""
+                android:layout_marginTop="@dimen/margin_12"
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:background="@drawable/booking_status_cancelled_btn_bg"/>
+        </FrameLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_140"
+            android:background="@drawable/scrim_bottom" />
+
+        <TextView
+            android:id="@+id/project_name_my_property"
+            fontPath="fonts/FiraSans-Book.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:padding="@dimen/margin_10"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_size_large" />
+    </android.support.v7.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/id_detail_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_image_cardview"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/paid_amount"
+                fontPath="fonts/FiraSans-Bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="16sp" />
+
+            <TextView
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/id_paid_amount_text"
+                android:text="@string/paid"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/due_amount"
+                fontPath="fonts/FiraSans-Bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="16sp" />
+
+            <TextView
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:id="@+id/id_pending_amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/pending"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/total_amount"
+                fontPath="fonts/FiraSans-Bold.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text=""
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="16sp" />
+
+            <TextView
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/id_total_amount_text"
+                android:text="@string/total"
+                android:textAllCaps="true"
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/property_description_my_property"
+        fontPath="fonts/FiraSans-Book.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_detail_panel"
+        android:layout_marginTop="@dimen/margin_10"
+        android:alpha="0.8"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/text_color_login_reg"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/property_address"
+        fontPath="fonts/FiraSans-Light.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/property_description_my_property"
+        android:layout_marginTop="@dimen/margin_7"
+        android:alpha="0.8"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/text_color_login_reg"
+        android:textSize="12sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_1"
+        android:layout_below="@+id/property_address"
+        android:layout_marginTop="@dimen/margin_15"
+        android:background="@color/gray_400" />
+
+</RelativeLayout>

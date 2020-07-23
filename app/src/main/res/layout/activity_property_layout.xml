@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/gray_100"
+    android:id="@+id/property_layout_root"
+    tools:context="com.clicbrics.consumer.activities.PropertyLayoutActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@color/colorAccent"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="@color/light_white">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/id_spinner_property_type_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <com.clicbrics.consumer.customview.DynamicWidthSpinner
+                        android:id="@+id/spinner_nav"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        fontPath="fonts/FiraSans-Medium.ttf"
+                        tools:ignore="MissingPrefix"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:id="@+id/id_title"
+                        android:textColor="@color/text_color_login_reg"
+                        android:textSize="@dimen/text_size"/>
+                    <ImageView
+                        android:id="@+id/id_drop_down_image"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/arrow_drop_down_black" />
+                </LinearLayout>
+            </FrameLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        android:id="@+id/layout_content"
+        layout="@layout/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
+
+    <Button
+        android:id="@+id/contact_btn_layout_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        fontPath="fonts/FiraSans-SemiBold.ttf"
+        android:background="@color/colorAccent"
+        android:textSize="16sp"
+        android:text="@string/contact_me"
+        app:layout_anchor="@id/layout_content"
+        app:layout_anchorGravity="bottom"
+        tools:ignore="MissingPrefix" />
+
+</android.support.design.widget.CoordinatorLayout>

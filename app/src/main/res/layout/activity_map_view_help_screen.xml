@@ -1,0 +1,267 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mapview_helpscreen_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/overlay_color"
+    android:orientation="vertical"
+    android:paddingTop="?android:attr/actionBarSize">
+
+    <include
+        android:id="@+id/id_criteria_layout"
+        layout="@layout/content_property_criteria_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="horizontal">
+
+            <TextView
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Tap to view list page"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size"
+                tools:ignore="MissingPrefix" />
+
+            <View
+                android:layout_width="@dimen/margin_7"
+                android:layout_height="@dimen/margin_7"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_7"
+                android:background="@drawable/circle_background" />
+
+            <View
+                android:layout_width="@dimen/margin_60"
+                android:layout_height="@dimen/margin_1"
+                android:layout_gravity="center_vertical"
+                android:background="@color/colorWhite" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fragment_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/image_list"
+                app:fabSize="normal" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+            <LinearLayout
+                android:id="@+id/id_floating_btn_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right|top"
+                android:orientation="vertical">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/draw_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/draw_icon"
+                    android:visibility="gone"
+                    app:backgroundTint="@color/colorWhite"
+                    app:fabSize="mini" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/current_location_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+
+                    android:src="@drawable/current_location1"
+                    app:backgroundTint="@color/colorWhite"
+                    app:fabSize="mini" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/layers_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/layers_icon"
+                    app:backgroundTint="@color/colorWhite"
+                    app:fabSize="mini" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:layout_toLeftOf="@id/id_floating_btn_layout"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/draw_icon"
+                        android:visibility="invisible"
+                        app:fabSize="mini" />
+
+                    <TextView
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/draw_polygun_shortcut"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size"
+                        tools:ignore="MissingPrefix" />
+
+                    <View
+                        android:layout_width="@dimen/margin_7"
+                        android:layout_height="@dimen/margin_7"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_7"
+                        android:background="@drawable/circle_background" />
+
+                    <View
+                        android:layout_width="@dimen/margin_60"
+                        android:layout_height="@dimen/margin_1"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorWhite" />
+                    <!--<android.support.design.widget.FloatingActionButton
+                        android:id="@+id/draw_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        app:fabSize="mini"
+                        app:backgroundTint="@color/colorWhite"
+                        android:src="@drawable/draw_icon"/>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/current_location1"
+                        android:visibility="invisible"
+                        app:fabSize="mini" />
+
+                    <TextView
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/my_location_shortcut"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size"
+                        tools:ignore="MissingPrefix" />
+
+                    <View
+                        android:layout_width="@dimen/margin_7"
+                        android:layout_height="@dimen/margin_7"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_7"
+                        android:background="@drawable/circle_background" />
+
+                    <View
+                        android:layout_width="@dimen/margin_60"
+                        android:layout_height="@dimen/margin_1"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorWhite" />
+                    <!--<android.support.design.widget.FloatingActionButton
+                        android:id="@+id/current_location_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:backgroundTint="@color/colorWhite"
+                        android:layout_gravity="center_vertical"
+                        app:fabSize="mini"
+                        android:src="@drawable/current_location1"/>-->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|top"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/layer_icon"
+                        android:visibility="invisible"
+                        app:fabSize="mini" />
+
+                    <TextView
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/nearby_help_text"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/text_size"
+                        tools:ignore="MissingPrefix" />
+
+                    <View
+                        android:layout_width="@dimen/margin_7"
+                        android:layout_height="@dimen/margin_7"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_7"
+                        android:background="@drawable/circle_background" />
+
+                    <View
+                        android:layout_width="@dimen/margin_60"
+                        android:layout_height="@dimen/margin_1"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/colorWhite" />
+                    <!--<android.support.design.widget.FloatingActionButton
+                        android:id="@+id/layers_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:backgroundTint="@color/colorWhite"
+                        android:layout_gravity="center_vertical"
+                        app:fabSize="mini"
+                        android:src="@drawable/layers_icon"/>-->
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <TextView
+        fontPath="fonts/FiraSans-Regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/overlay_color"
+        android:gravity="center"
+        android:text="TAP TO DISMISS"
+        android:textColor="@color/red_500"
+        android:textSize="@dimen/text_size_large"
+        tools:ignore="MissingPrefix" />
+</LinearLayout>

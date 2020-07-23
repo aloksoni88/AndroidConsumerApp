@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="MissingPrefix">
+
+        <ToggleButton
+            android:id="@+id/upcoming_property"
+            fontPath="fonts/FiraSans-Book.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bhk_selector"
+            android:minHeight="30dp"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:textAllCaps="false"
+            android:textColor="@drawable/filter_text_selector"
+            android:textOff="Upcoming"
+            android:textOn="Upcoming"
+            android:textSize="14sp"
+            tools:ignore="MissingPrefix" />
+
+
+        <ToggleButton
+            android:id="@+id/new_property"
+            fontPath="fonts/FiraSans-Book.ttf"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bhk_selector"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:minHeight="80dp"
+            android:textAllCaps="false"
+            android:textColor="@drawable/filter_text_selector"
+            android:textOff="New Launch"
+            android:textOn="New Launch"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:orientation="horizontal"
+        tools:ignore="MissingPrefix">
+
+        <ToggleButton
+            android:id="@+id/ongoing_property"
+            fontPath="fonts/FiraSans-Book.ttf"
+            android:layout_width="160dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bhk_selector"
+            android:minHeight="80dp"
+            android:textAllCaps="false"
+            android:textColor="@drawable/filter_text_selector"
+            android:textOff="Under Construction"
+            android:textOn="Under Construction"
+            android:textSize="14sp" />
+
+        <ToggleButton
+            android:id="@+id/ready_property"
+            fontPath="fonts/FiraSans-Book.ttf"
+            android:layout_width="140dp"
+            android:textSize="14sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:background="@drawable/bhk_selector"
+            android:minHeight="30dp"
+            android:textAllCaps="false"
+            android:textColor="@drawable/filter_text_selector"
+            android:textOff="Ready to Move"
+            android:textOn="Ready to Move"
+            tools:ignore="MissingPrefix" />
+
+    </LinearLayout>
+</LinearLayout>
+

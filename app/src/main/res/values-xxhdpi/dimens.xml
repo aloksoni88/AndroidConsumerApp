@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="image_height">264dp</dimen>
+    <dimen name="explore_area_margin">20dp</dimen>
+    <dimen name="detail_horizontal_margin">24dp</dimen>
+    <dimen name="login_horizontal_margin">48dp</dimen>
+    <dimen name="login_vertical_margin">32dp</dimen>
+
+    <dimen name="text_size_xxxxsmall">6sp</dimen>
+    <dimen name="text_size_xxxsmall">8sp</dimen>
+    <dimen name="text_size_xxsmall">10sp</dimen>
+    <dimen name="text_size_xsmall">12sp</dimen>
+    <dimen name="text_size_small">14sp</dimen>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="text_size_large">18sp</dimen>
+    <dimen name="text_size_xlarge">22sp</dimen>
+    <dimen name="text_size_xxlarge">28sp</dimen>
+    <dimen name="text_size_xxxlarge">35sp</dimen>
+    <dimen name="text_size_xxxxlarge">50sp</dimen>
+    <dimen name="custom_profile_image">50dp</dimen>
+    <dimen name="custom_profile_padding">2dp</dimen>
+    <dimen name="margin_1">1dip</dimen>
+    <dimen name="margin_2">4dip</dimen>
+    <dimen name="margin_3">5dip</dimen>
+    <dimen name="margin_4">8dip</dimen>
+    <dimen name="margin_5">9dip</dimen>
+    <dimen name="margin_6">10dip</dimen>
+    <dimen name="margin_7">11dip</dimen>
+    <dimen name="margin_8">12dip</dimen>
+    <dimen name="margin_9">13dip</dimen>
+
+    <dimen name="margin_10">14dip</dimen>
+    <dimen name="margin_12">18dip</dimen>
+    <dimen name="margin_15">20dip</dimen>
+    <dimen name="margin_20">25dip</dimen>
+    <dimen name="margin_25">35dip</dimen>
+    <dimen name="margin_30">40dip</dimen>
+    <dimen name="margin_32">43dip</dimen>
+    <dimen name="margin_35">45dip</dimen>
+    <dimen name="margin_40">50dip</dimen>
+    <dimen name="margin_43">53dip</dimen>
+    <dimen name="margin_45">60dip</dimen>
+    <dimen name="margin_47">67dip</dimen>
+    <dimen name="margin_50">75dip</dimen>
+    <dimen name="margin_60">90dip</dimen>
+    <dimen name="margin_70">105dip</dimen>
+    <dimen name="margin_80">120dip</dimen>
+    <dimen name="margin_85">130dip</dimen>
+    <dimen name="margin_90">140dip</dimen>
+    <dimen name="margin_95">155dip</dimen>
+
+    <dimen name="margin_114">170dip</dimen>
+    <dimen name="margin_120">135dip</dimen>
+    <dimen name="margin_130">150dip</dimen>
+    <dimen name="margin_220">220dip</dimen>
+    <dimen name="margin_230">260dip</dimen>
+    <dimen name="margin_240">280dip</dimen>
+    <dimen name="margin_245">265dip</dimen>
+    <dimen name="margin_250">250dip</dimen>
+    <dimen name="margin_270">270dip</dimen>
+    <dimen name="margin_280">295dip</dimen>
+    <dimen name="margin_300">450dip</dimen>
+    <dimen name="margin_350">550dip</dimen>
+    <dimen name="margin_150">230dip</dimen>
+    <dimen name="progressbar_top_margin">224dip</dimen>
+    <dimen name="margin_150_minus">-230dip</dimen>
+    <dimen name="margin_200">280dip</dimen>
+    <dimen name="margin_100">160dip</dimen>
+    <dimen name="logo_height">150dp</dimen>
+    <dimen name="logo_width">150dp</dimen>
+    <dimen name="recyclerviewHeight">228dip</dimen>
+    <dimen name="fab_margin_bottom">10dp</dimen>
+    <dimen name="layout_cardview_width">280dp</dimen>
+
+    <dimen name="concierge_top_padding">75dp</dimen>
+    <dimen name="item_layout_width">300dp</dimen>
+    <dimen name="item_layout_height">240dp</dimen>
+
+    <string-array name="week_array">
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </string-array>
+
+    <dimen name="onboarding_text_detail">16sp</dimen>
+    <dimen name="onboarding_header_text_size">22sp</dimen>
+    <dimen name="nav_drawer_margin">5dip</dimen>
+    <dimen name="nav_drawer_textsize">18sp</dimen>
+</resources>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <TextView
+        fontPath="fonts/FiraSans-Book.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/detail_horizontal_margin"
+        android:paddingRight="@dimen/detail_horizontal_margin"
+        android:text="Virtual Tour"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <!--<android.support.v7.widget.RecyclerView
+        android:id="@+id/id_virtual_tour_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"/>-->
+    <HorizontalScrollView
+        android:id="@+id/ic_virtual_tour_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollIndicators="none">
+
+        <LinearLayout
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/id_3d_view"
+                android:layout_width="240dp"
+                android:layout_height="150dp"
+                app:cardBackgroundColor="@color/gray_300"
+                app:cardElevation="@dimen/margin_2"
+                app:cardCornerRadius="4dp"
+                app:cardUseCompatPadding="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.clicbrics.consumer.customview.roundedimageview.RoundedImageView
+                        android:id="@+id/id_3d_view_thumb_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/indoor_view_placeholder"
+                        app:riv_corner_radius="4dp"
+                        android:scaleType="fitXY"
+                        app:riv_mutate_background="true" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/scrim_bottom_light_dark"/>
+
+                    <ImageView
+                        android:id="@+id/id_3d_view_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_indoor_view" />
+
+                    <TextView
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:ellipsize="end"
+                        android:paddingBottom="@dimen/margin_5"
+                        android:text="INDOOR VIEW"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </FrameLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/id_drone_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_marginRight="@dimen/margin_3">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="240dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="@dimen/margin_3"
+                    app:cardElevation="@dimen/margin_2"
+                    app:cardUseCompatPadding="true">
+
+                    <com.clicbrics.consumer.customview.roundedimageview.RoundedImageView
+                        android:id="@+id/id_drone_view_thumb_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/aerial_view_placeholder"
+                        android:scaleType="fitXY"
+                        app:riv_corner_radius_top_left="4dp"
+                        app:riv_corner_radius_top_right="4dp"
+                        app:riv_mutate_background="true" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/scrim_bottom_light_dark"/>
+                    <ImageView
+                        android:id="@+id/id_drone_view_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_drone_view" />
+
+                    <TextView
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:ellipsize="end"
+                        android:paddingBottom="@dimen/margin_5"
+                        android:text="AERIAL VIEW"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/id_drive_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="240dp"
+                    android:layout_height="150dp"
+                    app:cardBackgroundColor="@color/gray_300"
+                    app:cardCornerRadius="@dimen/margin_3"
+                    app:cardElevation="@dimen/margin_2"
+                    app:cardUseCompatPadding="true">
+
+                    <com.clicbrics.consumer.customview.roundedimageview.RoundedImageView
+                        android:id="@+id/id_drive_view_thumb_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/drive_view_placeholder"
+                        android:scaleType="fitXY"
+                        app:riv_mutate_background="true" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/scrim_bottom_light_dark"/>
+
+                    <ImageView
+                        android:id="@+id/id_drive_view_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_drive_view_icon" />
+
+                    <TextView
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:ellipsize="end"
+                        android:paddingBottom="@dimen/margin_5"
+                        android:text="DRIVE VIEW"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+
+                </android.support.v7.widget.CardView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

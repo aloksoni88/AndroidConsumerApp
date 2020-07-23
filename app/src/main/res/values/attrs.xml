@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="floatingHintEditTextStyle" format="reference" />
+
+    <declare-styleable name="CircularImageView">
+        <attr name="civ_border" format="boolean" />
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_background_color" format="color" />
+        <attr name="civ_shadow" format="boolean" />
+        <attr name="civ_shadow_color" format="color" />
+        <attr name="civ_shadow_radius" format="float" />
+        <attr name="civ_shadow_gravity">
+            <flag name="center" value="1" />
+            <flag name="top" value="2" />
+            <flag name="bottom" value="3" />
+            <flag name="start" value="4" />
+            <flag name="end" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="animation_duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="FeatureCoverFlow">
+        <attr name="coverWidth" format="dimension" />
+        <attr name="coverHeight" format="dimension" />
+        <attr name="spacing" format="float" />
+        <attr name="rotationThreshold" format="float" />
+        <attr name="scalingThreshold" format="float" />
+        <attr name="adjustPositionThreshold" format="float" />
+        <attr name="adjustPositionMultiplier" format="float" />
+        <attr name="maxRotationAngle" format="float" />
+        <attr name="maxScaleFactor" format="float" />
+        <attr name="circlePathRadius" format="float" />
+        <attr name="circlePathRadiusInMatrixSpace" format="float" />
+        <attr name="reflectionHeight" format="float" />
+        <attr name="reflectionGap" format="dimension" />
+        <attr name="reflectionOpacity" format="integer" />
+        <attr name="tunningWidgetSize" format="dimension" />
+        <attr name="alignAnimationTime" format="integer" />
+        <attr name="verticalPaddingTop" format="dimension" />
+        <attr name="verticalPaddingBottom" format="dimension" />
+        <attr name="reflectionBackroundColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="EndlessLoopAdapterContainer">
+        <attr name="shouldRepeat" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="BasicContentBand">
+        <attr name="gridMode">
+            <flag name="fixed" value="0" />
+            <flag name="dynamic" value="1" />
+        </attr>
+
+        <attr name="deviceSpecificPixelSize" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedImageView">
+        <attr name="riv_corner_radius" format="dimension" />
+        <attr name="riv_corner_radius_top_left" format="dimension" />
+        <attr name="riv_corner_radius_top_right" format="dimension" />
+        <attr name="riv_corner_radius_bottom_left" format="dimension" />
+        <attr name="riv_corner_radius_bottom_right" format="dimension" />
+        <attr name="riv_border_width" format="dimension" />
+        <attr name="riv_border_color" format="color" />
+        <attr name="riv_mutate_background" format="boolean" />
+        <attr name="riv_oval" format="boolean" />
+        <attr name="android:scaleType" />
+        <attr name="riv_tile_mode">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_x">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+        <attr name="riv_tile_mode_y">
+            <enum name="clamp" value="0" />
+            <enum name="repeat" value="1" />
+            <enum name="mirror" value="2" />
+        </attr>
+
+        <attr name="scaled" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="PinEntryView">
+        <!-- The number of digits in the pin -->
+        <attr name="numDigits" format="integer" />
+        <!-- Digit dimensions, default 50dp x 50dp -->
+        <attr name="digitWidth" format="dimension" />
+        <attr name="digitHeight" format="dimension" />
+        <!-- Spacing between the pin boxes, default 20dp -->
+        <attr name="digitSpacing" format="dimension" />
+        <!-- Digit background, colour or drawable -->
+        <attr name="digitBackground" format="reference|color" />
+        <!-- Font size to use for the mask text, default 15sp -->
+        <attr name="digitTextSize" format="dimension" />
+        <!-- Colour of the mask text, defaults to theme textColorPrimary -->
+        <attr name="digitTextColor" format="color" />
+        <!-- Digit elevation (API 21+ only), default 0dp -->
+        <attr name="digitElevation" format="dimension" />
+        <!-- The character to use to mask the input -->
+        <attr name="mask" format="string" />
+        <!-- Accent color, defaults to theme colorAccent -->
+        <attr name="pinAccentColor" format="color" />
+        <!-- Accent width, default 3dp -->
+        <attr name="accentWidth" format="dimension" />
+
+        <attr name="strokewidth" format="dimension" />
+        <attr name="strokeRadius" format="dimension" />
+        <!-- Accent type, default 'character' -->
+        <attr name="accentType" format="enum">
+            <enum name="none" value="0" />
+            <enum name="all" value="1" />
+            <enum name="character" value="2" />
+        </attr>
+        <!-- Input type -->
+        <attr name="pinInputType" format="enum">
+            <enum name="number" value="2" />
+        </attr>
+        <!-- Only draw accent when View has focus -->
+        <attr name="accentRequiresFocus" format="boolean" />
+    </declare-styleable>
+
+</resources>

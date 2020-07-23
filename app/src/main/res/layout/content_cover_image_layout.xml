@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<com.clicbrics.consumer.customview.ScreenSizeDummyImage
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:src="@drawable/placeholder"
+        android:visibility="invisible" />-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_image_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!--<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/id_virtual_tour_icon"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:tint="@color/light_white"
+        android:src="@drawable/ic_notification"/>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/scrim_bottom_dark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:padding="@dimen/margin_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                android:id="@+id/id_project_name"
+                fontPath="fonts/FiraSans-SemiBold.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/text_size_xxlarge"
+                android:textColor="@color/white"
+                tools:ignore="MissingPrefix" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/text_size_xsmall"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="-5dp"
+                android:text="RERA ID"
+                android:visibility="gone"
+                fontPath="fonts/FiraSans-Light.ttf"
+                android:id="@+id/id_rera_id"/>
+            </LinearLayout>
+            <com.clicbrics.consumer.customview.imagestoryview.StoriesProgressView
+                android:id="@+id/stories"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_gravity="bottom"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp" />
+
+            <TextView
+                android:id="@+id/id_bedroom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_3"
+                android:drawablePadding="@dimen/margin_3"
+                android:drawableStart="@drawable/bed_icon"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_5"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+            <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/id_area_n_status_layout"
+            android:padding="@dimen/margin_5"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_area_icon"/>
+            <LinearLayout
+                android:id="@+id/id_area_range_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+            <TextView
+                android:id="@+id/id_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:paddingLeft="@dimen/margin_3"
+                android:gravity="center"
+
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/white" />
+                <View android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/margin_1"
+                    android:layout_marginLeft="@dimen/margin_3"
+                    android:layout_height="@dimen/margin_1"
+                    android:background="@color/colorAccent"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/id_project_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=""
+
+                android:textSize="@dimen/text_size_small"
+                android:gravity="center"
+                android:textColor="@color/white" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/id_price_n_bsp_layout"
+                android:padding="@dimen/margin_5"
+                android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:src="@drawable/price_range_icon"/>
+            <TextView
+                android:id="@+id/id_price_n_bsp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@drawable/text_selector" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/id_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/margin_3"
+                android:drawableStart="@drawable/location_icon"
+                android:layout_gravity="left"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_5"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@color/white"
+               />
+            <LinearLayout
+                android:paddingTop="@dimen/margin_5"
+                android:paddingLeft="@dimen/margin_5"
+                android:id="@+id/id_emi_layout"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/id_emistr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/margin_3"
+                android:drawableStart="@drawable/emi_icon"
+                android:layout_gravity="left"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="EMI start from"
+                android:textSize="@dimen/text_size_small"
+                android:textColor="@drawable/text_selector" />
+            <View android:layout_width="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_height="@dimen/margin_1"
+                android:background="@color/colorAccent"/>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/id_scroll_view_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:tint="@color/gray_200"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_drop_down_grey"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_25"
+                android:background="@color/transparent"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="-4dp"
+        android:layout_marginTop="?android:attr/actionBarSize"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="right"
+            android:id="@+id/id_virtual_tour_icon"
+            android:src="@drawable/ic_virtual_tour"/>
+        <Button
+            android:id="@+id/offer_image"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="-4dp"
+            android:background="@drawable/offer_image_rightside"
+            android:gravity="center"
+            android:maxHeight="28dp"
+            android:minHeight="28dp"
+            android:paddingBottom="3dp"
+            android:paddingLeft="10dp"
+            android:text="Offer"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/commercial_tag"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_2"
+            android:layout_marginTop="@dimen/margin_2"
+            android:background="@drawable/ic_commercial_tag"
+            android:gravity="center"
+            android:maxHeight="24dp"
+            android:minHeight="24dp"
+            android:text="Commercial"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp"
+            android:visibility="gone" />
+    </LinearLayout>-->
+
+</FrameLayout>
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <data>
+            <import type="com.clicbrics.consumer.utils.ProjectDetailsUtil"/>
+            <import type="android.view.View"/>
+            <variable
+                name="projectModel"
+                type="com.clicbrics.consumer.viewmodel.ProjectDetailsViewModel" />
+        </data>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            &lt;!&ndash;<com.clicbrics.consumer.customview.ScreenSizeDummyImage
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:src="@drawable/placeholder"
+                android:visibility="invisible" />&ndash;&gt;
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/id_image_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/scrim_bottom_dark" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.clicbrics.consumer.customview.imagestoryview.StoriesProgressView
+                        android:id="@+id/stories"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_gravity="bottom"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp" />
+
+                    <TextView
+                        android:id="@+id/id_project_name"
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_5"
+                        android:text="@{projectModel.project.name}"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_xxlarge"
+                        tools:ignore="MissingPrefix" />
+
+                    <TextView
+                        android:id="@+id/id_bedroom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_3"
+                        android:padding="@dimen/margin_5"
+                        android:drawableStart="@drawable/bedroom"
+                        android:drawablePadding="@dimen/margin_3"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center"
+                        android:text="@{ProjectDetailsUtil.getBedNPropertyTypeStr(projectModel.propertyTypeList)}"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/id_area"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_5"
+                        android:drawableStart="@drawable/area_scale_detail"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center"
+                        android:drawablePadding="@dimen/margin_3"
+                        android:text="@{ProjectDetailsUtil.getAreaRangeNStatus(context,projectModel.propertyTypeList,projectModel.project)}"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/id_price_n_bsp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_5"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center"
+                        android:text="@{ProjectDetailsUtil.getPriceNBSPStr(context,projectModel.propertyTypeList)}"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/id_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_5"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center"
+                        android:text="@{ProjectDetailsUtil.getAddress(projectModel.project)}"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:id="@+id/id_emistr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_20"
+                        android:padding="@dimen/margin_5"
+                        android:gravity="center_vertical"
+                        android:layout_gravity="center"
+                        android:text="@{ProjectDetailsUtil.getEMIStr(context,projectModel.propertyTypeList,projectModel.project)}"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="-4dp"
+                android:layout_marginTop="@dimen/margin_30"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/offer_image"
+                    fontPath="fonts/FiraSans-Medium.ttf"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="-4dp"
+                    android:background="@drawable/offer_image_rightside"
+                    android:gravity="center"
+                    android:maxHeight="28dp"
+                    android:minHeight="28dp"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="10dp"
+                    android:text="Offer"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10sp"
+                    android:visibility="@{ProjectDetailsUtil.isOffer(projectModel.project) ? View.VISIBLE : View.GONE,default=gone }" />
+
+                <Button
+                    android:id="@+id/commercial_tag"
+                    fontPath="fonts/FiraSans-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/margin_2"
+                    android:layout_marginTop="@dimen/margin_2"
+                    android:background="@drawable/ic_commercial_tag"
+                    android:gravity="center"
+                    android:maxHeight="24dp"
+                    android:minHeight="24dp"
+                    android:text="Commercial"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="10sp"
+                    android:visibility="@{ProjectDetailsUtil.checkCommercial(projectModel.propertyTypeList) ? View.VISIBLE : View.GONE,default=gone }" />
+            </LinearLayout>
+        </FrameLayout>
+    </layout>-->

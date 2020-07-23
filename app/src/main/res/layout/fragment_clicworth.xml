@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fragment_color"
+        tools:ignore="MissingPrefix">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btn_get_estimate"
+            android:layout_alignParentTop="true"
+            android:fillViewport="true"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:id="@+id/root_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_10">
+
+                <LinearLayout
+                    android:id="@+id/search_title_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_2"
+                    android:background="@drawable/edittext_grayborder"
+                    android:weightSum="1">
+
+
+                    <TextView
+                        android:id="@+id/search_locality"
+                        fontPath="fonts/FiraSans-Light.ttf"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_weight=".85"
+                        android:background="@android:color/transparent"
+                        android:drawableTint="@color/black"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="@string/enter_your_area_or_locality"
+                        android:imeOptions="actionSearch"
+                        android:maxLines="1"
+                        android:paddingLeft="@dimen/margin_8"
+                        android:paddingRight="@dimen/margin_8"
+                        android:paddingTop="@dimen/margin_5"
+                        android:paddingBottom="@dimen/margin_5"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray_600"
+                        android:textSize="@dimen/text_size_small">
+
+                        <requestFocus />
+                    </TextView>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:layout_toRightOf="@+id/search_locality"
+                        android:layout_weight=".15"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/search"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_5"
+                            android:src="@drawable/search_icon"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/id_cancel_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_5"
+                            android:visibility="gone"
+                            app:srcCompat="@drawable/ic_round_cancel" />
+
+                        <View
+                            android:id="@+id/view_sepration"
+                            android:layout_width="@dimen/margin_1"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/margin_3"
+                            android:layout_marginRight="@dimen/margin_3"
+                            android:layout_toRightOf="@+id/search_locality"
+                            android:background="@color/gray_300" />
+
+                        <ImageView
+                            android:id="@+id/map_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/margin_3"
+                            app:srcCompat="@drawable/map_icon" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/nodata_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/search_title_layout"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/nodata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/margin_40"
+                        android:src="@drawable/no_data" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/nodata"
+                        android:layout_marginLeft="@dimen/margin_40"
+                        android:layout_marginRight="@dimen/margin_40"
+                        android:gravity="center"
+                        android:text="@string/sorry_clicworth_is_not_available_in_this_location_yet"
+                        android:textColor="@color/gray_text"
+                        android:textSize="@dimen/text_size_large"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/property_type_options"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_below="@+id/search_title_layout"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_12"
+                        android:minHeight="@dimen/margin_60"
+                        android:orientation="horizontal"
+                        android:weightSum="4">
+
+
+                        <ToggleButton
+                            android:id="@+id/id_apartment"
+                            fontPath="fonts/FiraSans-Book.ttf"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/margin_3"
+                            android:layout_weight="1"
+                            android:background="@drawable/bhk_selector"
+                            android:drawableTop="@drawable/ic_appartment_black"
+                            android:paddingTop="@dimen/margin_10"
+                            android:paddingBottom="@dimen/margin_3"
+                            android:textAllCaps="false"
+                            android:textColor="@drawable/filter_text_selector"
+                            android:textOff="Apartment"
+                            android:textOn="Apartment"
+                            android:textSize="@dimen/text_size_xsmall" />
+
+
+                        <ToggleButton
+                            android:id="@+id/id_villa"
+                            fontPath="fonts/FiraSans-Book.ttf"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/margin_3"
+                            android:layout_weight="1"
+                            android:background="@drawable/bhk_selector"
+                            android:drawableTop="@drawable/ic_filter_villa"
+                            android:paddingTop="@dimen/margin_10"
+                            android:paddingBottom="@dimen/margin_3"
+                            android:textAllCaps="false"
+                            android:textColor="@drawable/filter_text_selector"
+                            android:textOff="Villa"
+                            android:textOn="Villa"
+                            android:textSize="@dimen/text_size_xsmall" />
+
+                        <ToggleButton
+                            android:id="@+id/id_plot"
+                            fontPath="fonts/FiraSans-Book.ttf"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/margin_3"
+                            android:layout_weight="1"
+                            android:background="@drawable/bhk_selector"
+                            android:drawableTop="@drawable/ic_filter_plot"
+                            android:paddingTop="@dimen/margin_10"
+                            android:paddingBottom="@dimen/margin_3"
+                            android:textAllCaps="false"
+                            android:textColor="@drawable/filter_text_selector"
+                            android:textOff="Plot"
+                            android:textOn="Plot"
+                            android:textSize="@dimen/text_size_xsmall" />
+
+                        <ToggleButton
+                            android:id="@+id/id_independent"
+                            fontPath="fonts/FiraSans-Book.ttf"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/bhk_selector"
+                            android:drawableTop="@drawable/ic_filter_floor"
+                            android:paddingLeft="1dp"
+                            android:paddingTop="@dimen/margin_10"
+                            android:paddingBottom="@dimen/margin_3"
+                            android:paddingRight="1dp"
+                            android:textAllCaps="false"
+                            android:textColor="@drawable/filter_text_selector"
+                            android:textOff="@string/independent_floor"
+                            android:textOn="@string/independent_floor"
+                            android:textSize="@dimen/text_size_xsmall" />
+
+
+                    </LinearLayout>
+
+
+                    <!--<TextView
+                        android:id="@+id/rooms_title"
+                        fontPath="fonts/FiraSans-Medium.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_below="@id/property_type_options"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:text="@string/no_of_rooms"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_large"
+                        android:textStyle="bold" />-->
+
+
+                    <!--
+                                    <LinearLayout
+                                        android:id="@+id/room_options"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="visible"
+                                        android:layout_below="@id/property_type_options"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                            android:layout_marginTop="@dimen/margin_10"
+                                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2">
+
+                                            <ToggleButton
+                                                android:id="@+id/bhk1"
+                                                fontPath="fonts/FiraSans-Book.ttf"
+                                                android:layout_width="90dp"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bhk_selector"
+                                                android:minHeight="32dp"
+                                                android:textAllCaps="false"
+                                                android:textColor="@drawable/filter_text_selector"
+                                                android:textOff="1 bhk"
+                                                android:textOn="1 bhk"
+                                                android:textSize="14sp" />
+
+                                            <android.support.v4.widget.Space
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1" />
+
+                                            <ToggleButton
+                                                android:id="@+id/bhk2"
+                                                fontPath="fonts/FiraSans-Book.ttf"
+                                                android:layout_width="90dp"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bhk_selector"
+                                                android:minHeight="32dp"
+                                                android:textAllCaps="false"
+                                                android:textColor="@drawable/filter_text_selector"
+                                                android:textOff="2 bhk"
+                                                android:textOn="2 bhk"
+                                                android:textSize="14sp" />
+
+                                            <android.support.v4.widget.Space
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1" />
+
+                                            <ToggleButton
+                                                android:id="@+id/bhk3"
+                                                fontPath="fonts/FiraSans-Book.ttf"
+                                                android:layout_width="90dp"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bhk_selector"
+                                                android:minHeight="32dp"
+                                                android:textAllCaps="false"
+                                                android:textColor="@drawable/filter_text_selector"
+                                                android:textOff="3 bhk"
+                                                android:textOn="3 bhk"
+                                                android:textSize="14sp" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                                            android:layout_marginTop="@dimen/margin_10"
+                                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2">
+
+                                            <ToggleButton
+                                                android:id="@+id/bhk4"
+                                                fontPath="fonts/FiraSans-Book.ttf"
+                                                android:layout_width="90dp"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bhk_selector"
+                                                android:minHeight="32dp"
+                                                android:textAllCaps="false"
+                                                android:textColor="@drawable/filter_text_selector"
+                                                android:textOff="4 bhk"
+                                                android:textOn="4 bhk"
+                                                android:textSize="14sp" />
+
+                                            <android.support.v4.widget.Space
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1" />
+
+                                            <ToggleButton
+                                                android:id="@+id/bhk5plus"
+                                                fontPath="fonts/FiraSans-Book.ttf"
+                                                android:layout_width="90dp"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bhk_selector"
+                                                android:minHeight="32dp"
+                                                android:textAllCaps="false"
+                                                android:textColor="@drawable/filter_text_selector"
+                                                android:textOff="5+ bhk"
+                                                android:textOn="5+ bhk"
+                                                android:textSize="14sp" />
+
+                                            <android.support.v4.widget.Space
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1" />
+
+                                            <ToggleButton
+
+                                                fontPath="fonts/FiraSans-Book.ttf"
+                                                android:layout_width="90dp"
+                                                android:layout_height="wrap_content"
+                                                android:background="@drawable/bhk_selector"
+                                                android:minHeight="32dp"
+                                                android:textAllCaps="false"
+                                                android:textColor="@drawable/filter_text_selector"
+                                                android:textOff="3 bhk"
+                                                android:textOn="3 bhk"
+                                                android:textSize="14sp"
+                                                android:visibility="invisible" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                    -->
+
+                    <TextView
+                        android:id="@+id/bhk_selected_txt"
+                        fontPath="fonts/FiraSans-Medium.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_15"
+                        android:text="2 BHK"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+
+                    <FrameLayout
+                        android:id="@+id/bhk_seekbar_interval_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bhk_selected_txt"
+                        android:layout_marginTop="@dimen/margin_10">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_marginBottom="@dimen/margin_3"
+                            android:paddingLeft="@dimen/margin_5"
+                            android:paddingRight="@dimen/margin_5">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="1"
+                                android:textSize="@dimen/text_size_xxsmall" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="@dimen/margin_2"
+                                android:text="2"
+                                android:textSize="@dimen/text_size_xxsmall" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="3"
+                                android:textSize="@dimen/text_size_xxsmall" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="4"
+                                android:textSize="@dimen/text_size_xxsmall" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="4+"
+                                android:textSize="@dimen/text_size_xxsmall" />
+                        </LinearLayout>
+
+                        <SeekBar
+                            android:id="@+id/bhk_seekbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/bhk_selected_txt"
+                            android:max="5"
+                            android:min="1"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="0dp"
+                            android:paddingBottom="@dimen/margin_20"
+                            android:progress="2"
+                            android:progressDrawable="@drawable/seekbar_progress"
+                            android:thumb="@drawable/ic_seekbar"
+                            android:thumbOffset="-0dp" />
+
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:id="@+id/floor_selected_txt"
+                        fontPath="fonts/FiraSans-Medium.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/bhk_seekbar_interval_layout"
+                        android:layout_gravity="top"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:text="@string/ground_floor"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                    <FrameLayout
+                        android:id="@+id/seekbarframlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/floor_selected_txt"
+                        android:layout_marginTop="@dimen/margin_10">
+
+                        <LinearLayout
+                            android:id="@+id/floor_seekbar_interval_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="@dimen/margin_10"
+                            android:layout_marginBottom="@dimen/margin_3"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/margin_4"
+                            android:paddingRight="@dimen/margin_4"
+                            android:weightSum="20">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="8dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="G"
+                                    android:textSize="@dimen/text_size_xxsmall" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="8dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="5"
+                                    android:textSize="@dimen/text_size_xxsmall" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="8dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="10"
+                                    android:textSize="@dimen/text_size_xxsmall" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="8dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="15"
+                                    android:textSize="@dimen/text_size_xxsmall" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="5dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="1dp"
+                                    android:layout_height="8dp"
+                                    android:background="@color/seekbar_progress_tint_background" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="20+"
+                                    android:textSize="@dimen/text_size_xxsmall" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <SeekBar
+                            android:id="@+id/floor_seekbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:max="20"
+                            android:min="0"
+                            android:paddingStart="0dp"
+                            android:paddingEnd="0dp"
+                            android:paddingBottom="@dimen/margin_20"
+                            android:progress="0"
+                            android:progressDrawable="@drawable/seekbar_progress"
+                            android:thumb="@drawable/ic_seekbar"
+                            android:thumbOffset="-0dp"
+                            android:visibility="visible" />
+
+                    </FrameLayout>
+
+                    <!--<com.clicbrics.consumer.customview.TopSeekBarView
+                        android:id="@+id/floor_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/select_project_txt"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingRight="@dimen/margin_5"
+                        app:dsbv_max="5"
+                        app:dsbv_progress="0"
+                        app:dsbv_progressBackgroundColor="@color/gray_300"
+                        app:dsbv_progressColor="@color/red"
+                        app:dsbv_thumbDrawable="@drawable/thumb_emi" />-->
+
+                    <TextView
+                        android:id="@+id/size_title"
+                        fontPath="fonts/FiraSans-Medium.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/floor_seekbar_interval_layout"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:paddingTop="@dimen/margin_12"
+                        android:paddingRight="@dimen/margin_12"
+                        android:text=""
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+
+                    <LinearLayout
+                        android:id="@+id/sizelayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/size_title"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:layout_marginBottom="@dimen/margin_10"
+                        android:background="@drawable/gray_rectangle_box"
+                        android:orientation="horizontal"
+                        android:padding="0.5dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/decrease_size"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".2"
+                            android:background="@drawable/gradient_gray_rectangle"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_3"
+                            android:text="-"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_xlarge"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight=".6"
+                            android:background="@color/white"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/et_size"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:maxLength="5"
+                                android:background="@android:color/transparent"
+                                android:minWidth="10sp"
+                                android:text="1000"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_small" />
+
+                            <LinearLayout
+                                android:id="@+id/size_type_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                >
+
+                                <TextView
+                                    android:id="@+id/size_type"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:text="@string/sq_ft"
+                                    android:gravity="center"
+                                    android:paddingLeft="@dimen/margin_2"
+                                    android:paddingRight="@dimen/margin_2"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/text_size_small" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/gray_text_color" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/increase_size"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_weight=".2"
+                            android:background="@drawable/gradient_gray_rectangle"
+                            android:gravity="center"
+                            android:padding="@dimen/margin_3"
+                            android:text="+"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_xlarge" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sizelayout"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"></LinearLayout>
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/search_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/search_title_layout"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_2"
+                    android:visibility="gone">
+
+                    <ListView
+                        android:id="@+id/list_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:divider="@color/gray_400"
+                        android:dividerHeight="1px"
+                        android:visibility="visible"
+                        tools:ignore="RtlCompat" />
+                </FrameLayout>
+            </RelativeLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+        <Button
+            android:id="@+id/btn_get_estimate"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_35"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:background="@drawable/btn_estimate_drawble_gradient"
+            android:gravity="center"
+            android:text="@string/get_clicworth"
+            android:textColor="@color/colorWhite"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</layout>

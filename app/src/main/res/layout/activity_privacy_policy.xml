@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    android:fitsSystemWindows="true"
+    tools:context="com.clicbrics.consumer.activities.PrivacyPolicyActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/id_toolbar_layout"
+        android:background="@color/light_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/activity_privacy_policy"
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="20sp"
+                tools:ignore="MissingPrefix" />
+
+        </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <WebView
+        android:layout_below="@+id/id_toolbar_layout"
+        android:id="@+id/privacyPolictyWebview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/progress_bg"
+        android:indeterminateDrawable="@drawable/progress_bg"
+    />
+
+
+</RelativeLayout>

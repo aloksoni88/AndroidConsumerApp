@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/advisor_fragment_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@drawable/splash"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/id_advisor_call_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:layout_anchor="@id/id_advisor_image_layout"
+            app:layout_anchorGravity="bottom|right|end"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:fitsSystemWindows="true"
+            android:src="@drawable/ic_call_white_24dp"
+            app:background="?android:attr/selectableItemBackground" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/id_advisor_image_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/support_activity_image_layout_height">
+
+                    <ImageView
+                        android:id="@+id/id_concierge_blurr_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/support_activity_image_layout_height"
+                        android:layout_gravity="center"
+                        android:clickable="true"
+                        android:contentDescription="@string/app_name"
+                        android:scaleType="centerCrop" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/support_activity_image_layout_height"
+                        android:src="@drawable/scrim_bottom" />
+
+
+                    <ImageView
+                        android:id="@+id/id_default_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/default_property_advisor_image"
+                        android:visibility="visible"
+                        app:civ_border="true"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="@dimen/margin_2"
+                        app:civ_shadow="true" />
+
+                    <com.clicbrics.consumer.customview.CircularImageView
+                        android:id="@+id/id_advisor_image"
+                        android:layout_width="@dimen/margin_120"
+                        android:layout_height="@dimen/margin_120"
+                        android:layout_gravity="center"
+                        app:civ_border="true"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="2dp"
+                        app:civ_shadow="true" />
+
+                    <ProgressBar
+                        android:id="@+id/id_image_progressBar"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/progressbar_theme_color"
+                        android:indeterminateDrawable="@drawable/progress_bg"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/id_advisor_name"
+                        fontPath="fonts/FiraSans-Light.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="@dimen/margin_3"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        tools:ignore="MissingPrefix" />
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/id_help_msg"
+                    fontPath="fonts/FiraSans-Light.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/detail_horizontal_margin"
+                    android:layout_marginLeft="@dimen/detail_horizontal_margin"
+                    android:layout_marginRight="@dimen/detail_horizontal_margin"
+                    android:layout_marginTop="@dimen/margin_25"
+                    android:gravity="center"
+                    android:text="@string/advisor_help_msg"
+                    android:textColor="@color/text_color_login_reg"
+                    android:textSize="18sp"
+                    tools:ignore="MissingPrefix" />
+
+                <RatingBar
+                    android:id="@+id/rate_bar"
+                    style="?android:attr/ratingBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:clickable="true"
+                    android:numStars="5"
+                    android:progressDrawable="@drawable/rating_bar_selector"
+                    android:stepSize="1" />
+
+                <TextView
+                    android:id="@+id/id_rate_message"
+                    fontPath="fonts/FiraSans-Light.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:paddingTop="0dp"
+                    android:text="Rate your Property Advisor"
+                    android:textColor="@color/gray_600"
+                    android:textSize="16sp"
+                    tools:ignore="MissingPrefix" />
+
+                <EditText
+                    fontPath="fonts/FiraSans-Light.ttf"
+                    android:id="@+id/id_advisor_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:background="@drawable/cardview_selector_bg"
+                    android:gravity="start"
+                    android:hint="@string/feedback_hint_msg"
+                    android:maxLength="250"
+                    android:padding="@dimen/margin_8"
+                    android:textColor="@color/text_color_login_reg"
+                    android:textColorHint="@color/gray_500"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/id_submit_btn"
+                    fontPath="fonts/FiraSans-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/id_help_msg"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/margin_25"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:layout_weight="1"
+                    android:background="@drawable/pick_time_btn_selector"
+                    android:gravity="center"
+                    android:minHeight="@dimen/margin_10"
+                    android:minWidth="@dimen/margin_10"
+                    android:paddingBottom="@dimen/margin_5"
+                    android:paddingTop="@dimen/margin_5"
+                    android:text="@string/submit"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</android.support.v4.widget.NestedScrollView>
+
+    <!--<android.support.design.widget.FloatingActionButton
+        android:id="@+id/id_advisor_call_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        app:background="?attr/selectableItemBackground"
+        app:layout_anchor="@id/id_advisor_image_layout"
+        app:layout_anchorGravity="bottom|end"
+        android:src="@drawable/ic_call_white_24dp"/>-->
+
+

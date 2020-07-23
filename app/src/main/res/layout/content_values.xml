@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:ignore="MissingPrefix"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/detail_horizontal_margin"
+    android:paddingLeft="@dimen/detail_horizontal_margin">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Property Scores"
+        android:textColor="@color/black"
+        fontPath ="fonts/FiraSans-Book.ttf"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        tools:ignore="MissingPrefix">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:orientation="vertical"
+            tools:ignore="MissingPrefix">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                tools:ignore="MissingPrefix">
+
+                <RelativeLayout
+                    android:id="@+id/id_livability_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="4.5"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:id="@+id/livability_score"
+                        fontPath="fonts/FiraSans-SemiBold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="10"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/green_500"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:layout_toRightOf="@+id/livability_score"
+                        fontPath="fonts/FiraSans-Light.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:layout_centerVertical="true"
+                        android:text="@string/livability"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_800"
+                        android:textSize="@dimen/text_size_xsmall" />
+
+                    <ProgressBar
+                        android:layout_below="@+id/livability_score"
+                        android:id="@+id/livability_progress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center"
+                        android:progressDrawable="@drawable/property_score_pb_green_bg"
+                        android:max="10" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <RelativeLayout
+                    android:id="@+id/id_connectivity_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:id="@+id/connectivity_score"
+                        fontPath="fonts/FiraSans-SemiBold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="10"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/green_500"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:layout_toRightOf="@+id/connectivity_score"
+                        fontPath="fonts/FiraSans-Light.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:maxLines="1"
+                        android:layout_centerVertical="true"
+                        android:text="@string/connectivity"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_800"
+                        android:textSize="@dimen/text_size_xsmall" />
+
+                    <ProgressBar
+                        android:layout_below="@+id/connectivity_score"
+                        android:id="@+id/connectivity_progress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center"
+                        android:progressDrawable="@drawable/property_score_pb_green_bg"
+                        android:max="10" />
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_10"
+                android:orientation="horizontal"
+                android:weightSum="10"
+                tools:ignore="MissingPrefix">
+
+                <RelativeLayout
+                    android:id="@+id/id_valueformoney_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_weight="4.5"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:id="@+id/value_score"
+                        fontPath="fonts/FiraSans-SemiBold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="10"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/green_500"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:layout_toRightOf="@+id/value_score"
+                        fontPath="fonts/FiraSans-Light.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_centerVertical="true"
+                        android:text="@string/value_for_money"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_800"
+                        android:textSize="@dimen/text_size_xsmall" />
+
+                    <ProgressBar
+                        android:layout_below="@+id/value_score"
+                        android:id="@+id/value_progress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center"
+                        android:progressDrawable="@drawable/property_score_pb_green_bg"
+                        android:max="10" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+                <RelativeLayout
+                    android:id="@+id/id_lifestyle_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4.5"
+                    android:background="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_alignParentLeft="true"
+                        android:id="@+id/lifestyle_score"
+                        fontPath="fonts/FiraSans-SemiBold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:text="10"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/green_500"
+                        android:textSize="@dimen/text_size" />
+
+                    <TextView
+                        android:layout_toRightOf="@+id/lifestyle_score"
+                        fontPath="fonts/FiraSans-Light.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:maxLines="1"
+                        android:layout_centerVertical="true"
+                        android:text="@string/lifestyle"
+                        android:textAllCaps="true"
+                        android:textColor="@color/gray_800"
+                        android:textSize="@dimen/text_size_xsmall" />
+
+                    <ProgressBar
+                        android:layout_below="@+id/lifestyle_score"
+                        android:id="@+id/lifestyle_progress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="@dimen/margin_1"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center"
+                        android:progressDrawable="@drawable/property_score_pb_green_bg"
+                        android:max="10" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/id_score_info_msg"
+        fontPath="fonts/FiraSans-Book.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginTop="@dimen/margin_6"
+        android:gravity="center"
+        android:text="@string/scores_out_of_10"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+</LinearLayout>

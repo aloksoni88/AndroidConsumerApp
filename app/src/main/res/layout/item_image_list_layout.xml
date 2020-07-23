@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="imageItem"
+            type="com.clicbrics.consumer.model.Image" />
+    </data>
+    <FrameLayout
+        android:id="@+id/id_image_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="@dimen/margin_2"
+            app:cardUseCompatPadding="true">
+        <com.clicbrics.consumer.customview.roundedimageview.RoundedImageView
+            android:id="@+id/id_dummy_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/placeholder"
+            android:visibility="gone"
+            app:riv_corner_radius="4dp"
+            app:riv_mutate_background="true"
+            app:scaled="true"
+            app:setDummyImageListImage="@{imageItem.sURL}"/>
+
+        <com.clicbrics.consumer.customview.roundedimageview.RoundedImageView
+            android:id="@+id/id_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder"
+            app:riv_corner_radius="4dp"
+            app:riv_mutate_background="true"
+            app:scaled="true"
+            app:setImageListImage="@{imageItem.sURL}"/>
+
+
+        <ProgressBar
+            android:id="@+id/id_image_pb"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/progressbar_theme_color"
+            android:indeterminateDrawable="@drawable/progress_bg"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/margin_2"
+            android:layout_marginBottom="@dimen/margin_3"
+            android:id="@+id/id_virtual_tour_icon"
+            android:src="@drawable/ic_virtual_tour_tag"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/margin_8"
+            android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/commercial_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="24dp"
+            android:maxHeight="24dp"
+            android:visibility="gone"
+            android:layout_gravity="right"
+            android:layout_marginBottom="@dimen/margin_3"
+            android:src="@drawable/ic_commercial_tag" />
+        <ImageView
+            android:id="@+id/offer_image"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:minHeight="24dp"
+            android:maxHeight="24dp"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/margin_3"
+            android:src="@drawable/ic_offer_tag"/>
+            <TextView
+                android:id="@+id/id_soldout_tag"
+                android:text="SOLD OUT"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_xxsmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_soldout_svg_tag"
+                android:visibility="gone" />
+        </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <ScrollView
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/fragment_color"
+        android:layout_above="@+id/btn_get_estimate"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/root_layout1"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/search_title_layout"
+                android:weightSum="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginBottom="@dimen/margin_2"
+                android:background="@drawable/edittext_redborder">
+
+                <TextView
+                    android:id="@+id/select_city"
+                    fontPath="fonts/FiraSans-Light.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:drawableRight="@drawable/arrow_drop_down_black"
+                    android:drawablePadding="8dp"
+                    android:visibility="gone"
+                    android:drawableTint="@color/black"
+                    android:ellipsize="end"
+                    android:gravity="left|center_vertical"
+                    android:hint=""
+                    android:maxLines="1"
+                    android:padding="@dimen/margin_10"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/text_size_small" />
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/search_locality"
+                    fontPath="fonts/FiraSans-Light.ttf"
+                    android:layout_weight=".75"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:drawableTint="@color/black"
+                    android:ellipsize="end"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:hint="@string/enter_your_area_or_locality"
+                    android:maxLines="1"
+                    android:padding="@dimen/margin_8"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray_600"
+                    android:textSize="@dimen/text_size_small" />
+
+
+
+                <LinearLayout
+                    android:layout_weight=".25"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/search_locality"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/search_icon"
+                        android:padding="@dimen/margin_5"
+                        />
+                    <View
+                        android:id="@+id/view_sepration"
+                        android:layout_width="@dimen/margin_1"
+                        android:layout_toRightOf="@+id/search_locality"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_3"
+                        android:layout_marginRight="@dimen/margin_3"
+                        android:layout_centerVertical="true"
+                        android:background="@color/gray_300" />
+                    <ImageView
+                        android:id="@+id/map_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_3"
+                        app:srcCompat="@drawable/map_icon" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_below="@+id/search_title_layout"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/nodata"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/no_data"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/gray_text"
+                    android:layout_marginLeft="@dimen/margin_40"
+                    android:layout_marginRight="@dimen/margin_40"
+                    android:textSize="@dimen/text_size_xxlarge"
+                    android:textStyle="bold"
+                    android:text="@string/sorry_clicworth_is_not_available_in_this_location_yet"
+                    />
+
+            </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>

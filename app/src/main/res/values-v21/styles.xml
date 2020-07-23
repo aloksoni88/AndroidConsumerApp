@@ -1,0 +1,32 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:colorControlHighlight">@color/gray_500</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/background_color</item>
+        <item name="android:colorPrimaryDark">#B5000000</item>
+    </style>
+
+    <style name="BigFontSizeTheme" parent="AppTheme.NoActionBar">
+        <item name="android:activatedBackgroundIndicator">@color/gray_200</item>
+        <item name="android:fontFamily">FiraSans-Light.ttf</item>
+        <item name="android:layout_marginTop">@dimen/nav_drawer_margin</item>
+        <item name="android:layout_marginBottom">@dimen/nav_drawer_margin</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:checkableBehavior">single</item>
+        <item name="android:selectable">true</item>
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:selectableItemBackground">@color/gray_200</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:textSize">@dimen/nav_drawer_textsize</item>
+    </style>
+</resources>

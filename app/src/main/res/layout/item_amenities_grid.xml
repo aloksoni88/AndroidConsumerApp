@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal|top">
+
+    <ImageView
+        android:src="@drawable/amenity_default"
+        android:id="@+id/amenities_icon"
+        android:backgroundTint="@color/gray_700"
+        android:tint="@color/gray_700"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center_horizontal|top"/>
+
+    <TextView
+        android:id="@+id/amenity_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        fontPath ="fonts/FiraSans-Book.ttf"
+        android:textColor="@color/gray_800"
+        android:textSize="10sp"
+        tools:ignore="MissingPrefix"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"/>
+
+</LinearLayout>

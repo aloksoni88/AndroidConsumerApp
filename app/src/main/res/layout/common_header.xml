@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/fragment_color"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_8"
+        tools:context="com.clicbrics.consumer.activities.UsedLibraryActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_10"
+    android:layout_marginBottom="@dimen/margin_10"
+  >
+
+
+    <ImageButton
+        android:id="@+id/backbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:background="@null"
+        android:visibility="gone"
+        android:padding="@dimen/margin_2"
+        app:srcCompat="@drawable/ic_back_arrow" />
+
+    <TextView
+        android:id="@+id/apptitle"
+        fontPath="fonts/FiraSans-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/budget_font_size"
+        android:text="@string/clicworth1"
+        android:textAllCaps="false"
+        android:textColor="@color/clicworth_text_color"
+        android:textStyle="bold"
+        tools:ignore="MissingPrefix" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/apptitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_clicworth_tagline" />
+</RelativeLayout>
+    </LinearLayout>
+</layout>

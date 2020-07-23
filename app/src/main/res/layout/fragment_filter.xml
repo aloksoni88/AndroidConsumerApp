@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:id="@+id/root_layout_filter_fragment"
+    tools:context="com.clicbrics.consumer.fragment.FilterFragment"
+    tools:ignore="MissingPrefix"
+    tools:showIn="@layout/activity_filter">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/transparent"
+        android:minHeight="?android:attr/actionBarSize"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/filter_toolbar"
+            fontPath="fonts/FiraSans-Light.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:minHeight="?android:attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/filter_title"
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="FILTER"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/filter_reset"
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="12dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:gravity="right"
+                    android:padding="4dp"
+                    android:text="RESET"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/property_type_title"
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/property_type"
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <include
+                android:id="@+id/property_type_options"
+                layout="@layout/content_filter_property_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/property_type_title" />
+
+
+            <TextView
+                android:id="@+id/rooms_title"
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/property_type_options"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/rooms"
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <include
+                android:id="@+id/room_options"
+                layout="@layout/content_filter_room_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rooms_title" />
+
+            <TextView
+                android:id="@+id/project_status_txt"
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/room_options"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:text="@string/project_status"
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <include
+                android:id="@+id/project_status_icons"
+                layout="@layout/e_property_status_filter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/project_status_txt"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+            <com.appyvet.rangebar.RangeBar
+                android:id="@+id/priceBar"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_below="@id/project_status_icons"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="20dp"
+                custom:connectingLineColor="@color/colorAccent"
+                custom:pinMaxFont="14sp"
+                custom:pinRadius="14dp"
+                custom:selectorSize="12dp"
+                custom:temporaryPins="true"
+                custom:pinColor="@color/white"
+                custom:textColor="@color/colorAccent"
+                custom:tickEnd="21"
+                custom:tickInterval="1"
+                custom:tickStart="0" />
+
+            <FrameLayout
+                android:id="@+id/price_ranges"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:layout_below="@id/priceBar"
+                android:layout_marginTop="4dp"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:id="@+id/minPrice"
+                    fontPath="fonts/FiraSans-Book.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|left"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_small" />
+
+                <TextView
+                    android:id="@+id/maxPrice"
+                    fontPath="fonts/FiraSans-Book.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|right"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_small" />
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/apply_filter"
+        fontPath="fonts/FiraSans-Medium.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/price_ranges"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rect_selector_red_bg"
+        android:gravity="center"
+        android:text="@string/apply"
+        android:textColor="@color/white" />
+
+</android.support.design.widget.CoordinatorLayout>

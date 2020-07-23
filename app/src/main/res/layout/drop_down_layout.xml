@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/margin_80"
+    android:layout_height="wrap_content"
+    android:id="@+id/id_drop_down_layout"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_5"
+        android:gravity="center"
+        android:text="Sq.ft"
+        android:textColor="@color/black"
+        android:id="@+id/id_unit_sqft"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_200"/>
+    <TextView
+        android:padding="@dimen/margin_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="Sq.yd"
+        android:id="@+id/id_unit_sqyd"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_200"/>
+    <TextView
+        android:padding="@dimen/margin_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:text="Sq.m"
+        android:id="@+id/id_unit_sqm"/>
+</LinearLayout>

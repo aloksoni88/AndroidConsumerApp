@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fragment_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/common_header"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/layers_dialog_gray"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_15">
+
+        <ImageView
+            android:id="@+id/nodata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/no_data" />
+
+        <TextView
+            android:id="@+id/nodata_text"
+            fontPath="fonts/FiraSans-Bold.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nodata"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_15"
+            android:gravity="center"
+            android:text="@string/sorry_clicworth_is_not_available_in_this_location_yet"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"
+            tools:ignore="MissingPrefix" />
+
+        <TextView
+            android:id="@+id/change_criteria"
+            fontPath="fonts/FiraSans-Regular.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nodata_text"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_15"
+            android:background="@drawable/rectanglewithgrayline"
+            android:gravity="center"
+            android:text="@string/change_criteria"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size"
+            tools:ignore="MissingPrefix" />
+    </LinearLayout>
+</LinearLayout>

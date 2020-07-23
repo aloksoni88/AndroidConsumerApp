@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/trasparent"
+    android:orientation="vertical"
+    android:minWidth="@dimen/margin_150">
+
+    <LinearLayout
+        android:id="@+id/normal_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/custom_dialog_bg"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/txt_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:text="Do you realy want to exit ?"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size"
+            />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_8" >
+
+
+
+            <Button
+                android:id="@+id/btn_negative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_transparent_selector"
+                android:clickable="true"
+                android:visibility="gone"
+                android:text="@string/cancel"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_large"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/btn_positive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_transparent_selector"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:clickable="true"
+                android:visibility="gone"
+                android:text="@string/ok"
+                android:paddingTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                android:paddingLeft="@dimen/margin_15"
+                android:paddingRight="@dimen/margin_15"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/web_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:padding="0dip"
+        android:background="@color/trasparent">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/notification_view_border"
+            android:layout_margin="@dimen/margin_10"
+            android:minHeight="@dimen/margin_250"
+            android:minWidth="@dimen/margin_100" >
+            <WebView
+                android:id="@+id/web_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ></WebView>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progress"
+                android:background="@drawable/progress_bg"
+                android:indeterminateDrawable="@drawable/progress_bg"
+                android:layout_gravity="center"
+                />
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/web_view_cross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cross_black"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

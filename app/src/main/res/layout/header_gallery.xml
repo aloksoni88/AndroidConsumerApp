@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@color/profile_bg_color">
+
+    <TextView
+        android:id="@+id/image_title"
+        fontPath="fonts/FiraSans-SemiBold.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:gravity="center"
+        android:textColor="@color/text_color_login_reg"
+        android:textSize="18sp"
+        tools:ignore="MissingPrefix" />
+
+</LinearLayout>

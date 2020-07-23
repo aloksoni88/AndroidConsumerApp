@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/id_news_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_300"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/id_news_view_layout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_weight="1"
+                android:id="@+id/news_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <LinearLayout
+                android:id="@+id/id_next_page_loader_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_200"
+                android:gravity="center"
+                android:padding="@dimen/margin_15"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/id_layout_list_image_pb"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/progressbar_theme_color"
+                    android:indeterminateDrawable="@drawable/progress_bg"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:textColor="@color/gray_800"
+                    android:layout_marginLeft="@dimen/margin_3"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/loading_more_news"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/id_shimmer_layout"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.clicbrics.consumer.customview.ThreeTwoImageView
+                    android:id="@+id/cover_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder" />
+
+                <include layout="@layout/shimmer_layout_news" />
+
+                <include layout="@layout/shimmer_layout_news" />
+
+                <include layout="@layout/shimmer_layout_news" />
+
+                <include layout="@layout/shimmer_layout_news" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <include
+            android:id="@+id/id_no_internet_layout"
+            layout="@layout/activity_no_internet"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/id_progress_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/carousal_map_overlay_color"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateDrawable="@drawable/cicular_progress" />
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/activity_blog_details"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.clicbrics.consumer.activities.BlogDetailsActivity"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/content_blog_details"/>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/id_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:paddingLeft="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:background="@null"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/id_blogdetails_toolbar"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:background="@color/overlay_color2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:title="">
+
+            <TextView android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/id_blog_detail_title"
+                      fontPath="fonts/FiraSans-Light.ttf"
+                      android:maxLines="1"
+                      android:ellipsize="end"
+                      android:layout_marginRight="@dimen/margin_3"
+                      android:textColor="@color/colorWhite"
+                      android:textSize="20sp"
+                      android:gravity="center_vertical" tools:ignore="MissingPrefix"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+</RelativeLayout>

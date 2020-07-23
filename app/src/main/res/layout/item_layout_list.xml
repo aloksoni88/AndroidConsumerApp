@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="@dimen/item_layout_width"
+        android:layout_height="@dimen/item_layout_height"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/margin_3"
+        app:cardElevation="@dimen/margin_2"
+        app:cardBackgroundColor="@color/gray_300"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_95"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_5"
+            android:background="@drawable/gray_border_white_bg"
+            android:orientation="horizontal">
+
+            <FrameLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <com.clicbrics.consumer.customview.roundedimageview.RoundedImageView
+                    android:id="@+id/layout_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/margin_5"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/layout_unavailable"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    app:riv_corner_radius="4dp"
+                    app:riv_mutate_background="true"/>
+                <ProgressBar
+                    android:id="@+id/id_layout_list_image_pb"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/progressbar_theme_color"
+                    android:indeterminateDrawable="@drawable/progress_bg"
+                    android:visibility="gone" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/id_sold_out_image"
+                    android:visibility="visible"
+                    android:layout_gravity="center"
+                    android:src="@drawable/sold_out_icon"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_gravity="right|top"
+                    android:id="@+id/id_virtual_tour_icon"
+                    android:src="@drawable/ic_virtual_tour"/>
+            </FrameLayout>
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_marginRight="@dimen/margin_5"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/bed_type"
+                    fontPath="fonts/FiraSans-Book.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="2BHK"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/plot_size_in_yard"
+                    android:layout_below="@+id/bed_type"
+                    fontPath="fonts/FiraSans-Book.ttf"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/layout_price"
+                    fontPath="fonts/FiraSans-Bold.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="21.L"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/onwards"
+                    fontPath="fonts/FiraSans-Book.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" onwards"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center"
+                    android:textSize="10sp" />
+                </LinearLayout>
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/layout_area"
+                    fontPath="fonts/FiraSans-Book.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:paddingTop="10dp">
+
+    <ToggleButton
+        android:id="@+id/bus_stops"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableTop="@drawable/option_bus_selector_btn"
+        android:drawableBottom="@drawable/horizontal_red_line_bg"
+        android:textOff="@string/bus_stops"
+        android:textOn="@string/bus_stops"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:textColor="@drawable/map_nearby_btn_color_selector"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <ToggleButton
+        android:id="@+id/railways"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableTop="@drawable/option_railway_selector_btn"
+        android:drawableBottom="@drawable/horizontal_red_line_bg"
+        android:textOff="@string/railways"
+        android:textOn="@string/railways"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:textColor="@drawable/map_nearby_btn_color_selector"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <ToggleButton
+        android:id="@+id/airports"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableTop="@drawable/option_airport_selector_btn"
+        android:drawableBottom="@drawable/horizontal_red_line_bg"
+        android:textOff="@string/airports"
+        android:textOn="@string/airports"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:textColor="@drawable/map_nearby_btn_color_selector"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <ToggleButton
+        android:id="@+id/schools"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableTop="@drawable/option_school_selector_btn"
+        android:drawableBottom="@drawable/horizontal_red_line_bg"
+        android:textOff="@string/schools"
+        android:textOn="@string/schools"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:textColor="@drawable/map_nearby_btn_color_selector"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <ToggleButton
+        android:id="@+id/restaurants"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableTop="@drawable/option_restaurant_selector_btn"
+        android:drawableBottom="@drawable/horizontal_red_line_bg"
+        android:textOff="@string/restaurants"
+        android:textOn="@string/restaurants"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:textColor="@drawable/map_nearby_btn_color_selector"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <ToggleButton
+        android:id="@+id/groceries"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableTop="@drawable/option_grocery_selector_btn"
+        android:drawableBottom="@drawable/horizontal_red_line_bg"
+        android:textOff="@string/groceries"
+        android:textOn="@string/groceries"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:textColor="@drawable/map_nearby_btn_color_selector"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <ToggleButton
+        android:id="@+id/atms"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableTop="@drawable/option_atm_selector_btn"
+        android:drawableBottom="@drawable/horizontal_red_line_bg"
+        android:textOff="@string/atm"
+        android:textOn="@string/atm"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:textColor="@drawable/map_nearby_btn_color_selector"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+
+    <ToggleButton
+        android:id="@+id/hospitals"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableTop="@drawable/option_hospital_selector_btn"
+        android:drawableBottom="@drawable/horizontal_red_line_bg"
+        android:textOff="@string/hospitals"
+        android:textOn="@string/hospitals"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:textColor="@drawable/map_nearby_btn_color_selector"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <ToggleButton
+        android:id="@+id/parks"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableTop="@drawable/option_park_selector_btn"
+        android:drawableBottom="@drawable/horizontal_red_line_bg"
+        android:textOff="@string/parks"
+        android:textOn="@string/parks"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:textColor="@drawable/map_nearby_btn_color_selector"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+
+    <ToggleButton
+        android:id="@+id/petrol_pumps"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:drawableTop="@drawable/option_petrolpump_selector_btn"
+        android:drawableBottom="@drawable/horizontal_red_line_bg"
+        android:textOff="@string/petrol_pumps"
+        android:textOn="@string/petrol_pumps"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:textColor="@drawable/map_nearby_btn_color_selector"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption" />
+</LinearLayout>

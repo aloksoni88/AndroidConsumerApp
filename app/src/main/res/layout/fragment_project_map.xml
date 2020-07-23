@@ -1,0 +1,124 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="projetListModel"
+            type="com.clicbrics.consumer.viewmodel.ProjectListViewModel"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/id_map_fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/id_outer_panel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/content_map_fragment" />
+
+            <LinearLayout
+                android:id="@+id/drawing_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/id_criteria_layout"
+                    layout="@layout/content_property_criteria_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/no_results_in_map"
+                        fontPath="fonts/FiraSans-Medium.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/background_map_internet"
+                        android:gravity="center"
+                        android:minHeight="36dp"
+                        android:text="@string/no_result_found"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        tools:ignore="MissingPrefix" />
+
+                    <!--<LinearLayout
+                        android:id="@+id/drawing_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" />-->
+
+                    <LinearLayout
+                        android:id="@+id/id_floating_btn_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|top"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/draw_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/draw_icon"
+                            app:fabSize="mini" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/current_location_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_horizontal_margin"
+                            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+                            android:src="@drawable/current_location1"
+                            app:fabSize="mini" />
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:id="@+id/layers_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/layers_icon"
+                            app:fabSize="mini" />
+
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:id="@+id/drawing_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" />-->
+            <com.clicbrics.consumer.velocityviewpager.VelocityViewPager
+                android:id="@+id/map_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_gravity="bottom"
+                android:background="@color/carousal_map_overlay_color"
+                android:clipToPadding="false"
+                android:paddingStart="40dp"
+                android:paddingLeft="40dp"
+                android:paddingEnd="40dp"
+                android:paddingRight="40dp" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>

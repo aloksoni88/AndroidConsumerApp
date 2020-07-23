@@ -1,0 +1,97 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="projectListModel"
+            type="com.clicbrics.consumer.model.ProjectListResponse" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_300"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/id_container_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/result_count"
+                    fontPath="fonts/FiraSans-Medium.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text=""
+                    android:textColor="@color/text_color_login_reg"
+                    tools:ignore="MissingPrefix" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/wishlist_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/result_count" />
+
+                <TextView
+                    android:id="@+id/id_empty_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="No Project found"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/id_no_internet_layout"
+                layout="@layout/activity_no_internet"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/no_results_found"
+                layout="@layout/no_results_found"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/favorites_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/no_wishlist_found" />
+
+                <TextView
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_5"
+                    android:text="NO FAVORITES"
+                    android:textAllCaps="true"
+                    android:textColor="#979797"
+                    android:textSize="@dimen/text_size"
+
+
+                    tools:ignore="MissingPrefix"
+
+
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="ameities_column_count">4</integer>
+    <integer name="padding_first_item">18</integer>
+    <integer name="drawer_font_size">22</integer>
+</resources>

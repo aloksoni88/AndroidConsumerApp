@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_home_fragment_layout">
+
+    <data>
+
+        <variable
+            name="projectListModel"
+            type="com.clicbrics.consumer.viewmodel.ProjectListViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_300"
+            android:visibility="visible">
+
+            <include
+                android:id="@+id/id_criteria_layout"
+                layout="@layout/content_property_criteria_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_below="@+id/id_criteria_layout"
+                android:id="@+id/id_shimmer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/shimmer_layout_project_list" />
+
+                    <include layout="@layout/shimmer_layout_project_list" />
+
+                    <include layout="@layout/shimmer_layout_project_list" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <TextView
+                android:id="@+id/id_empty_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="No Project found"
+                android:visibility="gone" />
+            <LinearLayout
+                android:id="@+id/id_container_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/id_criteria_layout">
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_weight="1"
+                    android:id="@+id/home_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/id_next_page_loader_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_200"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_15"
+                    android:visibility="gone">
+
+                    <ProgressBar
+                        android:id="@+id/id_layout_list_image_pb"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/progressbar_theme_color"
+                        android:indeterminateDrawable="@drawable/progress_bg"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:textColor="@color/gray_800"
+                        android:layout_marginLeft="@dimen/margin_3"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/loading_projects"/>
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/id_no_internet_layout"
+                    layout="@layout/activity_no_internet"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <include
+                android:id="@+id/no_results_found"
+                layout="@layout/no_results_found"
+                android:layout_below="@+id/id_criteria_layout"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/error_view"
+                layout="@layout/property_list_error_view"
+                android:layout_below="@+id/id_criteria_layout"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

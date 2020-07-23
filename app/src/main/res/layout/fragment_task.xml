@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/margin_10">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/root_layout_my_task"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context="com.clicbrics.consumer.fragment.MyRedbricsFragment">
+
+            <FrameLayout
+                android:id="@+id/agent_details"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@color/blue_grey_700"
+                android:orientation="horizontal">
+
+                <ProgressBar
+                    android:id="@+id/id_agent_image_pb"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/progressbar_theme_color"
+                    android:indeterminateDrawable="@drawable/progress_bg"
+                    android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/agent_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_person" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/scrim_bottom" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin"
+                        android:paddingTop="4dp"
+                        android:text="Sales Executive"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:id="@+id/agent_credentials"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:orientation="horizontal"
+                        android:paddingBottom="8dp"
+                        android:paddingLeft="@dimen/activity_horizontal_margin"
+                        android:paddingRight="@dimen/activity_horizontal_margin">
+
+                        <TextView
+                            android:id="@+id/agent_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_large" />
+
+                        <!--<ImageView
+                            android:id="@+id/call_agent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/margin_8"
+                            android:src="@drawable/ic_call_white_24dp" />
+
+                        <ImageView
+                            android:id="@+id/email_agent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/margin_8"
+                            android:src="@drawable/ic_email_white_24dp" />
+
+                        <ImageView
+                            android:id="@+id/message_agent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_message_white_24dp"
+                            android:padding="@dimen/margin_8"/>-->
+                    </LinearLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/task_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="@dimen/margin_4" />
+
+            <TextView
+                android:id="@+id/empty_view_task"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/text_color_login_reg"
+                android:gravity="bottom|center_horizontal"
+                android:text="No activity"
+                android:textSize="@dimen/text_size_large"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/id_taskdetail_call_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_15"
+        android:src="@drawable/ic_call_white_24dp"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_anchorGravity="bottom|right|end"
+        app:rippleColor="@color/dark_red" />
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorWhite">
+
+        <ImageView android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:id="@+id/id_image"
+                android:background="@drawable/cloud_icon"
+                   android:layout_marginTop="130dp"
+                android:layout_centerHorizontal="true"/>
+
+    <TextView
+        fontPath="fonts/FiraSans-Light.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_loading_txt_msg"
+        android:layout_marginTop="@dimen/margin_60"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/id_image"
+        android:text="Loading Articles ..."
+        android:textColor="@color/colorPrimary"
+        android:textSize="26sp" tools:ignore="MissingPrefix"/>
+
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/dialog_map_options"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nearby Places"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/theme" />
+
+    <ListView
+        android:layout_margin="@dimen/margin_4"
+        android:id="@+id/nearby_places_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:choiceMode="singleChoice"/>
+
+    <TextView
+        android:id="@+id/clear_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clear All"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:padding="@dimen/margin_8"
+        android:background="@color/theme" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3"
+        android:layout_marginTop="@dimen/margin_20">
+
+        <RadioGroup
+            android:id="@+id/map_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/normal_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/normal_map_view"
+                android:background="@drawable/map_option_button_left"
+                android:textColor="@drawable/radio_selector"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="@dimen/margin_6"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/satellite_view"
+                android:text="@string/satellite_map_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/map_option_button_center"
+                android:textColor="@drawable/radio_selector"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="@dimen/margin_6" />
+
+            <RadioButton
+                android:id="@+id/hybrid_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@drawable/radio_selector"
+                android:background="@drawable/map_option_button_right"
+                android:text="@string/hybrid_map_view"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="@dimen/margin_6" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+
+</LinearLayout>

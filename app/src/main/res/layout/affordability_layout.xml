@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cardView"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="@dimen/margin_2"
+        app:cardUseCompatPadding="true">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/margin_300"
+    android:padding="@dimen/margin_15"
+    android:background="@drawable/cardview_gradient"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        fontPath="fonts/FiraSans-Bold.ttf"
+        android:id="@+id/afford_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/affordibility_calculator"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_large"
+        android:textColor="@color/black"
+        />
+<LinearLayout
+    android:layout_marginTop="@dimen/margin_20"
+    android:layout_below="@+id/afford_tv"
+    android:id="@+id/eligibleloan_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs"
+                fontPath="fonts/FiraSans-Bold.ttf"
+                android:layout_gravity="top"
+                android:textColor="@color/black"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.35"
+                fontPath="fonts/FiraSans-Bold.ttf"
+                android:id="@+id/eligible_cost"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_xxxlarge"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cr"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_xlarge"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/rs"
+                fontPath="fonts/FiraSans-Bold.ttf"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.35"
+                fontPath="fonts/FiraSans-Bold.ttf"
+                android:id="@+id/property_cost"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_xxxlarge"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cr"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_xlarge"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:gravity="center"
+            android:text="@string/eligible_loan_amount"
+            fontPath="fonts/FiraSans-Regular.ttf"
+            android:textSize="@dimen/text_size_small"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:text="@string/affordable_property_cost"
+            android:gravity="center"
+            fontPath="fonts/FiraSans-Regular.ttf"
+            android:textSize="@dimen/text_size_small"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
+    <LinearLayout
+        android:id="@+id/seekBarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/eligibleloan_layout"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            >
+
+            <TextView
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:paddingRight="@dimen/margin_12"
+                android:text="@string/down_payment"
+                android:textColor="@color/gray_text_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                android:padding="2dp"
+                tools:ignore="MissingPrefix" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        fontPath="fonts/FiraSans-Medium.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rs"
+                        android:layout_toLeftOf="@+id/downpaymntamount"
+                        android:visibility="visible"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold"
+                        android:padding="2dp"
+                        tools:ignore="MissingPrefix" />
+                    <EditText
+                        android:layout_alignParentRight="true"
+                        fontPath="fonts/FiraSans-Medium.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:text="10000"
+                        android:maxLength="8"
+                        android:minWidth="10dp"
+                        android:textColorHint="@color/color_content_about_gray"
+                        android:background="@android:color/transparent"
+                        android:id="@+id/downpaymntamount"
+                        android:textColor="@color/gray_text_color"
+                        android:textSize="@dimen/text_size"
+                        android:padding="2dp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        tools:ignore="MissingPrefix" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/downpaymntamount"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/gray_text_color" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_4"
+                >
+
+                <LinearLayout
+                    android:id="@+id/bhk_seekbar_interval_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/bhk_seekbar"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="@dimen/margin_10"
+                    android:layout_marginBottom="@dimen/margin_3"
+                    >
+
+                    <TextView
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/margin_3"
+                        android:text="@string/rs_10_k"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/margin_3"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/margin_3"
+                        android:text="" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/margin_3"
+                        android:text="" />
+
+                    <TextView
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rs_1_cr"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+
+                <SeekBar
+                    android:id="@+id/downpayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/bhk_selected_txt"
+                    android:max="1000"
+                    android:min="1"
+                    android:paddingBottom="@dimen/margin_20"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_progress"
+                    android:thumb="@drawable/ic_seekbar"
+                    android:thumbOffset="-0dp" />
+
+            </FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+        <TextView
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text="@string/monthly_income"
+            android:textColor="@color/gray_text_color"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            tools:ignore="MissingPrefix" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal"
+                >
+            <TextView
+
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs"
+                android:padding="2dp"
+                android:visibility="visible"
+                android:layout_toLeftOf="@+id/monthly_income_amount"
+                android:textColor="@color/gray_text_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                tools:ignore="MissingPrefix" />
+
+            <EditText
+                android:layout_alignParentRight="true"
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="10000"
+                android:minWidth="10dp"
+                android:layout_marginLeft="@dimen/margin_1"
+                android:padding="2dp"
+                android:inputType="number"
+                android:maxLength="7"
+                android:background="@android:color/transparent"
+                android:id="@+id/monthly_income_amount"
+                android:textColor="@color/gray_text_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                tools:ignore="MissingPrefix" />
+            </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/downpaymntamount"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/gray_text_color" />
+            </LinearLayout></RelativeLayout>
+        <FrameLayout
+            android:id="@+id/monthly_income_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_3"
+            >
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:textSize="@dimen/text_size_small"
+                android:text="@string/rs_10_k"/>
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:textSize="@dimen/text_size_small"
+                android:text="@string/rs_20_l"/>
+        </LinearLayout>
+            <SeekBar
+                android:id="@+id/monthly_income"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/margin_20"
+                android:progressDrawable="@drawable/seekbar_progress"
+                android:thumb="@drawable/ic_seekbar"
+                android:max="400"
+                android:min="2"
+                android:paddingEnd="0dp"
+                android:paddingStart="0dp"
+                android:thumbOffset="-0dp"
+                android:progress="2"/>
+        </FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            >
+        <TextView
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/margin_12"
+            android:text="Loan Tenure"
+            android:textColor="@color/gray_text_color"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            tools:ignore="MissingPrefix" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal"
+                >
+                <EditText
+                    android:paddingRight="@dimen/margin_3"
+                    android:visibility="visible"
+                    android:layout_toLeftOf="@+id/yr_tv"
+                    fontPath="fonts/FiraSans-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:inputType="number"
+                    android:background="@android:color/transparent"
+                    android:layout_height="match_parent"
+                    android:maxLength="2"
+                    android:minWidth="10dp"
+                    android:text="1"
+                    android:id="@+id/loan_tenure_amount"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/yr_tv"
+                    fontPath="fonts/FiraSans-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/years"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="@dimen/text_size"
+                    android:textStyle="bold"
+                    tools:ignore="MissingPrefix" />
+
+            </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/downpaymntamount"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/gray_text_color" /></LinearLayout></RelativeLayout>
+        <FrameLayout
+            android:id="@+id/loan_tenure_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            >
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_3"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:textSize="@dimen/text_size_small"
+                android:text="@string/_1_year"/>
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:textSize="@dimen/text_size_small"
+                android:text="30 Years"/>
+        </LinearLayout>
+            <SeekBar
+                android:id="@+id/loan_tenure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/margin_20"
+                android:progressDrawable="@drawable/seekbar_progress"
+                android:thumb="@drawable/ic_seekbar"
+                android:max="30"
+                android:min="1"
+                android:paddingEnd="0dp"
+                android:paddingStart="0dp"
+                android:thumbOffset="-0dp"
+                android:progress="0"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+        <TextView
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/margin_12"
+            android:text="Interest Rate"
+            android:textColor="@color/gray_text_color"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            tools:ignore="MissingPrefix" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal"
+                >
+                <EditText
+
+                    fontPath="fonts/FiraSans-Medium.ttf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:minWidth="10dp"
+                    android:text="0"
+                    android:paddingRight="@dimen/margin_3"
+                    android:layout_toLeftOf="@+id/percent_tv"
+                    android:id="@+id/intrest_rate_period"
+                    android:textColor="@color/gray_text_color"
+                    android:textSize="@dimen/text_size"
+                    android:inputType="numberDecimal"
+                    android:background="@android:color/transparent"
+                    android:maxLength="4"
+                    android:textStyle="bold"
+                    tools:ignore="MissingPrefix" />
+            <TextView
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="%"
+                android:layout_alignParentRight="true"
+                android:visibility="visible"
+                android:id="@+id/percent_tv"
+                android:textColor="@color/gray_text_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                tools:ignore="MissingPrefix" />
+
+            </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/downpaymntamount"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/gray_text_color" /></LinearLayout>
+        </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/intrest_rate_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            >
+
+
+        <LinearLayout
+            android:id="@+id/floor_seekbar_interval_layout"
+            android:layout_below="@+id/floor_seekbar"
+            android:gravity="bottom"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/margin_3"
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:textSize="@dimen/text_size_small"
+                android:text="1%" />
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:textSize="@dimen/text_size_small"
+                android:text="@string/_15"/>
+        </LinearLayout>
+        <SeekBar
+            android:id="@+id/intrest_rate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/margin_20"
+            android:progressDrawable="@drawable/seekbar_progress"
+            android:thumb="@drawable/ic_seekbar"
+            android:max="150"
+            android:min="10"
+            android:paddingEnd="0dp"
+            android:paddingStart="0dp"
+            android:thumbOffset="-0dp"
+            android:progress="0"/></FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+
+
+        <TextView
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/margin_12"
+            android:text="@string/other_emis_montly"
+            android:textColor="@color/gray_text_color"
+            android:textSize="@dimen/text_size"
+            android:textStyle="bold"
+            tools:ignore="MissingPrefix" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal"
+                >
+            <TextView
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rs"
+                android:visibility="visible"
+                android:paddingRight="@dimen/margin_3"
+                android:layout_toLeftOf="@+id/emi_amount"
+                android:textColor="@color/gray_text_color"
+                android:textSize="@dimen/text_size"
+                android:textStyle="bold"
+                tools:ignore="MissingPrefix" />
+            <EditText
+                android:layout_alignParentRight="true"
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="10dp"
+                android:text="0"
+                android:inputType="number"
+                android:background="@android:color/transparent"
+                android:id="@+id/emi_amount"
+                android:textColor="@color/gray_text_color"
+                android:textSize="@dimen/text_size"
+                android:maxLength="7"
+                android:textStyle="bold"
+                tools:ignore="MissingPrefix" />
+            </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/downpaymntamount"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/gray_text_color" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:id="@+id/other_emi_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            >
+
+
+        <LinearLayout
+            android:layout_below="@+id/floor_seekbar"
+            android:gravity="bottom"
+            android:layout_marginBottom="@dimen/margin_2"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:textSize="@dimen/text_size_small"
+                android:text="0"/>
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:paddingLeft="@dimen/margin_3"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                fontPath="fonts/FiraSans-Regular.ttf"
+                android:textSize="@dimen/text_size_small"
+                android:text="@string/rs_20_l"/>
+        </LinearLayout>
+        <SeekBar
+            android:id="@+id/other_emi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/margin_20"
+            android:progressDrawable="@drawable/seekbar_progress"
+            android:thumb="@drawable/ic_seekbar"
+            android:max="400"
+            android:min="0"
+            android:paddingEnd="0dp"
+            android:paddingStart="0dp"
+            android:thumbOffset="-0dp"
+            android:progress="0"/>
+        </FrameLayout>
+        <TextView
+            android:id="@+id/requestplanloan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_small"
+            android:gravity="center"
+            android:paddingTop="@dimen/margin_8"
+            android:paddingBottom="@dimen/margin_8"
+            fontPath="fonts/FiraSans-Regular.ttf"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_20"
+            android:text="@string/request_for_loan"
+            android:background="@drawable/gray_outline_wite_rectangle"
+            android:textColor="@color/dark_red"
+
+            />
+    </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
+    </android.support.v7.widget.CardView>
+</layout>

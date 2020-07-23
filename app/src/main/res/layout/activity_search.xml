@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg_color"
+    tools:context="com.clicbrics.consumer.activities.SearchActivityOld"
+    tools:ignore="MissingPrefix">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/screen_bg_color"
+        android:elevation="0dp"
+        android:gravity="center">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/search_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginRight="@dimen/margin_5"
+                android:weightSum="1">
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_back_arrow"
+                android:padding="@dimen/margin_3"
+                />
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:orientation="horizontal">
+            <EditText
+                android:id="@+id/search_edit"
+                fontPath="fonts/FiraSans-Light.ttf"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="Search"
+                android:layout_toLeftOf="@+id/progressBar2"
+                android:imeOptions="actionSearch"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray_500"
+                android:textSize="15sp">
+
+                <requestFocus />
+            </EditText>
+               <ProgressBar
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_vertical"
+                   android:id="@+id/progressBar2"
+                   android:padding="@dimen/margin_5"
+                   android:layout_marginRight="@dimen/margin_5"
+                   android:layout_toLeftOf="@+id/id_search_clear_btn"
+                   android:layout_centerVertical="true"
+                   style="?android:attr/progressBarStyleSmall"
+                   android:indeterminate="true"
+                   android:visibility="gone"
+                   android:indeterminateDrawable="@drawable/cicular_progress"/>
+
+               <ImageView
+                   android:id="@+id/id_search_clear_btn"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:alpha="0.5"
+                   android:drawableTint="@color/black"
+                   android:padding="@dimen/margin_2"
+                   android:layout_marginRight="@dimen/margin_5"
+                   android:visibility="invisible"
+                   app:srcCompat="@drawable/ic_round_cancel" />
+           </RelativeLayout>
+            </LinearLayout>
+            <!--EditText
+                android:id="@+id/search_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/transparent"
+                android:textCursorDrawable="@drawable/search_cursor_drawable"/-->
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--<android.support.v7.widget.RecyclerView
+            android:id="@+id/list_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />-->
+<LinearLayout
+    android:id="@+id/liner_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/margin_2"
+    android:paddingTop="@dimen/margin_2"
+    android:layout_marginBottom="@dimen/margin_8"
+    android:layout_marginTop="@dimen/margin_2">
+        <TextView
+            android:id="@+id/searchincitytext"
+            fontPath="fonts/FiraSans-Light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:drawableRight="@drawable/drop_down_selector_image"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/search_in_city"
+            android:textColor="@color/black"
+            android:visibility="visible" />
+</LinearLayout>
+          <!--  <TextView
+                android:id="@+id/change"
+                fontPath="fonts/FiraSans-Medium.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="@dimen/margin_3"
+                android:paddingBottom="@dimen/margin_3"
+                android:text="@string/change"
+                android:textAllCaps="true"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/blue_round_color"
+                android:visibility="gone" />
+        </RelativeLayout>-->
+        <TextView
+            android:id="@+id/search_result_zero"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="4dp"
+            android:text="No Results Found"
+            android:textColor="@color/gray_800"
+            android:visibility="gone" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedscroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/recent_textView"
+                    fontPath="fonts/FiraSans-Bold.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="@dimen/margin_3"
+                    android:paddingBottom="@dimen/margin_3"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:background="@color/status_bar_color_lightwhite"
+                    android:text="@string/recent_search" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recentProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                   />
+
+                <TextView
+                    android:id="@+id/toplocality_tv"
+                    fontPath="fonts/FiraSans-Bold.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:paddingTop="@dimen/margin_3"
+                    android:paddingBottom="@dimen/margin_3"
+                    android:background="@color/status_bar_color_lightwhite"
+                    android:textColor="@color/black"
+                    android:text="@string/top_locality"
+                    android:textAllCaps="true" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/topLocalityrecyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <!--   <ListView
+
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:divider="@color/gray_400"
+               android:dividerHeight="1px" />-->
+
+        <!--<TextView
+            android:id="@+id/recent_txt"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:text="Recent"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_recent_searches"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+        <ImageView
+            android:id="@+id/powered_by_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recent_txt"
+            android:layout_gravity="center_horizontal"
+            android:padding="8dp"
+            android:src="@drawable/powered_by_google_dark" />-->
+    </LinearLayout>
+    <!--</android.support.v4.widget.NestedScrollView>-->
+</android.support.design.widget.CoordinatorLayout>

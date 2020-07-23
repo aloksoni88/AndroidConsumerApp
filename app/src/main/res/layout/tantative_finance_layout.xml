@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/margin_10"
+    android:orientation="vertical">
+
+    <TextView
+        android:paddingLeft="@dimen/detail_horizontal_margin"
+        android:id="@+id/finance_txt"
+        fontPath="fonts/FiraSans-Book.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Financing"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/tantative_layout_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blur_imag_finance_options"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/id_finance_req_btn"
+            fontPath="fonts/FiraSans-Light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/cir_white_with_redborder_bg"
+            android:minHeight="@dimen/margin_35"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingRight="@dimen/margin_10"
+            android:text="Request for Financing Options"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_small" />
+    </FrameLayout>
+
+
+</LinearLayout>

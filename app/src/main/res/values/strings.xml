@@ -1,0 +1,650 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="done">Done</string>
+    <string name="apartment">Apartment</string>
+    <string name="new_property">new</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="ongoing">ongoing</string>
+    <string name="project_status">PROJECT STATUS</string>
+    <string name="ready">ready</string>
+    <string name="villa">Villa</string>
+    <string name="plots">Plots</string>
+    <string name="commercial">Commercial</string>
+    <string name="apply">APPLY</string>
+    <string name="single_family">Single Family</string>
+    <string name="multi_family">Multi Family</string>
+    <string name="land">Land</string>
+    <string name="facebook_app_id">178411629253542</string>
+    <string name="fb_login_protocol_scheme">fb178411629253542</string>
+
+    <string name="app_name">clicbrics</string>
+    <string name="action_settings">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="title_activity_login">Login</string>
+    <string name="degree">\u00B0</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="country_code">+91</string>
+    <string name="agree_terms_text">I agree to</string>
+    <!--<string name="terms_and_conditions"><u><![CDATA[Terms & Conditions]]></u></string>-->
+    <string name="terms_and_conditions">
+        <u>Terms &amp; Conditions</u>
+    </string>
+    <string name="create_account">Create Account</string>
+    <string name="name">Name</string>
+    <string name="email_id_hint">Email-id</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="referral_code">Referral Code</string>
+    <string name="housing">Housing</string>
+    <string name="email_id_or_mobile_hint">Email / Phone</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="login_hyperlink">
+        <u>Login</u>
+    </string>
+    <string name="forgot_password_underscore">
+        <u>Forgot Password?</u>
+    </string>
+    <string name="or">OR</string>
+    <!--<string name="google_map_api_key">AIzaSyCKIp8cDtHHMcpRMUcK-PwuOkcaAuOwLxI</string>-->
+    <string name="google_map_api_key">AIzaSyB3u9sru_Q-SywEC_fAFrwAwMZdvy3EBiU</string>
+    <string name="autocomplete_hint">Place name or address</string>
+    <string name="anywhr">ANYWHERE</string>
+    <string name="recent">Recent</string>
+    <string name="recent_locations">Recent Locations</string>
+    <string name="title_activity_property">Property List</string>
+    <string name="please_wait">Please wait..</string>
+    <string name="title_activity_filter">Filter</string>
+    <string name="price_range">Price Range (\u20B9)</string>
+    <string name="view_filter">SEARCH</string>
+    <string name="reset">Reset</string>
+    <string name="cancel_caps">CANCEL</string>
+    <string name="area">Area(sq ft)</string>
+    <string name="beds">Beds</string>
+    <string name="baths">Baths</string>
+    <string name="property_type">PROPERTY TYPE</string>
+    <string name="min_range">Min</string>
+    <string name="network_error_msg">Please check network connection.</string>
+    <string name="retry">TRY AGAIN</string>
+    <string name="try_again">Please try again</string>
+    <string name="view_list">
+        <b>VIEW LIST</b>
+    </string>
+    <string name="save_search">SAVE SEARCH</string>
+    <string name="splash_text">EVERYONE\'S PRIVATE PROPERTY AGENT</string>
+    <string name="my_profile">MY PROFILE</string>
+    <string name="shared_with_frnd">SHARE</string>
+    <string name="about_us">ABOUT US</string>
+    <string name="incorrect_password">Incorrect password</string>
+    <string name="password_cannot_be_empty">password cannot be empty!</string>
+    <string name="email_cannot_be_empty">email cannot be empty!</string>
+    <string name="invalid_emailid">Invalid emailId</string>
+    <string name="zoom_in_error_msg">Please zoom in to see your results</string>
+    <string name="no_project_found">No Project Found</string>
+    <string name="no_saved_search_found">No saved search found</string>
+    <string name="no_activity_found">No Activity Found</string>
+    <string name="draw_msg">Draw to search on the map.</string>
+
+    <string-array name="price_array">
+        <item>₹ 0</item>
+        <item>₹ 10 L</item>
+        <item>₹ 20 L</item>
+        <item>₹ 30 L</item>
+        <item>₹ 40 L</item>
+        <item>₹ 50 L</item>
+        <item>₹ 60 L</item>
+        <item>₹ 70 L</item>
+        <item>₹ 80 L</item>
+        <item>₹ 90 L</item>
+        <item>₹ 1 Cr</item>
+        <item>₹ 1.10 Cr</item>
+        <item>₹ 1.20 Cr</item>
+        <item>₹ 1.30 Cr</item>
+        <item>₹ 1.40 Cr</item>
+        <item>₹ 1.50 Cr</item>
+        <item>₹ 1.60 Cr</item>
+        <item>₹ 1.70 Cr</item>
+        <item>₹ 1.80 Cr</item>
+        <item>₹ 1.90 Cr</item>
+        <item>₹ 2 Cr</item>
+        <item>Any</item>
+    </string-array>
+
+    <integer-array name="price_array_value">
+        <item>0</item>
+        <item>1000000</item>
+        <item>2000000</item>
+        <item>3000000</item>
+        <item>4000000</item>
+        <item>5000000</item>
+        <item>6000000</item>
+        <item>7000000</item>
+        <item>8000000</item>
+        <item>9000000</item>
+        <item>10000000</item>
+        <item>11000000</item>
+        <item>12000000</item>
+        <item>13000000</item>
+        <item>14000000</item>
+        <item>15000000</item>
+        <item>16000000</item>
+        <item>17000000</item>
+        <item>18000000</item>
+        <item>19000000</item>
+        <item>20000000</item>
+        <item>1000000000</item>
+    </integer-array>
+    >
+
+    <string-array name="area_array">
+        <item>500 sqft</item>
+        <item>1000 sqft</item>
+        <item>1500 sqft</item>
+        <item>2000 sqft</item>
+        <item>3000 sqft</item>
+        <item>4000 sqft</item>
+        <item>5000 sqft</item>
+        <item>Any</item>
+    </string-array>
+
+    <integer-array name="area_array_values">
+        <item>500</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+        <item>5100</item>
+    </integer-array>
+
+    <string-array name="sort_arry">
+        <item>Sort by</item>
+        <item>Price</item>
+        <item>Distance</item>
+    </string-array>
+    <string name="could_not_get_package_name">"could not get package name: "</string>
+    <string name="logging_in">Logging In…</string>
+    <string name="google_auth_error">Unable to authenticate from google</string>
+    <string name="name_cannot_be_empty">Name cannot be empty!</string>
+    <string name="phone_no_cannot_be_empty">Phone no cannot be empty!</string>
+    <string name="invalid_phone_no">Invalid phone no</string>
+    <string name="cannot_connect">Can\'t connect.</string>
+    <string name="error">Error</string>
+    <string name="otp_msg">Please type the verification code sent to</string>
+    <string name="waiting_for_otp">Waiting for OTP</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="resend_otp">RESEND OTP</string>
+    <string name="submit">Submit</string>
+    <string name="signup_error">Unable to complete registration. Please try again!</string>
+    <string name="resending_otp">Resending OTP…</string>
+    <string name="unable_to_process_request">Unable to process your request, Please retry.</string>
+    <string name="verifying_user">Verifying user…</string>
+    <string name="otp_should_not_be_empty">OTP should not be empty!</string>
+    <string name="no_trusted_contact">No Trusted Contact</string>
+    <string name="trusted_contacts">TRUSTED CONTACTS</string>
+    <string name="mobile">MOBILE</string>
+    <string name="work_email">Work Email</string>
+    <string name="email">EMAIL</string>
+    <string name="add_contacts">Add Contacts</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="trusted_contacts_add">"Trusted Contacts Add "</string>
+    <string name="profile">Profile</string>
+    <string name="logout_msg">Logging out…</string>
+    <string name="ga_event_category">event</string>
+    <string name="ga_button_category">button_click</string>
+    <string name="internet_is_very_slow">Unable to process your request, please check network connection.</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="dont_have_password">DON\'T HAVE A PASSWORD?</string>
+    <string name="get_password">Get Password</string>
+    <string name="unable_to_process">Unable to process your request, please retry.</string>
+    <string name="invalid_password">Invalid Password</string>
+    <string name="change_password">Change Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password_does_not_match">Password does not match.</string>
+    <string name="network_error_title">Can\'t connect.</string>
+    <string name="password_has_been_changed">Password changed successfully.</string>
+    <string name="close">Close</string>
+    <string name="invalid_name">Invalid name!</string>
+    <string name="name_error">Enter valid name.</string>
+    <string name="mobile_error">Enter valid mobile number.</string>
+    <string name="email_error">Enter valid email address.</string>
+    <string name="contact_already_exist">Contact already exists!</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="select_image">Select Image</string>
+    <string name="edit_image">Edit Image</string>
+    <string name="send_password">SEND PASSWORD</string>
+    <string name="email_sent">"Email sent "</string>
+    <string name="login_msg">Logging in…</string>
+    <string name="confirm">Confirm</string>
+    <string name="contact_must_have_contact_no_or_emailid">Contact must have contact no or emailId</string>
+    <string name="trusted_contact_add_limit">You cannot add more than 5 trusted contacts.</string>
+    <string name="permision">Permission denied!</string>
+    <string name="storage_permission_denied">Storage permission denied!</string>
+    <string name="submitting_feedback">Submitting feedback..</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="alert">Alert</string>
+    <string name="search_country_name">Search Country</string>
+    <string name="updating_profile">Updating Profile...</string>
+    <string name="logout">Logout</string>
+    <string name="nav_logout">LOGOUT</string>
+    <string name="send_email_with_dot">Send email...</string>
+    <string name="sending_email_with_dot">Sending email...</string>
+    <string name="invalid_fields">Invalid Name, your changes will be lost</string>
+    <string name="save_change_confirmation">Do you want to save changes?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="verify_account">Verify Account</string>
+    <string name="cant_login_from_FB">Couldn\'t log in to facebook account</string>
+    <string name="forgot_password_button_clicked">Forgot Password button Clicked</string>
+    <string name="forgot_password_button">Forgot Password button</string>
+    <string name="invalid_otp">Invalid OTP, please try again.</string>
+    <string name="signUp_logIn">LOGIN</string>
+    <string name="home">HOME</string>
+    <!--<string name="my_redbrics"><font color='red'>MY REDBRICS</font>></string>-->
+    <string name="my_redbrics">MY CLICBRICS</string>
+    <string name="notifications">NOTIFICATIONS</string>
+    <string name="favorite_list">FAVORITES</string>
+    <string name="recently_viewed">RECENTLY VIEWED</string>
+    <string name="saved_searches">SAVED SEARCHES</string>
+    <string name="tab_saved_searches">SAVED \nSEARCHES</string>
+    <string name="recent_search">RECENT SEARCHES</string>
+    <string name="rate_app">RATE THIS APP</string>
+    <string name="settings">SETTINGS</string>
+    <string name="password_short">Password should have minimum 1 characters!</string>
+    <string name="drawer_open">Drawer Opened</string>
+    <string name="drawer_closed">Drawer Closed</string>`
+    <string name="title_activity_property_detail">Property Detail</string>
+    <string name="about_project">About Project</string>
+    <string name="developer">Developer</string>
+    <string name="possession">Possession</string>
+    <string name="possession_by">Possession by</string>
+    <string name="total_area">Total Area</string>
+    <string name="green_area">Green Area</string>
+    <string name="title_activity_explore_neighbourhood">Explore Area</string>
+    <string name="title_activity_emi">Customize EMI</string>
+    <string name="loan_amount">Loan Amount</string>
+    <string name="emi">EMI Amount</string>
+    <string name="tenure">Tenure</string>
+    <string name="downpayment">Down Payment</string>
+
+    <string name="groceries">Groceries</string>
+    <string name="schools">Schools</string>
+    <string name="parks">Parks</string>
+    <string name="atm">ATMs</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="hospitals">Hospitals</string>
+    <string name="bus_stops">Bus Stops</string>
+    <string name="railways">Railways</string>
+    <string name="airports">Airports</string>
+    <string name="nearby">EXPLORE NEIGHBORHOOD</string>
+    <string name="payment_plan">PAYMENT PLANS</string>
+    <string name="place_api_key">AIzaSyCSa6I2sv9siUv9oP5B_uPQ8XF3oe_Kmv4</string>
+    <string name="title_activity_layout">LayoutActivity</string>
+
+    <string name="scores">Scores</string>
+
+    <string name="livability">Livability</string>
+    <string name="connectivity">Connectivity</string>
+    <string name="lifestyle">Lifestyle</string>
+    <string name="safety">Safety</string>
+    <string name="value_for_money">Value for Money</string>
+    <string name="ongoing_projects">ongoing projects</string>
+    <string name="total_projects">total projects</string>
+    <string name="experience">experience</string>
+    <string name="video">Video</string>
+
+    <string-array name="months">
+        <item name="JAN">Jan</item>
+        <item name="FEB">Feb</item>
+        <item name="MAR">Mar</item>
+        <item name="APR">Apr</item>
+        <item name="MAY">May</item>
+        <item name="JUN">Jun</item>
+        <item name="JUL">Jul</item>
+        <item name="AUG">Aug</item>
+        <item name="SEP">Sept</item>
+        <item name="OCT">Oct</item>
+        <item name="NOV">Nov</item>
+        <item name="DEC">Dec</item>
+    </string-array>
+
+    <string name="callback_description">We\'re pleased to contact you for more details</string>
+    <string name="get_a_callback">GET A CALLBACK</string>
+    <string name="contact_us_at">Contact us at</string>
+    <string name="call_us_at_number">1800-180-2222</string>
+
+    <string name="amenties">Amenties</string>
+    <string name="details">Details</string>
+    <string name="view_layout_details">VIEW LAYOUT DETAILS</string>
+
+    <string name="view_all_furnishings">VIEW ALL FURNISHINGS</string>
+    <string name="onwards">Onwards</string>
+    <string name="builtup_area">BUILTUP AREA</string>
+    <string name="floors">Floors</string>
+    <string name="fittings">Fittings</string>
+    <string name="walls">Walls</string>
+    <string name="furnishing">FURNISHING</string>
+    <string name="amenities">AMENITIES</string>
+    <string name="property_detail">PROPERTY DETAILS</string>
+    <string name="payable_emi">Payable EMI</string>
+    <string name="interestRate">Interest Rate</string>
+    <string name="customizeemi">CUSTOMIZE EMI</string>
+    <string name="property_value">Property Value</string>
+    <string name="book_a_visit">SCHEDULE VISIT</string>
+    <string name="call_me_back">CALL ME BACK</string>
+    <string name="contact_us">CONTACT US</string>
+    <string name="bedroom">Bedroom</string>
+    <string name="bathroom">Bathroom</string>
+    <string name="balcony">Balcony</string>
+    <string name="store">Store</string>
+    <string name="study">Study</string>
+    <string name="servant_room">Servant Room</string>
+    <string name="pooja_room">Pooja Room</string>
+    <string name="kids_room">Kids Room</string>
+    <string name="bedrooms">Bedrooms</string>
+    <string name="bathrooms">Bathrooms</string>
+    <string name="balconies">Balconies</string>
+    <string name="store_room">Store Room</string>
+    <string name="store_rooms">Store Rooms</string>
+    <string name="study_rooms">Study Rooms</string>
+    <string name="study_room">Study Room</string>
+    <string name="servant_rooms">Servant Rooms</string>
+    <string name="pooja_rooms">Pooja Rooms</string>
+    <string name="kids_rooms">Kids Rooms</string>
+    <string name="read_more">Read More</string>
+    <string name="read_less">Read Less</string>
+    <string name="speak_to_a_home_loan_expert">SPEAK TO A HOME LOAN EXPERT</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="getting_location">Unknown address</string>
+    <string name="search_saved">Search saved successfully.</string>
+    <string name="title_activity_plan_payment">Payment Plans</string>
+    <string name="title_activity_save_search">Saved Searches</string>
+    <string name="title_activity_fav">Favorite Projects</string>
+    <string name="no_filter_applied">No Filter Applied</string>
+    <string name="normal_map_view">Normal</string>
+    <string name="satellite_map_view">Satellite</string>
+    <string name="hybrid_map_view">Hybrid</string>
+    <string name="force_update_msg">\"This version is out of date. Please update your app.\"</string>
+    <string name="force_update_title">Mandatory Update</string>
+    <string name="update_title">Update</string>
+    <string name="force_update_btn_text">NOW</string>
+    <string name="force_update_btn_text_later">LATER</string>
+    <string name="login_error">Login failed, please try again.</string>
+    <string name="title_activity_team_and_condition">TERMS &amp; CONDITIONS</string>
+    <string name="title_activity_notification">Notifications</string>
+    <string name="title_activity_payment_plan">Payment Plans</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="loan_exp_msg">Thanks for connecting to clicbrics, our loan expert will soon contact you.</string>
+    <string-array name="week_array">
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </string-array>
+
+    <string-array name="size_list">
+        <item>Sq.ft</item>
+        <item>Sq.yd</item>
+    </string-array>
+
+    <string name="livability_detail">Helps you assess the livability of project from perspective of
+        typical day to day needs. Higher index indicates more livable project.
+    </string>
+
+    <string name="connectivity_detail">Helps you assess the connectivity of project to most
+        important and active landmarks across the city. Higher index indicates more centrally
+        located project.
+    </string>
+
+    <string name="lifestyle_detail">Helps you to judge the luxuriousness in context of overall market
+        considering that every project is marked as luxurious by developers. Higher index indicates
+        more luxurious project.
+    </string>
+
+    <string name="value_for_money_detail">Assessing property price against other key decision
+        factors. Higher index indicates potentially a better value for money deal.
+    </string>
+    <string name="carpet_area">Carpet Area</string>
+    <string name="builtup_area_small">Builtup Area</string>
+    <string name="super_area">Super Area</string>
+    <string name="thanks_msg">Thank you for choosing clicbrics, our executive will contact you soon!</string>
+    <string name="book_a_visit_confirmation">Your visit has been scheduled. Thanks for choosing clicbrics!</string>
+    <string name="btn_logout_from_google">logout</string>
+    <string name="btn_revoke_access">revoke_access</string>
+    <string name="loading">Loading!</string>
+    <string name="string_new">New</string>
+    <string name="string_ongoing">"Ongoing"</string>
+    <string name="string_ready">"Ready"</string>
+    <string name="string_ready_to_move">"ReadyToMove"</string>
+    <string name="string_inprogress">"InProgress"</string>
+    <string name="string_notstarted">NotStarted</string>
+
+    <string name="concierge">RELATIONSHIP MANAGER</string>
+    <string name="my_properties">MY PROPERTIES</string>
+    <string name="tab_my_properties">MY \nPROPERTIES</string>
+    <string name="site_visits">SITE VISITS</string>
+    <string name="reschedule">Reschedule</string>
+    <string name="scheduled">Scheduled</string>
+    <string name="my_site_visits">MY SITE VISITS</string>
+    <string name="tab_my_site_visits">My Site \nVisits</string>
+    <string name="paid_amount">Paid Amount</string>
+    <string name="due_amount">Due Amount</string>
+    <string name="total_amount">Total Amount</string>
+
+    <string name="city_availability_declaration">
+        We’re only available in the above cities at the moment reach out to us at <b>support@clicbrics.com</b> to bring us to your city
+    </string>
+    <string name="let_s_pick_a_city">LET\'S PICK A CITY</string>
+    <string name="use_my_current_location">Use my current location</string>
+    <string name="rooms">ROOMS</string>
+    <string name="budget">BUDGET</string>
+
+
+    <!-- TODO: Remove or change this placeholderf text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="skip">Skip</string>
+    <string name="onboarding1_title">FIND THE BEST HOME</string>
+    <string name="onboarding2_title">MEET YOUR \nRELATIONSHIP MANAGER</string>
+    <string name="onboarding3_title">WE’RE THERE FOR YOU, EVERY STEP OF THE WAY</string>
+    <string name="continue_str">continue</string>
+    <string name="onboarding1_text_msg">We offer the best quality properties and constantly update them with newest offerings.</string>
+    <string name="onboarding2_text_msg">As soon as you like a house, we guide you through the whole process. You don’t have to worry about a thing!</string>
+    <string name="onboarding3_text_msg">Unlike others, clicbrics doesn’t forget you once you’ve bought your house, clicbrics is still there for you after you move in.</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="closed">Closed</string>
+    <string name="search_string">Search in
+        <xliff:g id="city">%1s</xliff:g>
+    </string>
+    <string name="less">Less</string>
+    <string name="view_more">View More</string>
+    <string name="cancel_visit">Cancel Visit</string>
+    <string name="wishlist">WISHLIST</string>
+    <string name="login_regsiter">Login/Register</string>
+    <string name="paid">Paid</string>
+    <string name="pending">Pending</string>
+    <string name="total">Total</string>
+    <string name="contact">Contact</string>
+    <string name="property_details">Property Details</string>
+    <string name="view_all">View All</string>
+    <string name="bhk_type">BHK Type</string>
+    <string name="bhk">BHK</string>
+    <string name="floor">Floor</string>
+    <string name="independent_floor">Independent Floor</string>
+    <string name="unit">Unit</string>
+    <string name="agent">Agent</string>
+    <string name="payments">Payments</string>
+    <string name="payment_history">Payment History</string>
+    <string name="documents">Documents</string>
+    <string name="due">Due</string>
+    <string name="block_tower">Block/Tower</string>
+    <string name="no_notifications">No Notifications!</string>
+    <string name="call_now">Call Now</string>
+    <string name="no_internet_message">Whoops!\n Looks like you don’t have an active internet connnection at the moment. clicbrics needs an active internet connection to show you all our awesome houses.</string>
+    <string name="no_internet_message_news">Whoops!\n Looks like you don’t have an active internet connnection at the moment. clicbrics needs an active internet connection to show all news.</string>
+    <string name="no_internet_message_article">Whoops!\n Looks like you don’t have an active internet connnection at the moment. clicbrics needs an active internet connection to show all articles.</string>
+    <string name="no_internet_message_decor">Whoops!\n Looks like you don’t have an active internet connnection at the moment. clicbrics needs an active internet connection to show all home decor.</string>
+    <string name="no_results_found">NO RESULTS FOUND</string>
+    <string name="no_results_full">Sorry we couldn’t find any results matching\nthe criteria you just entered. Let’s try changing\n your search area.</string>
+    <string name="no_results_with_filter">Sorry we couldn’t find any results matching\nthe criteria you just entered. Let’s try changing\n your filter criteria\'s.</string>
+    <string name="no_results_home">Something went wrong.\nPlease try again.</string>
+    <string name="property_list_error">Sorry we couldn’t find any results. This might be network issue. Please try again.</string>
+
+    <string name="try_again_btn">TRY AGAIN</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="sec">" Sec"</string>
+    <string name="customer_care_no">+91 80108 20000</string>
+    <string name="raise_service_request">Raise Service Request</string>
+    <string name="service_request">Service Request</string>
+    <string name="select_a_service">Select a service</string>
+    <string name="enter_your_message_here">Enter your message here...</string>
+    <string name="select_service_type_err_msg">Please select a service type!</string>
+    <string name="comments_empty_err_msg">Please enter the comments</string>
+    <string name="scores_out_of_10">All scores are out of 10*</string>
+    <string name="petrol_pumps">Petrol Pumps</string>
+    <string name="you_can_even_call_us">You can even call us at
+        <u>
+            <font color='red'>+91 80108 20000</font>
+        </u>
+        to schedule
+    </string>
+    <string name="call_us_for_more_info">For more information, please call
+        <u>
+            <font color='red'>
+                <xliff:g id="number">%1s</xliff:g>
+            </font>
+        </u>
+    </string>
+    <string name="title_activity_drawer_base">DrawerBaseActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="service_request_confimation_msg">We have recieved you service request. Your relationship manager will contact you soon.</string>
+    <string name="forget_password">Forgot Password</string>
+
+    <string name="no_network">Please check network connection.</string>
+    <string name="property_size">Property Size</string>
+    <string name="sales_executive">Sales Executive</string>
+    <string name="bullet_symbol">\u2022</string>
+    <string name="space">\u0020</string>
+    <string name="our_recommendations">Our Recommendations</string>
+    <string name="trending_projects">Trending Projects</string>
+    <string name="saved_searches_title">Saved Searches</string>
+    <string name="relation_manager">RELATION MANAGER</string>
+    <string name="relationship_manager">RELATIONSHIP MANAGER</string>
+    <string name="property_advisor">PROPERTY ADVISOR</string>
+    <string name="please_check_network_connection">Please check network connection.</string>
+    <string name="something_went_wrong">Something went wrong.\nPlease try again.</string>
+    <string name="featured_projects">Featured Projects</string>
+    <string name="popular_projects">Popular Projects</string>
+    <string name="rupee_sign">"\u20B9"</string>
+    <string name="contact_me">Contact me</string>
+    <string name="enter_search_area">Enter search area</string>
+    <string name="version">Version</string>
+    <string name="activity_privacy_policy">PRIVACY POLICY</string>
+    <string name="activity_used_library">ATTRIBUTIONS</string>
+    <string name="new_service_request">New Service Request</string>
+    <string name="no_sitevisit_found">No sitevisit found</string>
+    <string name="no_properties_found">No properties found</string>
+    <string name="no_sitevisit">No site visit requested</string>
+    <string name="saved_search_delet_err_msg">Could not able to delete saved search\n Please try again!</string>
+    <string name="schedule_visit_err_msg">Could not schedule your visit.\nPlease try again!</string>
+    <string name="call_me_back_request_err_msg">Your request could not be completed,\n Please try again!</string>
+    <string name="type">Type</string>
+    <string name="no_network_connection">No network connection</string>
+    <string name="no_result_found">No Results Found</string>
+    <string name="nearby_help_text">Tap to view nearby school, \nrestaurants and hospitals.</string>
+    <string name="save">Save</string>
+    <string name="contact_support">CONTACT SUPPORT</string>
+    <string name="no_advisor_assigned_msg">No Property Advisor assigned yet. Call to your Relationship Manager, to get a Property Advisor.</string>
+    <string name="advisor_help_msg">Need best property expert to buy property, your Property Advisor is here to help you with best property advices.</string>
+    <string name="rm_help_msg">Have any questions for us? Need any help? Your relationship manager is here to help you with your house hunt.</string>
+    <string name="my_location_shortcut">Tap to jump to my location</string>
+    <string name="draw_polygun_shortcut">Draw to select region</string>
+    <string name="no_city_found">Sorry we are not available in your city yet, \nfeel free to browse our other locations</string>
+    <string name="enable_gps_location">Please enable your device gps location.</string>
+    <string name="title_activity_document_webview">DocumentWebview</string>
+    <string name="feedback_hint_msg">Please share your valuable feedback</string>
+    <string name="offers">Offers</string>
+    <string name="locality">Locality</string>
+    <string name="project">Project</string>
+    <string name="price_on_request">Price on request</string>
+    <string name="offer_detail">Offer Detail</string>
+    <string name="news">News</string>
+    <string name="blogs">Articles</string>
+    <string name="read_all_blog_msg">You have read all articles,\nplease check later for more.</string>
+    <string name="read_all_news_msg">You have read all news,\nplease check later for more.</string>
+    <string name="read_all_decor_msg">You have read all home decor ideas,\nplease check later for more.</string>
+    <string name="password_reset">Password Reset</string>
+    <string name="tap_to_read_more"><u>Read More</u></string>
+    <string name="home_decor">Home Decor</string>
+    <string name="home_decor_ideas">Home Decor Ideas</string>
+    <string name="news_list_error_msg">Whoops!\n Looks like something wrong to get the news list. Please check your internet or retry again.</string>
+    <string name="decor_list_error_msg">Whoops!\n Looks like something wrong to get the home decor list. Please check your internet or retry again.</string>
+    <string name="article_list_error_msg">Whoops!\n Looks like something wrong to get the article list. Please check your internet or retry again.</string>
+    <string name="success">Success</string>
+    <string name="rera_id">RERA ID</string>
+    <string name="noti_channel_default">ANDROID CHANNEL</string>
+    <string name="select_floor">Select Floor</string>
+    <string name="property_address">Enter Property Address</string>
+    <string name="select_property_type">Select Property Type</string>
+    <string name="no_of_rooms">Number of Rooms</string>
+    <string name="size_of_property">Size of Property</string>
+    <string name="estimated_property">Estimated Property Value</string>
+    <string name="edit_detail">Edit Details</string>
+    <string name="property_not_found">Sorry! We don\'t have enough information about your location to estimate your property value</string>
+    <string name="clicworth">Clicworth</string>
+    <string name="clicworth1">clicworth</string>
+    <string name="new_txt">NEW</string>
+    <string name="loading_projects">Loading projects</string>
+    <string name="loading_decor">Loading ideas</string>
+    <string name="loading_more_news">Loading news</string>
+    <string name="loading_blogs">Loading blogs</string>
+    <string name="blogs_n_articles">BLOGS &amp; ARTICLES</string>
+    <string name="enter_your_area_or_locality">Enter your area or locality</string>
+    <string name="get_clicworth">GET CLICWORTH</string>
+    <string name="sq_ft">Sq.ft</string>
+    <string name="rs">\u20B9</string>
+    <string name="notify_price_change">NOTIFY PRICE CHANGE</string>
+    <string name="feedback">FEEDBACK</string>
+    <string name="monthly_income">Monthly Income</string>
+    <string name="down_payment">Down Payment</string>
+    <string name="other_emis_montly">Other EMIs (Monthly)</string>
+    <string name="request_for_loan">REQUEST FOR LOAN</string>
+    <string name="affordibility_calculator">Affordability Calculator</string>
+    <string name="tap_to_explore">TAP TO EXPLORE</string>
+    <string name="explore_area">Explore Area</string>
+    <string name="similar_properties">Similar Properties</string>
+    <string name="sorry_clicworth_is_not_available_in_this_location_yet">Sorry , clicworth is not available in this location yet.</string>
+    <!--<string name="select_locality">Please select locality</string>-->
+    <string name="select_locality">Please select location of your property</string>
+    <string name="select_property">Please select property type</string>
+    <string name="select_no_of_rooms">Please select number of rooms</string>
+    <string name="plot_size_cannot_be_empty">Area/size cannot be empty</string>
+    <string name="_1">1</string>
+    <string name="rs_10_k">\u20B9 10k</string>
+    <string name="rs_1_cr">\u20B9 1Cr</string>
+    <string name="rs_20_l">\u20B9 20L</string>
+    <string name="_15">15%</string>
+    <string name="_1_year">1 Year</string>
+    <string name="years">Years</string>
+    <string name="eligible_loan_amount">Eligible loan amount</string>
+    <string name="affordable_property_cost">Affordable property cost</string>
+
+    <string name="ground_floor">Ground floor</string>
+    <string name="search_location_of_your_property">Search location of your property</string>
+    <string name="change_criteria">Change Criteria</string>
+    <string name="search_city">Search city</string>
+    <string name="search_your_area_or_locality">Search your area or locality</string>
+    <!--<string name="top_locality">POPULAR SEARCHES</string>-->
+    <string name="top_locality">POPULAR LOCALITIES</string>
+    <string name="select_city">Enter city</string>
+    <string name="change"><u>Change</u></string>
+    <string name="search_in_city">Search in</string>
+</resources>
+

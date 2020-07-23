@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/margin_10"
+    android:paddingBottom="@dimen/margin_10"
+    android:orientation="vertical">
+
+    <TextView
+        android:paddingLeft="@dimen/detail_horizontal_margin"
+        android:id="@+id/payment_plan_txt"
+        fontPath="fonts/FiraSans-Book.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Payment Plans"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_10">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:id="@+id/tantative_layout_view"
+            android:background="@drawable/blur_imag_payment"/>
+        <Button
+            android:id="@+id/id_request_payment_plan_btn"
+            fontPath="fonts/FiraSans-Light.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/cir_white_with_redborder_bg"
+            android:minHeight="@dimen/margin_35"
+            android:paddingLeft="@dimen/margin_25"
+            android:paddingRight="@dimen/margin_25"
+            android:text="Request for Payment Plan"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_small" />
+    </FrameLayout>
+
+
+</LinearLayout>

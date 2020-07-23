@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/explore_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="2dp"
+        android:layout_marginTop="@dimen/margin_15"
+        android:layout_marginBottom="@dimen/margin_15"
+        app:cardElevation="@dimen/margin_2"
+        app:cardUseCompatPadding="true">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/cardview_gradient"
+    >
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/explore_map_lite"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        map:cameraZoom="14"
+        map:liteMode="true"
+        map:mapType="normal"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/explore_gradientbackground">
+    <TextView
+        android:id="@+id/taptoexplore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_small"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_20"
+        android:paddingTop="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10"
+        android:layout_gravity="center"
+        fontPath="fonts/FiraSans-Regular.ttf"
+        android:background="@drawable/alpha_rectangle"
+        android:textColor="@color/colorAccent"
+        android:text="@string/tap_to_explore"/>
+    <TextView
+        fontPath="fonts/FiraSans-Bold.ttf"
+        android:id="@+id/afford_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="top"
+        android:gravity="center_vertical"
+        android:text="@string/explore_area"
+        android:paddingLeft="@dimen/margin_15"
+        android:paddingBottom="@dimen/margin_3"
+        android:paddingTop="@dimen/margin_3"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_large"
+        android:textColor="@color/black"
+        />
+</FrameLayout>
+</RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>

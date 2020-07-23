@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:minWidth="200dp"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        fontPath="fonts/FiraSans-Regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:text="SORT BY"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/tab_text_gray" />
+
+    <TextView
+        android:id="@+id/relevance_sort"
+        fontPath="fonts/FiraSans-Regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:text="Relevance"
+        android:textColor="@color/text_color_login_reg"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/low_to_high_price_sort"
+        fontPath="fonts/FiraSans-Regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:text="Price: Low to High"
+        android:textColor="@color/text_color_login_reg"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/high_to_low_price_sort"
+        fontPath="fonts/FiraSans-Regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:text="Price: High to Low"
+        android:textColor="@color/text_color_login_reg"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/low_to_high_area_sort"
+        fontPath="fonts/FiraSans-Regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:text="Area: Low to High"
+        android:textColor="@color/text_color_login_reg"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/high_to_low_area_sort"
+        fontPath="fonts/FiraSans-Regular.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:text="Area: High to Low"
+        android:textColor="@color/text_color_login_reg"
+        android:textSize="16sp" />
+</LinearLayout>

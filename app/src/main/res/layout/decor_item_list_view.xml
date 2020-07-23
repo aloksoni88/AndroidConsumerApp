@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_20"
+    android:id="@+id/id_root_layout"
+    android:orientation="vertical"
+    tools:ignore="MissingPrefix">
+
+    <TextView
+        android:id="@+id/decor_item_title"
+        fontPath="fonts/FiraSans-Book.ttf"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.clicbrics.consumer.customview.ThreeTwoImageView
+        android:layout_marginTop="@dimen/margin_10"
+        android:id="@+id/decor_item_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:background="@drawable/placeholder"
+        android:contentDescription="Decor Image" />
+    <ImageView
+        android:id="@+id/video_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#4A000000"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:scaleType="center"
+        android:src="@drawable/ic_play_circle_outline_white_48dp"
+        android:visibility="gone" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/decor_item_desc"
+        fontPath="fonts/FiraSans-Light.ttf"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_5"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray_700"
+        android:textSize="16sp" />
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingPrefix">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/site_visit_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:background="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/cardview_bg_color"
+        app:cardCornerRadius="@dimen/margin_3">
+
+        <RelativeLayout
+            android:background="@drawable/cardview_selector_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/calender_image_site_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:src="@drawable/calendar" />
+
+            <TextView
+                android:id="@+id/project_site_visit"
+                fontPath="fonts/FiraSans-Light.ttf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_toRightOf="@id/calender_image_site_visit"
+                android:text=""
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="@dimen/text_size_xlarge" />
+
+            <TextView
+                android:id="@+id/date_site_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/project_site_visit"
+                android:layout_toRightOf="@id/calender_image_site_visit"
+                android:layout_marginTop="4dp"
+                android:text="12th Dec 2016"
+                android:textColor="@color/gray_600"
+                fontPath="fonts/FiraSans-Regular.ttf"/>
+
+            <TextView
+                android:id="@+id/time_site_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date_site_visit"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_toRightOf="@id/calender_image_site_visit"
+                android:text="5:30 PM"
+                android:textColor="@color/gray_700"
+                android:layout_marginTop="4dp"
+                fontPath="fonts/FiraSans-Medium.ttf"/>
+
+
+            <TextView
+                android:id="@+id/reschedule_site_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/date_site_visit"
+                android:layout_alignParentRight="true"
+                android:padding="16dp"
+                android:text="@string/reschedule"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:textColor="@color/colorAccent"
+                fontPath="fonts/FiraSans-Medium.ttf"/>
+            <!--<TextView
+                android:id="@+id/project_site_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:text="Eisenberg"
+                android:textColor="@color/colorWhite"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/calender_image_site_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/project_site_visit"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:src="@drawable/ic_date_range_white_24dp" />
+
+            <TextView
+                android:id="@+id/status_site_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/project_site_visit"
+                android:textColor="@color/colorWhite"
+                android:layout_toRightOf="@id/calender_image_site_visit"
+                android:text="Visit Scheduled" />
+
+            <TextView
+                android:id="@+id/reschedule_site_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/project_site_visit"
+                android:layout_toRightOf="@id/status_site_visit"
+                android:paddingLeft="4dp"
+                android:text="@string/reschedule"
+                android:textColor="@color/theme" />
+
+            <TextView
+                android:id="@+id/date_and_time_site_visit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/status_site_visit"
+                android:textColor="@color/colorWhite"
+                android:layout_toRightOf="@id/calender_image_site_visit"
+                android:text="5:40 AM 12 Dec, 2016" />-->
+
+        </RelativeLayout>
+
+        <!--<ImageView
+            android:id="@+id/icon_site_visit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical|right"
+            android:src="@drawable/ic_arrow_right_36dp" />-->
+
+    </android.support.v7.widget.CardView>
+</FrameLayout>

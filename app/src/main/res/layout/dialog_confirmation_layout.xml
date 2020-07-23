@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_200"
+    android:layout_marginLeft="@dimen/margin_10"
+    android:layout_marginRight="@dimen/margin_10"
+    android:layout_marginBottom="@dimen/margin_10">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_dialog_title"
+        android:text="Confirm"
+        fontPath="fonts/FiraSans-Medium.ttf"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_large"
+        android:layout_gravity="left"
+        android:layout_marginTop="@dimen/margin_12"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_10"
+        tools:ignore="MissingPrefix"/>
+
+
+    <TextView
+        android:id="@+id/id_dialog_message"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:text="Confirm to delete saved search."
+        android:layout_gravity="left"
+        android:gravity="left"
+        android:textColor="@color/black"
+        android:clickable="true"
+        android:textSize="14sp"
+        android:onClick="onClickForgotPassword"
+        android:layout_marginTop="@dimen/margin_2"
+        android:layout_marginLeft="@dimen/margin_10"/>
+
+    <RelativeLayout android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/margin_10"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:gravity="right"
+        android:layout_marginTop="@dimen/margin_15">
+        <Button
+            android:id="@+id/id_ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_toLeftOf="@+id/id_cancel_btn"
+            android:minHeight="40dp"
+            android:textSize="12sp"
+            android:textColor="@drawable/button_red_selector"
+            android:background="@drawable/edit_profile_dialog_button_selector_bg"
+            android:text="@string/ok" />
+
+        <!--<Button
+            android:id="@+id/id_hold_property_btn"
+            android:layout_toRightOf="@id/id_ok_btn"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/gray_600"
+            android:text="@string/ok"
+            android:textSize="12sp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:minHeight="40dp"
+            android:visibility="gone"
+            android:textColor="@color/colorWhite" />-->
+
+        <Button
+            android:id="@+id/id_cancel_btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textSize="12sp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:minHeight="40dp"
+            android:visibility="visible"
+            android:textColor="@drawable/button_red_selector"
+            android:background="@drawable/edit_profile_dialog_button_selector_bg"/>
+    </RelativeLayout>
+</LinearLayout>
+
+
+

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.clicbrics.consumer.utils.StringUtil"/>
+        <import type="com.clicbrics.consumer.view.adapter.MapCarousalItemFragment"/>
+        <import type="android.view.View"/>
+        <variable
+            name="mapItemModel"
+            type="com.clicbrics.consumer.model.Project"/>
+    </data>
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:id="@+id/id_map_carousal_item_layout"
+    android:background="?android:attr/selectableItemBackground"
+    app:cardBackgroundColor="@color/transparent"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="2dp"
+    app:cardMaxElevation="4dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true"
+    tools:ignore="MissingPrefix">
+
+<FrameLayout
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/placeholder"
+        app:setMapListDummyImage="@{mapItemModel.coverImage}"
+        android:scaleType="centerCrop"/>
+    <ImageView
+        android:id="@+id/project_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/placeholder"
+        app:setMapListImage="@{mapItemModel.coverImage}"
+        android:scaleType="centerCrop"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="#3A000000" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/commercial_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="24dp"
+        android:maxHeight="24dp"
+        android:layout_marginBottom="@dimen/margin_3"
+        android:src="@drawable/ic_commercial_tag"
+        android:visibility="@{mapItemModel.commercial ? View.VISIBLE : View.GONE,default=gone}"/>
+    <ImageView
+        android:id="@+id/offer_image"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:minHeight="24dp"
+        android:maxHeight="24dp"
+        android:src="@drawable/ic_offer_tag"
+        android:layout_marginBottom="@dimen/margin_3"
+        android:visibility="@{mapItemModel.offerAvailable ? View.VISIBLE : View.GONE, default=gone}"/>
+
+        <!--<ImageView
+            android:id="@+id/id_soldout_img"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:minHeight="24dp"
+            android:maxHeight="24dp"
+            android:src="@drawable/ic_soldout_svg_tag"
+            android:visibility="@{mapItemModel.offer ? View.VISIBLE : View.GONE, default=gone}"/>-->
+
+        <TextView
+            android:id="@+id/id_soldout_tag"
+            android:text="SOLD OUT"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xxsmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_soldout_svg_tag"
+            android:visibility="@{mapItemModel.sold ? View.VISIBLE : View.GONE, default=gone}"/>
+    </LinearLayout>
+    <!--<Button
+        android:id="@+id/offer_image"
+        fontPath="fonts/FiraSans-Medium.ttf"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="-4dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/offer_image_rightside"
+        android:gravity="center"
+        android:maxHeight="24dp"
+        android:minHeight="24dp"
+        android:paddingBottom="3dp"
+        android:paddingLeft="10dp"
+        android:text="Offer"
+        android:textColor="@color/colorWhite"
+        android:textSize="8sp"
+        android:visibility="@{mapItemModel.offer ? View.VISIBLE : View.GONE, default=gone}" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:layout_gravity="bottom"
+        android:layout_margin="4dp"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/price_range"
+            fontPath="fonts/FiraSans-Bold.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/white"
+            android:text="@{mapItemModel.priceRange}"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/project_name"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/white"
+            android:text="@{mapItemModel.name}"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/developer_name"
+            fontPath="fonts/FiraSans-Book.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/white"
+            android:text="@{mapItemModel.builderName}"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/bed_list_and_status"
+            fontPath="fonts/FiraSans-Book.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/white"
+            android:text="@{MapCarousalItemFragment.getBedListNStatus(mapItemModel.propertyTypeRange,mapItemModel.projectStatus.toString())}"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/area"
+            fontPath="fonts/FiraSans-Book.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/white"
+            android:text="@{MapCarousalItemFragment.getAreaRange(mapItemModel,context)}"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/favorite_project"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left|start"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            app:setMapFavoriteImage="@{mapItemModel.id}"
+            android:src="@drawable/ic_favorite_border_white_24dp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_4"
+            android:visibility="@{mapItemModel.virtualTour ? View.VISIBLE : View.GONE,default=gone}"
+            android:id="@+id/id_virtual_tour_icon"
+            android:src="@drawable/ic_virtual_tour_tag"/>
+        <!--<Button
+            android:id="@+id/commercial_tag"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_commercial_tag"
+            android:gravity="center"
+            android:maxHeight="20dp"
+            android:minHeight="20dp"
+            android:text="Commercial"
+            android:textColor="@color/colorWhite"
+            android:textSize="8sp"
+            android:visibility="@{mapItemModel.commerical ? View.VISIBLE : View.GONE,default=gone}" />-->
+    </LinearLayout>
+</FrameLayout>
+</android.support.v7.widget.CardView>
+</layout>

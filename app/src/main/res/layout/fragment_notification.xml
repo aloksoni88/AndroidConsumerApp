@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_fragment_notifications"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_notification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        />
+
+   <!-- <TextView
+        android:id="@+id/empty_view_notification"
+        fontPath="fonts/FiraSans-Light.ttf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="No Notifications!"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large"
+        android:visibility="gone"
+        tools:ignore="MissingPrefix" />-->
+    <LinearLayout android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:visibility="gone"
+                  android:id="@+id/empty_view_notification"
+                  android:layout_centerInParent="true"
+                  android:orientation="vertical">
+        <ImageView android:layout_width="@dimen/margin_60"
+                   android:layout_height="@dimen/margin_60"
+                   android:layout_gravity="center"
+                   android:src="@drawable/ic_no_notification_icon"/>
+        <TextView
+            fontPath="fonts/FiraSans-Regular.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="No Notifications"
+            android:textColor="#979797"
+            android:textAllCaps="true"
+            android:textSize="@dimen/text_size"
+            tools:ignore="MissingPrefix" />
+    </LinearLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/indeterminate_progress"
+        android:indeterminate="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/cicular_progress"/>
+
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/empty"
+        android:title="menu"
+        android:orderInCategory="101"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_more_icon_black">
+
+        <menu>
+            <item android:id="@+id/edit_profile"
+                android:title="@string/edit_profile"
+                app:showAsAction="always"></item>
+            <!--<item android:id="@+id/edit_password"-->
+                <!--android:title="@string/change_password"-->
+                <!--app:showAsAction="never"></item>-->
+            <item android:id="@+id/forgot_password"
+                android:title="@string/forget_password"
+                app:showAsAction="always"></item>
+        </menu>
+
+    </item>
+</menu>

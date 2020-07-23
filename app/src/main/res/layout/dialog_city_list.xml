@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/splash_background_layer_list"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:id="@+id/id_dialog_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:gravity="center_horizontal"
+            android:text="@string/let_s_pick_a_city"
+            android:textColor="@color/text_color_login_reg"
+            android:textSize="28sp" />
+
+        <ImageView
+            android:id="@+id/id_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_10"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <ListView
+            android:id="@+id/cityList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            android:layout_marginBottom="@dimen/margin_50"
+            android:dividerHeight="0dp" />
+
+        <TextView
+            android:id="@+id/city_declaration"
+            fontPath="fonts/FiraSans-Medium.ttf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginRight="@dimen/margin_5"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:autoLink="email"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:text="@string/city_availability_declaration"
+            android:textColor="@color/gray_700"
+            android:textColorLink="@color/text_color_login_reg" />
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:background="@color/light_white"
+    android:id="@+id/home_decor_picture_view">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_app_barlayout"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/decor_picture_view_toolbar"
+            fontPath="fonts/FiraSans-Regular.ttf"
+            android:fitsSystemWindows="true"
+            android:background="@color/light_white"
+            android:titleTextColor="@color/text_color_login_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:id="@+id/id_decor_picture_view_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/home_decor"
+                    android:textColor="@color/text_color_login_reg"
+                    android:textSize="16sp"
+                    tools:ignore="MissingPrefix" />
+
+            </LinearLayout>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/id_decor_picture_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/id_app_barlayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="ameities_column_count">4</integer>
+    <integer name="padding_first_item">12</integer>
+    <integer name= "onboarding_shift_margin">50</integer>
+    <integer name="drawer_font_size">20</integer>
+</resources>

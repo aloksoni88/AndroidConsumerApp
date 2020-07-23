@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+    >
+    <LinearLayout
+        android:id="@+id/view_data_layout"
+        android:visibility="visible"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground">
+
+
+        <ImageView
+            android:id="@+id/id_icon"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_saved_searches" />
+        <LinearLayout
+            android:layout_weight="1"
+            android:id="@+id/cardlayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/id_saved_search_name"
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_toRightOf="@+id/id_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Saved search name"
+                android:textColor="@color/text_color_login_reg"
+                android:textSize="16sp"
+                tools:ignore="MissingPrefix"/>
+
+            <TextView
+                android:id="@+id/id_filter_details"
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_toRightOf="@+id/id_icon"
+                android:layout_below="@+id/id_saved_search_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Filter criteria name"
+                android:textColor="@color/gray_700"
+                android:textSize="14sp"
+                tools:ignore="MissingPrefix"/>
+
+            <TextView
+                android:id="@+id/id_time"
+                fontPath="fonts/FiraSans-Book.ttf"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_toRightOf="@+id/id_icon"
+                android:layout_below="@+id/id_filter_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/gray_700"
+                android:text="time"
+                android:textSize="14sp"
+                tools:ignore="MissingPrefix"/>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/id_delete_icon"
+            android:paddingRight="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete_icon" />
+    </LinearLayout>
+</FrameLayout>

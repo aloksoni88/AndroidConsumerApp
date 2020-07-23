@@ -1,0 +1,81 @@
+{
+  "project_info": {
+    "project_number": "989959626685",
+    "firebase_url": "https://housing-master-server.firebaseio.com",
+    "project_id": "housing-master-server",
+    "storage_bucket": "housing-master-server.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989959626685:android:b9143dd3cb67aba2",
+        "android_client_info": {
+          "package_name": "com.clicbrics.consumer"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989959626685-rg3mkne6qetl8ik325k6fhd40768r1rt.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "989959626685-14o223cuidk1b49n09forpvjvs2ep1kc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD723QyoCC7fYoQengrBfwLiKxBbvMccSA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:989959626685:android:193b5b6dd84cce36",
+        "android_client_info": {
+          "package_name": "com.clicbrics.propmaster"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "989959626685-rg3mkne6qetl8ik325k6fhd40768r1rt.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "989959626685-14o223cuidk1b49n09forpvjvs2ep1kc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD723QyoCC7fYoQengrBfwLiKxBbvMccSA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

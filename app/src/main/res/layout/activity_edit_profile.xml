@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash"
+    tools:ignore="MissingPrefix">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/id_app_barlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_white">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/edit_profile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:contentInsetEnd="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            android:background="@color/light_white"
+            android:gravity="center"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    fontPath="fonts/FiraSans-Regular.ttf"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:gravity="center_vertical"
+                    android:text="EDIT PROFILE"
+                    android:textColor="@color/text_color_login_reg"
+                    android:textSize="20sp"
+                    tools:ignore="MissingPrefix" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_below="@+id/id_app_barlayout"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/driveEditImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_gravity="center"
+                    android:background="@color/gray"
+                    android:clickable="true"
+                    android:contentDescription="@string/app_name"
+                    android:onClick="editImage"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/splash" />
+
+                <com.clicbrics.consumer.customview.CircularImageView
+                    android:id="@+id/editCircularImage"
+                    android:layout_width="@dimen/margin_120"
+                    android:layout_height="@dimen/margin_120"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_person"
+                    app:civ_border="true"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/margin_2"
+                    app:civ_shadow="true" />
+
+            </FrameLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                app:cardBackgroundColor="@color/cardview_bg_color"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/margin_2"
+                app:contentPadding="@dimen/margin_10">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/id_name_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/name_icon" />
+
+                    <TextView
+                        android:id="@+id/id_name_lable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_toRightOf="@id/id_name_icon"
+                        android:text="@string/name"
+                        android:textColor="@color/gray_600"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/id_name"
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_name_lable"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:background="@null"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_toRightOf="@id/id_name_icon"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textColor="@color/text_color_login_reg"
+                        android:textSize="@dimen/text_size_large"
+                        android:textStyle="bold" />
+
+                    <View android:layout_width="match_parent"
+                          android:layout_height="1dp"
+                          android:layout_marginTop="3dp"
+                          android:layout_below="@+id/id_name"
+                          android:layout_toRightOf="@id/id_name_icon"
+                          android:layout_marginLeft="@dimen/margin_15"
+                          android:background="@color/gray_400"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                app:cardBackgroundColor="@color/cardview_bg_color"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="@dimen/margin_2"
+                app:contentPadding="@dimen/margin_10">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/id_email_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/email_icon" />
+
+                    <TextView
+                        android:id="@+id/id_email_lable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_toRightOf="@id/id_email_icon"
+                        android:text="@string/email"
+                        android:textColor="@color/gray_600"
+                        android:textSize="@dimen/text_size" />
+
+                    <EditText
+                        android:id="@+id/id_email"
+                        fontPath="fonts/FiraSans-Regular.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/id_email_lable"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_toRightOf="@id/id_email_icon"
+                        android:background="@null"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textColorHint="@color/gray_500"
+                        android:textColor="@color/text_color_login_reg"
+                        android:textSize="@dimen/text_size_large"
+                        android:textStyle="bold"
+                        android:windowSoftInputMode="adjustPan" />
+                    <View android:layout_width="match_parent"
+                          android:layout_height="1dp"
+                          android:layout_marginTop="3dp"
+                          android:layout_below="@+id/id_email"
+                          android:layout_toRightOf="@id/id_email_icon"
+                          android:layout_marginLeft="@dimen/margin_15"
+                          android:background="@color/gray_400"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_10"
+                app:cardBackgroundColor="@color/cardview_bg_color"
+                app:cardCornerRadius="@dimen/margin_2"
+                app:contentPadding="@dimen/margin_10">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/id_phone_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/phone_icon_black" />
+
+                    <TextView
+                        android:id="@+id/id_phone_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_toRightOf="@id/id_phone_icon"
+                        android:text="@string/mobile"
+                        android:textColor="@color/gray_600"
+                        android:textSize="@dimen/text_size" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/id_phone_layout"
+                        android:layout_below="@id/id_phone_label"
+                        android:layout_marginLeft="@dimen/margin_15"
+                        android:layout_toRightOf="@id/id_phone_icon"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/countryStdCode"
+                            fontPath="fonts/FiraSans-Regular.ttf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:onClick="showCountryList"
+                            android:text="@string/country_code"
+                            android:textColor="@color/text_color_login_reg"
+                            android:textColorHint="@color/text_hint"
+                            android:textSize="@dimen/text_size_large"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/arrow_drop_down_black"
+                            android:clickable="true"
+                            android:onClick="showCountryList" />
+
+
+                        <EditText
+                            android:id="@+id/phone_number"
+                            fontPath="fonts/FiraSans-Regular.ttf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@null"
+                            android:digits="0123456789"
+                            android:ems="10"
+                            android:inputType="phone"
+                            android:maxLength="12"
+                            android:maxLines="1"
+                            android:textColor="@color/text_color_login_reg"
+                            android:textColorHint="@color/gray_500"
+                            android:textSize="@dimen/text_size_large"
+                            android:textStyle="bold"
+                            android:windowSoftInputMode="adjustPan" />
+                    </LinearLayout>
+                    <View android:layout_width="match_parent"
+                          android:layout_height="1dp"
+                          android:layout_below="@+id/id_phone_layout"
+                          android:layout_toRightOf="@id/id_phone_icon"
+                          android:layout_marginLeft="@dimen/margin_15"
+                          android:background="@color/gray_400"/>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

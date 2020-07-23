@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_height">240dp</dimen>
+    <dimen name="explore_area_margin">10dp</dimen>
+    <dimen name="detail_horizontal_margin">12dp</dimen>
+    <dimen name="login_horizontal_margin">20dp</dimen>
+    <dimen name="login_vertical_margin">16dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <item name="floatinghintedittext_hint_scale" format="float" type="dimen">0.6</item>
+    <item name="floatinghintedittext_animation_steps" format="integer" type="dimen">6</item>
+
+    <dimen name="text_size_xxxxsmall">4sp</dimen>
+    <dimen name="text_size_xxxsmall">6sp</dimen>
+    <dimen name="text_size_xxsmall">8sp</dimen>
+    <dimen name="text_size_xsmall">10sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size">13sp</dimen>
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_xlarge">18sp</dimen>
+    <dimen name="text_size_xxlarge">22sp</dimen>
+    <dimen name="text_size_xxxlarge">28sp</dimen>
+    <dimen name="text_size_xxxxlarge">43sp</dimen>
+    <dimen name="custom_profile_image">50dp</dimen>
+    <dimen name="custom_profile_padding">2dp</dimen>
+    <dimen name="margin_1">1dip</dimen>
+    <dimen name="margin_2">2dip</dimen>
+    <dimen name="margin_3">3dip</dimen>
+    <dimen name="margin_4">4dip</dimen>
+    <dimen name="margin_5">5dip</dimen>
+    <dimen name="margin_6">6dip</dimen>
+    <dimen name="margin_7">7dip</dimen>
+    <dimen name="margin_8">8dip</dimen>
+    <dimen name="margin_9">9dip</dimen>
+    <dimen name="margin_10">10dip</dimen>
+    <dimen name="margin_12">14dip</dimen>
+    <dimen name="margin_15">15dip</dimen>
+    <dimen name="margin_20">20dip</dimen>
+    <dimen name="margin_25">25dip</dimen>
+    <dimen name="margin_30">30dip</dimen>
+    <dimen name="margin_32">33dip</dimen>
+
+    <dimen name="margin_35">40dip</dimen>
+    <dimen name="margin_40">45dip</dimen>
+    <dimen name="margin_43">41dip</dimen>
+    <dimen name="margin_45">45dip</dimen>
+    <dimen name="margin_47">46dip</dimen>
+    <dimen name="margin_50">55dip</dimen>
+    <dimen name="margin_55">60dip</dimen>
+    <dimen name="margin_60">65dip</dimen>
+    <dimen name="margin_70">80dip</dimen>
+    <dimen name="margin_80">90dip</dimen>
+    <dimen name="margin_85">85dip</dimen>
+    <dimen name="margin_90">95dip</dimen>
+    <dimen name="margin_95">95dip</dimen>
+
+    <dimen name="margin_114">150dip</dimen>
+    <dimen name="margin_120">120dip</dimen>
+    <dimen name="margin_130">130dip</dimen>
+    <dimen name="margin_140">160dip</dimen>
+    <dimen name="margin_145">170dip</dimen>
+    <dimen name="margin_148">175dip</dimen>
+    <dimen name="margin_150">180dip</dimen>
+    <dimen name="progressbar_top_margin">174dip</dimen>
+    <dimen name="margin_150_minus">-180dip</dimen>
+    <dimen name="margin_220">220dip</dimen>
+    <dimen name="margin_230">235dip</dimen>
+    <dimen name="margin_240">245dip</dimen>
+    <dimen name="margin_245">245dip</dimen>
+    <dimen name="smiley_top">40dip</dimen>
+    <dimen name="margin_250">250dip</dimen>
+    <dimen name="margin_270">270dip</dimen>
+    <dimen name="margin_280">285dip</dimen>
+    <dimen name="margin_300">300dip</dimen>
+    <dimen name="margin_350">350dip</dimen>
+    <dimen name="margin_100">130dip</dimen>
+    <dimen name="recyclerviewHeight">165dip</dimen>
+    <dimen name="fab_margin_bottom">10dp</dimen>
+
+    <dimen name="onboarding_top_margin2">10dp</dimen>
+    <dimen name="onboarding_top_margin">10dp</dimen>
+    <dimen name="onboarding_top_margin1">30dp</dimen>
+    <dimen name="nav_drawer_margin">3dip</dimen>
+    <dimen name="nav_drawer_textsize">20sp</dimen>
+    <dimen name="layout_cardview_width">260dp</dimen>
+    <dimen name="item_layout_width">260dp</dimen>
+    <dimen name="item_layout_height">200dp</dimen>
+
+    <string-array name="week_array">
+        <item>S</item>
+        <item>M</item>
+        <item>T</item>
+        <item>W</item>
+        <item>T</item>
+        <item>F</item>
+        <item>S</item>
+    </string-array>
+</resources>

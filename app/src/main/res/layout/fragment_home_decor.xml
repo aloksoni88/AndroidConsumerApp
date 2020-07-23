@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/id_home_decor_fragment_layout">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_300"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/id_decor_view_layout">
+        <android.support.v7.widget.RecyclerView
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="false"
+            android:id="@+id/home_decor_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+        <LinearLayout
+            android:id="@+id/id_next_page_loader_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:background="@color/gray_200"
+            android:gravity="center"
+            android:padding="@dimen/margin_15"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/id_layout_list_image_pb"
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/progressbar_theme_color"
+                android:indeterminateDrawable="@drawable/progress_bg"
+                android:visibility="visible" />
+
+            <TextView
+                android:textColor="@color/gray_800"
+                android:layout_marginLeft="@dimen/margin_3"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/loading_decor"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/id_shimmer_layout"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.clicbrics.consumer.customview.ThreeTwoImageView
+                android:id="@+id/cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+            <include layout="@layout/shimmer_layout_news" />
+
+            <include layout="@layout/shimmer_layout_news" />
+
+            <include layout="@layout/shimmer_layout_news" />
+
+            <include layout="@layout/shimmer_layout_news" />
+            <!--<com.clicbrics.consumer.customview.ThreeTwoImageView
+                android:id="@+id/cover_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+
+            <ImageView
+                android:id="@+id/news_image"
+                android:layout_width="@dimen/margin_80"
+                android:layout_height="@dimen/margin_80"
+                android:layout_margin="@dimen/margin_5"
+                android:background="@drawable/placeholder"
+                android:contentDescription="News Image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cover_image" />
+
+            <View
+                android:id="@+id/id_view1"
+                android:layout_width="@dimen/margin_150"
+                android:layout_height="@dimen/margin_10"
+                android:layout_margin="@dimen/margin_10"
+                android:background="@color/gray_200"
+                app:layout_constraintLeft_toRightOf="@+id/news_image"
+                app:layout_constraintTop_toBottomOf="@+id/cover_image" />
+
+            <View
+                android:id="@+id/id_view2"
+                android:layout_width="@dimen/margin_120"
+                android:layout_height="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_50"
+                android:background="@color/gray_200"
+                app:layout_constraintLeft_toRightOf="@+id/news_image"
+                app:layout_constraintTop_toBottomOf="@+id/id_view1" />-->
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <include layout="@layout/activity_no_internet"
+        android:id="@+id/id_no_internet_layout"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/id_progress_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/carousal_map_overlay_color">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/progressBar"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/cicular_progress"/>
+    </RelativeLayout>
+</RelativeLayout>
+</layout>
